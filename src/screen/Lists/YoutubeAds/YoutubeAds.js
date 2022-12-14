@@ -1,7 +1,10 @@
-import React, { useState, useCallback, useRef } from "react";
-import { Animated, Button, View, Text, SafeAreaView, StyleSheet, ScrollView, TextInput, Touchable, TouchableOpacity, FlatList, Dimensions, Image } from "react-native"
-import YoutubePlayer from 'react-native-youtube-iframe';
+import React, { useState, useCallback, useRef, useEffect } from "react";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, FlatList, Dimensions, Image } from "react-native"
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import BaseUrl from "../../../Component/BaseURL/BaseUrl";
+
 const { width } = Dimensions.get("screen");
+
 const cardWidth = width / 1.2;
 const COLORS = {
     white: '#FFF',
@@ -12,206 +15,60 @@ const COLORS = {
     grey: '#908E8C',
     orange: '#F5A623',
 };
-const hotels = [
-    {
-        id: '1',
-        videoId: "3lfQ2vtUyX0",
-        name: 'Double Tree Hotel',
-        location: 'Goa',
-        price: 750,
-        // image: require('./assets/hotel1.jpg'),
-        details: "Tucked between lush forest and the calming waters of the Mandovi River, we are located 10 minutes from the UNESCO World Heritage Site at Old Goa. Goa capital city Panaji and Miramar Beach are both 15 minutes away, as is a choice of shoping, dining, and nightlife. Goa International Airport can be reached in 45 minutes.",
-    },
-    {
-        id: '2',
-        videoId: "iuqfU9Ll300",
-        name: 'villa Riviera',
-        location: 'Goa',
-        price: 1250,
-        // image: require('./assets/hotel2.jpg'),
-        details: "Villa Riviera is located in Saipem, a few minutes away from Candolim beach, a very popular beach in Goa. If you wish to spend a day near the beach, the sandy beach of Candolim is easily accessible by a short drive. Many shops, restaurants, beach shacks are located near the Candolim beach",
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
-    {
-        id: '3',
-        videoId: "3cchY1q44bk",
-        name: 'Hotel Silver Line',
-        location: ' Mussoorie',
-        price: 999,
-        // image: require('./assets/hotel4.jpg'),
-        details: "Located in Mussoorie, within a 9-minute walk of Mussoorie Mall Road and half a kilometer of Camel's Back Road, Hotel Silver Line provides accommodations with a restaurant as well as free private parking for guests who drive. This 3-star hotel offers a 24-hour front desk and room service."
-    },
 
-];
+
 const YoutubeAds = ({ navigation }) => {
-    const [videocount, setVideoCount] = useState(0);
-    const increment = () => {
-        if (videocount <= videocount) {
-            setVideoCount(videocount + 1)
-        }
-    }
-    const [likecount, setLikeCount] = useState(0);
-    const increments = () => {
-        if (likecount <= likecount) {
-            setLikeCount(likecount + 1)
-        }
-    }
-    const [favselect, setFavSelect] = useState(true)
 
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState([]);
+    
 
-    const Card = ({ hotel, index }) => {
+    let accessToken ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
+
+    console.log(data, "userdataprofil")
+    useEffect(() => {
+        fetch(BaseUrl + '/douryou-seller-api/seller-view-todays-deals-added/', {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'Authorization': 'Bearer ' + accessToken,
+            },
+        }).then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) =>
+                // alert(error))
+                console.error(error))
+            .finally(() => setLoading(false));
+    }, []);
+    // let Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0 k"
+    // useEffect(async () => {
+    //     AsyncStorage.setItem("accessToken", Token);
+    // }, [])
+
+    // let [accessToken, setAccessToken] = useState()
+    // const [loading, setLoading] = useState(false);
+    // const [data, setData] = useState([]);
+    // function getData(accessToken) {
+    //     fetch(BaseUrl + '/douryou-seller-api/seller-view-todays-deals-added/', {
+    //         headers: {
+    //             "Accept": "application/json",
+    //             "Content-Type": "multipart/form-data",
+    //             'Authorization': 'Bearer ' + accessToken,
+    //         },
+    //     }).then((response) => response.json())
+    //         .then((json) => setData(json))
+    //         .catch((error) => console.error(error))
+    //         .finally(() => setLoading(false));
+    // }
+    // useEffect(async () => {
+    //     let accessToken = await AsyncStorage.getItem("accessToken")
+    //     console.log(accessToken)
+    //     getData(accessToken)
+    //     setAccessToken(accessToken)
+    // }, [])
+  
+    // console.log(accessToken + "acces token")
+    const Card = ({ item, index }) => {
 
         return (
             <>
@@ -221,67 +78,40 @@ const YoutubeAds = ({ navigation }) => {
 
                     <View style={style.adMain}>
                         <View style={style.youtube}>
-                            <TouchableOpacity onPress={() => navigation.navigate('YourMainAds')} >
-                                <Image source={require('../assets/Ads.png')} style={{ height: 350, width: '100%' }} />
+                            <TouchableOpacity onPress={() => navigation.navigate('YourMainAds', item)} >
+                                <Image source={{ uri: BaseUrl + item.UploadAdsPhoto }} style={{ height: 350, width: '100%' }} />
                             </TouchableOpacity>
                         </View>
 
                         <View style={style.cardDetails}>
                             <View style={style.bar}>
 
-                                <Text style={style.Study}>STUDY VISA </Text>
+                                <Text style={style.Study}>{item.Catagery}</Text>
                             </View>
                             <View style={{ marginTop: 5, flexDirection: 'row' }}>
 
                                 <View style={{ marginVertical: 5, marginHorizontal: 5 }}>
-                                    <Text style={style.company}>Canada Study Visa</Text>
+                                    <Text style={style.company}>{item.from_compny_profile.CompanyName}</Text>
                                     {/* <TouchableOpacity onPress={() => navigation.navigate('AdsActivityPremium')}> */}
-                                    <Text style={style.link}>Eazyvisa Immigration Cusultalt</Text>
+                                    <Text style={style.link}>{item.from_compny_profile.CompanyAddress}</Text>
                                     {/* </TouchableOpacity> */}
 
                                 </View>
                             </View>
-                            {/* <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                                <View style={{ flexDirection: 'row' }}>
+
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
+                                <View style={{ flexDirection: 'row', marginLeft: 30 }}>
                                     <TouchableOpacity onPress={() => navigation.navigate('ViewAds')}>
                                         <Image source={require('../assets/eye.png')} style={style.eye} />
                                     </TouchableOpacity>
-                                    <View style={style.viewcount}>
-                                        <Text >{videocount}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
-                                            <Image source={require('../assets/thumb.png')} style={style.eye} />
-                                        </TouchableOpacity>
-                                        <View style={style.viewcount}>
-                                            <Text >{likecount}</Text>
-                                        </View>
-                                    </View>
-                                </View>
-                                <View style={{ flexDirection: 'row' }}>
 
-                                    <TouchableOpacity onPress={() => navigation.navigate("ShareAds")}>
-                                        <Image source={require('../assets/share.png')} style={style.share} />
-                                    </TouchableOpacity>
-                                </View>
-                            </View> */}
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginLeft: 30 }}>
-                            <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                                    <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
-                                        <Image source={require('../assets/eye.png')} style={style.like} />
-                                    </TouchableOpacity>
-                                    <View style={style.viewcount}>
-                                        <Text >{likecount}</Text>
-                                    </View>
                                 </View>
 
                                 <View style={{ flexDirection: 'row', marginLeft: 50 }}>
                                     <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
                                         <Image source={require('../assets/thumb.png')} style={style.like} />
                                     </TouchableOpacity>
-                                    <View style={style.viewcount}>
-                                        <Text >{likecount}</Text>
-                                    </View>
+
                                 </View>
 
                                 <View style={{ flexDirection: 'row', marginLeft: 30 }}>
@@ -289,9 +119,7 @@ const YoutubeAds = ({ navigation }) => {
                                     <TouchableOpacity onPress={() => navigation.navigate("ShareAds")}>
                                         <Image source={require('../assets/share.png')} style={style.share} />
                                     </TouchableOpacity>
-                                    <View style={style.sharecount}>
-                                        <Text >{likecount}</Text>
-                                    </View>
+
                                 </View>
                             </View>
 
@@ -304,35 +132,34 @@ const YoutubeAds = ({ navigation }) => {
         )
     }
     return (<>
-
-
-        <View style={{ backgroundColor: "#fff" }}>
-            {/* <View>
-                <Image source={require('../../LoginFlow/assets/logo.png')} style={style.logo} />
-            </View> */}
-
-
-            <View style={style.Name1}>
-                <View style={style.topmain}>
-                    <View style={style.topad}>
-                        <Image source={require('../../HomeScreen/assets/ads.png')} style={style.ad} />
-                    </View>
-
-                    <View style={style.maintext}>
-                        <Text style={style.toptext}>Yours Ads</Text>
-                    </View>
-
-                </View>
-            </View>
-            <FlatList
-                data={hotels}
-                renderItem={Card}
-                keyExtractor={item => item.id}
-            />
-
-        </View>
         <ScrollView>
-            {/*  */}
+
+            <View style={{ backgroundColor: "#fff" }}>
+
+                <View style={style.Name1}>
+                    <View style={style.topmain}>
+                        <View style={style.topad}>
+                            <Image source={require('../../HomeScreen/assets/ads.png')} style={style.ad} />
+                        </View>
+
+                        <View style={style.maintext}>
+                            <Text style={style.toptext}>Yours Ads</Text>
+                        </View>
+
+                    </View>
+                </View>
+                <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    data={data.TodaysDeals}
+                    renderItem={({ item, index }) =>
+                        (<Card item={item} index={index}></Card>)}
+                    keyExtractor={from_compny_profile => from_compny_profile.id} />
+
+
+
+            </View>
+
+
         </ScrollView>
 
     </>
@@ -340,9 +167,7 @@ const YoutubeAds = ({ navigation }) => {
 }
 export default YoutubeAds;
 const style = StyleSheet.create({
-    // main:{
-    //     marginBottom:240
-    // },
+
     logo: {
         width: '70%',
         height: 180,
@@ -354,15 +179,12 @@ const style = StyleSheet.create({
         width: '95%',
         padding: 10,
         alignSelf: 'center',
-        //  marginBottom:50
-
     },
     Name1: {
         height: 55,
         width: "90%",
         borderWidth: 3,
         marginTop: 10,
-        // marginHorizontal: 7,
         borderRadius: 10,
         borderColor: '#000000',
         backgroundColor: "#fff",
@@ -381,7 +203,6 @@ const style = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginLeft: 20,
-        // marginRight:25,
     },
     toptext: {
         textAlign: "center",
@@ -404,8 +225,6 @@ const style = StyleSheet.create({
         borderTopRightRadius: 14,
         borderWidth: 2,
         borderColor: '#000',
-        // marginVertical:4
-
     },
     dp: {
         height: 80,
@@ -474,9 +293,6 @@ const style = StyleSheet.create({
         bottom: 0,
         width: "100%",
         alignSelf: 'center',
-        //  borderWidth:2,
-        //  borderColor:'#000',
-        //  marginVertical:4
 
     },
     partOneIcon: {
@@ -496,7 +312,6 @@ const style = StyleSheet.create({
         marginLeft: 1,
         marginTop: 8,
         width: Dimensions.get('window').width / 5,
-        // width: Dimensions.get('window').width * 0.2,
     },
     sharecount: {
         marginLeft: 15,
@@ -504,10 +319,11 @@ const style = StyleSheet.create({
         width: Dimensions.get('window').width / 5,
     },
     eye: {
-        height: 20,
-        width: 27,
+        height: 19,
+        width: 35,
         margin: 12,
-        marginLeft: -10
+        marginLeft: -30,
+        resizeMode: 'contain'
     },
     like: {
         height: 22,
@@ -519,8 +335,6 @@ const style = StyleSheet.create({
         height: 22,
         width: 20,
         marginTop: 8,
-        // margin: 20,
-        // marginLeft: 1
     },
     thum: {
         height: 53,

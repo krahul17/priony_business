@@ -1,36 +1,88 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput, Dimensions } from 'react-native';
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput';
+import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import CustomText from '../../../Component/CustomText/CustomText';
+import EventsScreen from '../EventsScreen';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const EventSecond = ({ navigation, route }) => {
+
+     
+
+    const { value } = route.params
+    const item=value;
+    console.log(item.id,"jdhfuj item event")
+    console.log('mera event jdfjdfbd',item.EventCatagory)
+
+    const [contactPerson, setContactPerson] = useState('')
+    const [desigation, setDesignation] = useState('')
+    const [number, setNumber] = useState('')
+    const [quintity, setQuintity] = useState('')
+    const [accessToken2, setAccess] = useState(null);
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
+
+    console.log(data, 'data is comiong')
+
+    useEffect(() => {
+        fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'Authorization': 'Bearer ' + accessToken,
+            },
+        }).then((response) => response.json())
+            .then((json) => setData(json.Events))
+            .catch((error) =>
+                // alert(error))
+                console.error(error))
+            .finally(() => setLoading(false));
+    }, []);
+    const SaveData = async () => {
+
+        // if (!( select_catgry && title && desc && UploadAdsPhoto )) {
+        //    alert('Enter all felid')
+        //    return
+        // }
 
 
-const gustData = [
+        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
+        setAccess(accessToken)
+        //    let accessToken = await AsyncStorage.getItem('accessToken');
+        //  setAccess(accessToken)
 
-    {
-        id: '1',
-        image: require('../../EventsScreen/assets/cityimage.png'),
-        fav: require('../../EventsScreen/assets/fav.png'),
-        chat: require('../../EventsScreen/assets/chat1.png'),
-        share: require('../../EventsScreen/assets/share.png'),
-        City: 'Moga',
-        State: 'Punjab',
-        date: '',
-        adress: ' ',
-        company: '',
-        contact: '',
-        desigation: '',
-        no: '',
-        size: '',
-        rent: '',
-    },
+        let formData = new FormData();
+        formData.append('ContactPerson', contactPerson)
+        formData.append('Designation', desigation)
+        formData.append('ContactNumber', number)
+        formData.append('BookedQuentity', quintity)
+   
+      
 
-
-]
-
-
-
-const EventSecond = ({ navigation }) => {
-
-  
+        fetch(BaseUrl + '/douryou-seller-api/seller-book-this-event/'+ item.id +"/", {
+            method: 'Post',
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "multipart/form-data",
+                'Authorization': 'Bearer ' 
+                // + accessToken2,
+            },
+            body: formData
+        }).then((result) => {
+            result.json().then((response) => {
+                console.log(response, "Response");
+                alert("DATA SAVE")
+                navigation.navigate('EventPayment',{
+                    plan:item.EventCatagory,})
+            }).catch((error) => {
+                console.log(error);
+            });
+        })
+    }
 
     return (
         <>
@@ -39,10 +91,6 @@ const EventSecond = ({ navigation }) => {
                 <ScrollView >
 
                     <View>
-                        {/* <View style={styles.mainlogo}>
-                            <Image source={require('../../EventsScreen/assets/logo.png')} style={styles.logo} />
-                        </View> */}
-
                         <View style={styles.Name1}>
                             <View style={styles.topmain}>
                                 <View style={styles.topad}>
@@ -56,185 +104,148 @@ const EventSecond = ({ navigation }) => {
                             </View>
                         </View>
 
-                        <FlatList
-                            // horizontal
-                            data={gustData}
-                            keyExtractor={item => item.id}
-                            renderItem={({item}) =>(
-                                <View style={styles.mainList}>
-    
-                                <TouchableOpacity>
-                                    <View style={styles.fav}>
-                                        <Image source={item.fav} style={{ height: 50, width: 50 }} />
-                                    </View>
-                                </TouchableOpacity>
-                    
-                    
-                                <View style={{ flexDirection: 'row' }}>
-                    
-                                    <View style={styles.Pic}>
-                                        <Image source={item.image} style={styles.pic} />
-                                    </View>
-                    
-                                  <View>
-                                  <View style={{ marginTop: 10 }}>
-                                        <Text style={{ fontSize: 25, fontWeight: '600', color: '#000' }}>{item.City}</Text>
-                                    </View>
-                                  <View >
-                                        <Text style={{ fontSize: 25, fontWeight: '600', color: '#000' }}>{item.State}</Text>
-                                    </View>
-                                  </View>
-                    
-                    
+                        <View style={styles.mainList}>
+
+                            <TouchableOpacity>
+                                <View style={styles.fav}>
+                                    <Image source={item.fav} style={{ height: 50, width: 50 }} />
                                 </View>
-                    
-                                <View style={{ marginHorizontal: 10 }}>
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Event Date: </Text>
-                                        </View>
-                                        <View>
-                                            <Text style={styles.name}>
-                                                {item.date}
-                                            </Text>
-                                        </View>
-                                    </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Event adress: </Text>
-                                        </View>
-                                        <View>
-                                            <Text style={styles.name}>
-                                                {item.adress}
-                                            </Text>
-                                            <Text style={styles.name}>
-                                                {item.adress}
-                                            </Text>
-                    
-                                        </View>
-                                    </View>
+                            </TouchableOpacity>
+
+
+                            <View style={{ flexDirection: 'row' }}>
+
+                                <View style={styles.Pic}>
+                                    <Image source={{ uri: BaseUrl + item.EventImage }} style={styles.pic} />
                                 </View>
-                    
-                                <View style={styles.adress}>
-                                    {/*  */}
-                                    <CustomTextInput label={'Enter Company Name'}/> 
-                                    <CustomTextInput label={'Enter Adress'}/>
-                                    <CustomTextInput label={'Enter Contact Parson'}/>
-                                    <CustomTextInput label={'Enter Desigation'}/>
-                                    <CustomTextInput label={'Enter Contact Number'}/>
-                                   {/* <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Company Name: </Text>
-                                        </View>
-                                        <View>
-                                            <Text style={styles.name}>
-                                                {item.company}
-                                            </Text>
-                                        </View>
+
+                                <View>
+                                    <View style={{ marginTop: 10 }}>
+                                    <Text style={{ width:"50%",fontSize: 22, fontWeight: '600', color: '#000', }}>{item.EventAddress}</Text>
                                     </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Adress: </Text>
-                                        </View>
-                                        <View>
-                                            <Text style={styles.Adress}>
-                                                {item.adress}
-                                            </Text>
-                                            <Text style={styles.Adress}>
-                                                {item.adress}
-                                            </Text>
-                                        </View>
-                                    </View>
-                     */}
-                                  {/*  <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Contact Parson: </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.type}
-                                            </TextInput>
-                                        </View>
-                                    </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Desigation: </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.desigation}
-                                            </TextInput>
-                                        </View>
-                                    </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Contact No: </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.contact}
-                                            </TextInput>
-                                        </View> */}
-                                    {/* </View> */}
-                    
+                                   
                                 </View>
-                    
-                                <View style={{ marginHorizontal: 10 }}>
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Size of Stall </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.size}
-                                            </TextInput>
-                                        </View>
-                                    </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Rent of Stall </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.rent}
-                                            </TextInput>
-                    
-                                        </View>
-                                    </View>
-                                </View>
-                    
-                                <TouchableOpacity onPress={() => navigation.navigate('EventPayment')}>
-                                    <View style={styles.Btn}>
-                                        <Text style={styles.btn}>Book My Stall</Text>
-                                    </View>
-                                </TouchableOpacity>
-                    
-                                <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -45 }}>
-                    
-                                    <TouchableOpacity>
-                                        <View style={{ marginRight: 20, margin: 2 }}>
-                                            <Image source={item.chat} style={{ height: 30, width: 32 }} />
-                                        </View>
-                                    </TouchableOpacity>
-                    
-                                    <TouchableOpacity>
-                                        <View style={{ marginRight: 10, margin: 2 }}>
-                                            <Image source={item.share} style={{ height: 30, width: 27 }} />
-                                        </View>
-                                    </TouchableOpacity>
-                    
-                                </View>
-                    
-                    
+
+
                             </View>
 
-                            )}
-                        />
+                            <View style={{ marginHorizontal: 10 }}>
+                                <View style={styles.mainadress}>
+                                    <View>
+                                        <Text style={styles.label} >Event Date: </Text>
+                                    </View>
+                                    <View>
+                                        <Text style={styles.name}>
+                                            {item.EventDate}
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.mainadress}>
+                                    {/* <View>
+                                        <Text style={styles.label} >Event adress: </Text>
+                                    </View> */}
+                                    {/* <View>
+                                        <Text style={styles.name23}>
+                                            {item.EventAddress}
+                                        </Text>
+                                       
+
+                                    </View> */}
+                                </View>
+                            </View>
+
+                            <View style={styles.adress}>
+                                <CustomText Name={data.CompanyName} />
+                                <CustomText Name={data.CompanyAddress} />
+                                <View>
+                                <TextInput style={styles.editable} placeholder={data.ContactPersonName} value={contactPerson} onChangeText={setContactPerson}></TextInput>
+                                </View>
+                                <View>
+                                <TextInput style={styles.editable} placeholder={data.ContactPersonDesigation} value={desigation} onChangeText={setDesignation}></TextInput>
+                                </View>
+                                <View>
+                                <TextInput style={styles.editable} placeholder={data.ContactPersonNumber} value={number} onChangeText={setNumber}></TextInput>
+                                </View>
+                                {/* <CustomTextInput label={data.CompanyName} value={contactPerson} setValue={setContactPerson} /> */}
+                                {/* <CustomTextInput label={'Enter Desigation'} value={desigation} setValue={setDesignation}/> */}
+                                {/* <CustomTextInput label={'Enter Contact Number'} value={number} setValue={setNumber}/> */}
+
+                            </View>
+
+                            <View style={{ marginHorizontal: 10 }}>
+                                <View style={styles.mainadress}>
+                                    <View>
+                                        <Text style={styles.label} >Size of Stall </Text>
+                                    </View>
+                                    <View>
+                                        <Text style={styles.name2}>
+                                            {item.FirstStall}
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.mainadress}>
+                                    <View>
+                                        <Text style={styles.label} >Rent of Stall </Text>
+                                    </View>
+                                    <View>
+                                        <Text style={styles.name2}>
+                                            {item.FirstPrice}
+                                        </Text>
+
+                                    </View>
+                                </View>
+                                <View style={styles.mainadress}>
+                                    <View>
+                                        <Text style={styles.label} >   No.of Stall </Text>
+                                    </View>
+                                    <View>
+                                        <Text style={styles.name2}>
+                                           {item.FirstQuentity}
+                                        </Text>
+
+                                    </View>
+                                </View>
+                                <View style={styles.mainadress}>
+                                    <View>
+                                        <Text style={styles.label} >         Quintity </Text>
+                                    </View>
+                                    <View>
+                                        <TextInput style={styles.name2} placeholder={'please Enter quintity'} value={quintity} onChangeText={setQuintity}>
+                                            
+                                        </TextInput>
+
+                                    </View>
+                                </View>
+                            </View>
+
+                            <TouchableOpacity onPress={SaveData}
+                            // onPress={() => navigation.navigate('EventPayment')}
+                            >
+                                <View style={styles.Btn}>
+                                    <Text style={styles.btn} >Book My Stall</Text>
+                                </View>
+                            </TouchableOpacity>
+
+                            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -45 }}>
+
+                                <TouchableOpacity>
+                                    <View style={{ marginRight: 20, margin: 2 }}>
+                                        <Image source={require('../assets/chat1.png')} style={{ height: 30, width: 32 }} />
+                                    </View>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity>
+                                    <View style={{ marginRight: 10, margin: 2 }}>
+                                        <Image source={require('../assets/share.png')} style={{ height: 30, width: 27 }} />
+                                    </View>
+                                </TouchableOpacity>
+
+                            </View>
+
+
+                        </View>
 
 
                     </View>
@@ -316,7 +327,7 @@ const styles = StyleSheet.create({
         // marginVertical: 30,
         marginHorizontal: 15,
         marginTop: 15,
-       
+
     },
     pic: {
         height: 100,
@@ -344,6 +355,27 @@ const styles = StyleSheet.create({
         color: '#000',
     },
     name: {
+        borderBottomWidth: 2,
+        width: Dimensions.get('screen').width * 0.50,
+        height: 25,
+        color:"#000",
+        fontSize: 15,
+        marginTop:10,
+        fontWeight: '500',
+        paddingHorizontal: 10
+    },
+    name2: {
+        borderWidth: 1,
+        width: Dimensions.get('screen').width * 0.46,
+        height: 40,
+        color:"#000",
+        fontSize: 15,
+        borderRadius: 10,
+        marginTop:10,
+        fontWeight: '500',
+        paddingHorizontal: 10,paddingVertical:8
+    },
+    name23: {
         borderBottomWidth: 2,
         width: Dimensions.get('screen').width * 0.50,
         height: 38,
@@ -380,5 +412,22 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontSize: 15,
-    }
+    },
+    editable: {
+        margin: 10,
+        width: '85%',
+        alignSelf: 'center',
+        borderWidth: 1,
+        borderColor: '#000',
+        height: 55,
+        fontSize:18,
+        paddingLeft:15,
+        color:'#000',
+        borderRadius: 10,
+        // alignItems: "center",
+        justifyContent: "center"
+    
+    },
+
+ 
 })

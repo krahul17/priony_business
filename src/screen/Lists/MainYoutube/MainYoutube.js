@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, Text, View, TouchableOpacity, Image, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import YoutubePlayer from 'react-native-youtube-iframe'
-// import Share from "react-native-share";
+
 
 
 const hotels = [
@@ -19,13 +19,7 @@ const MainYoutube = ({ navigation, route }) => {
 
   const item = route.params;
   console.log(item, "fhfrtyurtuyr");
-  // const { videocount } = route.params;
-  // const [videocount, setVideoCount] = useState(0);
-  // const increment = () => {
-  //   if (videocount <= videocount) {
-  //     setVideoCount(videocount + 1)
-  //   }
-  // }
+ 
   const [likecount, setLikeCount] = useState(0);
   const increments = () => {
     if (likecount <= likecount) {
@@ -46,24 +40,7 @@ const url = "https://www.excellencetechnology.in/privacy-policy/";
       console.log(err);
     }
   };
-  // function checksellerprofile() {
-  //   // let data = { videocount }
-  //   fetch("https://douryou.herokuapp.com/douryou-user/user-requrinment/", {
-  //     method: 'POST',
-  //     headers: {
-  //       "Accept": 'application/json',
-  //       "Content-Type": 'application/json',
-  //     },
-  //     body: JSON.stringify(data)
-  //   }).then((result) => {
-  //     result.json().then((resp) => {
-  //       console.log('resp', resp)
-  //       navigation.navigate('ProfileDetails', {
-  //         videocount
-  //       })
-  //     })
-  //   })
-  // }
+
   return (
     <ScrollView style={styles.mainContainer}>
       <View>
@@ -86,79 +63,51 @@ const url = "https://www.excellencetechnology.in/privacy-policy/";
             <YoutubePlayer
               height={300}
               play={playing}
-              videoId={'3lfQ2vtUyX0'}
-            // onChangeState={onStateChange}
+              videoId={item.VideoLink}
             />
           </View>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: -70 }}>
           <View style={{ flexDirection: 'row' }}>
-            <View>
-              {/* <Image source={require('../../../Components/CustomFlatList/assets/eye.png')} style={styles.eye} /> */}
-            </View>
+    
             <View style={styles.viewcount}>
-              {/* <Text >{videocount}</Text> */}
+        
             </View>
-            <View style={{ flexDirection: 'row' }}>
-              <View>
-                {/* <Image source={require('../../../Components/CustomFlatList/assets/thumb.png')} style={styles.like} /> */}
-              </View>
-              {/* <View style={styles.viewcount}>
-                <Text >{likecount}</Text>
-              </View> */}
-            </View>
+          
           </View>
-          <View style={{ flexDirection: 'row', marginLeft: 20 }}>
-            <TouchableOpacity onPress={() => increments()}>
-              {/* <Image source={require('../../../Components/CustomFlatList/assets/thumb.png')} style={styles.thum} /> */}
-            </TouchableOpacity>
-            <TouchableOpacity>
-              {/* <Image source={require('../../../Components/CustomFlatList/assets/message.png')} style={styles.message} /> */}
-            </TouchableOpacity>
-            {/* <TouchableOpacity onPress={async () => { await share() }}> */}
-              {/* <Image source={require('../../../Components/CustomFlatList/assets/share.png')} style={styles.share} /> */}
-            {/* </TouchableOpacity> */}
+          <View style={{ flexDirection: 'row', marginLeft: 20 }}>    
           </View>
         </View>
         <View style={styles.listboarder}>
           <View style={{ flexDirection: 'row', }}>
             <View>
-              {/* <Image source={require('./assets/category.png')} style={styles.icon} /> */}
-            </View>
-            <View>
-              <Text style={styles.text}>Category :-</Text>
+              <Text style={styles.text}>Category :- {item.CatageryName}</Text>
             </View>
           </View>
         </View>
         <View style={styles.listboarder}>
           <View style={{ flexDirection: 'row', }}>
+          
             <View>
-              {/* <Image source={require('./assets/title.png')} style={styles.icon} /> */}
-            </View>
-            <View>
-              <Text style={styles.text}>Post Title :-</Text>
+              <Text style={styles.text}>Post Title :- {item.VideoTitle}</Text>
             </View>
           </View>
         </View>
         <View style={styles.listboarder}>
           <View style={{ flexDirection: 'row', }}>
+         
             <View>
-              {/* <Image source={require('./assets/date.png')} style={styles.icon} /> */}
-            </View>
-            <View>
-              <Text style={styles.text}>Post Date & Time</Text>
+              <Text style={styles.text}>Post Date & Time :- {item.AddedTime}</Text>
             </View>
           </View>
         </View>
         <View style={styles.listboarderdescription}>
           <View style={{ flexDirection: 'row', }}>
-            <View>
-              {/* <Image source={require('./assets/des.png')} style={styles.icon} /> */}
-            </View>
+         
             <View>
               <Text style={styles.text}>Description</Text>
               <Text style={styles.text}>
-                Enter text here
+                {item.VideoDescription}
               </Text>
             </View>
           </View>

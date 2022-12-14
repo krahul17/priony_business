@@ -51,7 +51,7 @@ export default function SellFranchise({ route }) {
         // }
 
 
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
+        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
         setAccess(accessToken)
 
         //    let accessToken = await AsyncStorage.getItem('accessToken');
@@ -78,7 +78,7 @@ export default function SellFranchise({ route }) {
         formData.append('TotalAreaRequired', areareq)
         formData.append('TotalInvestmentRequired', investreq)
         formData.append('EstimatedReturnOfInvestment', investreturn)
-        formData.append('SellFranchiseDateandTime', shareoffer)
+        formData.append('TotalShareOfferOnSells', shareoffer)
         formData.append('UploadCompanyVisitingCard', { uri: UploadAdsPhoto, name: filename, type })
 
 
@@ -172,10 +172,11 @@ const styles = StyleSheet.create({
         width: 130
     },
     dp: {
-        width: 350,
-        height: 350,
+        width: 340,
+        height: 340,
         alignSelf: 'center',
-        overflow: "hidden"
+        overflow: "hidden",
+        
     },
     Name1: {
         height: 55,
@@ -259,6 +260,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         borderRadius: 10,
         alignSelf: "center",
+        resizeMode:'contain'
     },
     Btn: {
         alignItems: 'center',

@@ -1,33 +1,137 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
     StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList,
     TouchableOpacity, TextInput, Pressable, Dimensions
 } from 'react-native';
+import BaseUrl from '../../Component/BaseURL/BaseUrl';
 
 
-const gustData = [
-
-    {
-        id: '1',
-        image: require('../EventsScreen/assets/cityimage.png'),
-        fav: require('../EventsScreen/assets/fav.png'),
-        chat: require('../EventsScreen/assets/chat1.png'),
-        share: require('../EventsScreen/assets/share.png'),
-        City: 'Moga',
-        State: 'Punjab',
-        date: '12/12/2022',
-        duration: '4 months',
-        type: 'single',
-        no: '5',
-    },
-
-
-
-]
 
 
 
 const EventsScreen = ({ navigation }) => {
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
+
+    console.log(data, 'data is comiong')
+    useEffect(() => {
+        fetch(BaseUrl + '/douryou-seller-api/seller-fetch-all-events/', {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'Authorization': 'Bearer ' + accessToken,
+            },
+        }).then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) =>
+                // alert(error))
+                console.error(error))
+            .finally(() => setLoading(false));
+    }, []);
+
+
+    const Card = ({ item, index }) => {
+        return (
+
+            <View style={styles.mainList}>
+                <TouchableOpacity>
+                    <View style={styles.fav}>
+                        <Image source={require('../EventsScreen/assets/fav.png')} style={{ height: 50, width: 50 }} />
+                    </View>
+                </TouchableOpacity>
+
+                <View style={{ flexDirection: 'row' }}>
+
+                    <View style={styles.Pic}>
+                        <Image source={{ uri: BaseUrl + item.EventImage }} style={styles.pic} />
+                    </View>
+
+                    <View>
+                        <View 
+                        // style={{width:'90%'}}
+                        >
+                            <Text style={{ width:'45%',fontSize: 22, fontWeight: '600', color: '#000', }}>{item.EventAddress}</Text>
+                        </View>
+                    </View>
+
+                </View>
+
+
+
+                <View style={styles.adress}>
+                    <View style={styles.mainadress}>
+                        <View>
+                            <Text style={styles.label} >Events Date: </Text>
+                        </View>
+                        <View>
+                            <Text style={styles.name}>
+                                {item.EventDate}
+                            </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.mainadress}>
+                        <View>
+                            <Text style={styles.label} >Event Duration: </Text>
+                        </View>
+                        <View>
+                            <Text style={styles.name}>
+                                {item.EventLength}
+                            </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.mainadress}>
+                        <View>
+                            <Text style={styles.label} >Events Type: </Text>
+                        </View>
+                        <View>
+                            <Text style={styles.name}>
+                                {item.EventCatagory}
+                            </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.mainadress}>
+                        <View>
+                            <Text style={styles.label} >No. of Stall: </Text>
+                        </View>
+                        <View>
+                            <Text style={styles.name}>
+                                {item.FirstQuentity}
+                            </Text>
+                        </View>
+                    </View>
+
+                </View>
+                <View >
+                    <TouchableOpacity onPress={() => navigation.navigate('EventSecond', {value:item})} style={styles.Btn}>
+                        <Text style={styles.btn}>Book Now</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 }}>
+
+                    <TouchableOpacity>
+                        <View style={{ marginRight: 20, marginTop: -15 }}>
+                            <Image source={require('../EventsScreen/assets/chat1.png')} style={{ height: 30, width: 32 }} />
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity>
+                        <View style={{ marginRight: 10, marginTop: -15 }}>
+                            <Image source={require('../EventsScreen/assets/share.png')} style={{ height: 30, width: 27 }} />
+                        </View>
+                    </TouchableOpacity>
+
+                </View>
+
+            </View>
+        )
+    }
 
 
     return (
@@ -37,9 +141,6 @@ const EventsScreen = ({ navigation }) => {
                 <ScrollView >
 
                     <View>
-                        {/* <View style={styles.mainlogo}>
-                            <Image source={require('../EventsScreen/assets/logo.png')} style={styles.logo} />
-                        </View> */}
 
                         <View style={styles.Name1}>
                             <View style={styles.topmain}>
@@ -57,109 +158,10 @@ const EventsScreen = ({ navigation }) => {
                         </View>
 
                         <FlatList
-                            // horizontal
-                            data={gustData}
-                            keyExtractor={item => item.id}
-                            renderItem={({ item }) => (
-                                <View style={styles.mainList}>
-                                    <TouchableOpacity>
-                                        <View style={styles.fav}>
-                                            <Image source={item.fav} style={{ height: 50, width: 50 }} />
-                                        </View>
-                                    </TouchableOpacity>
-
-                                    <View style={{ flexDirection: 'row' }}>
-
-                                        <View style={styles.Pic}>
-                                            <Image source={item.image} style={styles.pic} />
-                                        </View>
-
-                                        <View>
-                                             <View>
-                                            <Text style={{ fontSize: 25, fontWeight: '600', color: '#000', }}>{item.City}</Text>
-                                        </View>
-
-                                        <View >
-                                            <Text style={{ fontSize: 25, fontWeight: '600', color: '#000', }}>{item.State}</Text>
-                                        </View> 
-                                        </View>
-
-                                    </View>
-
-
-
-                                    <View style={styles.adress}>
-                                        <View style={styles.mainadress}>
-                                            <View>
-                                                <Text style={styles.label} >Events Date: </Text>
-                                            </View>
-                                            <View>
-                                                <Text style={styles.name}>
-                                                    {item.date}
-                                                </Text>
-                                            </View>
-                                        </View>
-
-                                        <View style={styles.mainadress}>
-                                            <View>
-                                                <Text style={styles.label} >Event Duration: </Text>
-                                            </View>
-                                            <View>
-                                                <Text style={styles.name}>
-                                                    {item.duration}
-                                                </Text>
-                                            </View>
-                                        </View>
-
-                                        <View style={styles.mainadress}>
-                                            <View>
-                                                <Text style={styles.label} >Events Type: </Text>
-                                            </View>
-                                            <View>
-                                                <Text style={styles.name}>
-                                                    {item.type}
-                                                </Text>
-                                            </View>
-                                        </View>
-
-                                        <View style={styles.mainadress}>
-                                            <View>
-                                                <Text style={styles.label} >No. of Stall: </Text>
-                                            </View>
-                                            <View>
-                                                <Text style={styles.name}>
-                                                    {item.no}
-                                                </Text>
-                                            </View>
-                                        </View>
-
-                                    </View>
-                                    <View >
-                                        <TouchableOpacity onPress={() => navigation.navigate('EventSecond')} style={styles.Btn}>
-                                            <Text style={styles.btn}>Book Now</Text>
-                                        </TouchableOpacity>
-                                    </View>
-
-                                    <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 }}>
-
-                                        <TouchableOpacity>
-                                            <View style={{ marginRight: 20, marginTop: -15  }}>
-                                                <Image source={item.chat} style={{ height: 30, width: 32 }} />
-                                            </View>
-                                        </TouchableOpacity>
-
-                                        <TouchableOpacity>
-                                            <View style={{ marginRight: 10, marginTop: -15 }}>
-                                                <Image source={item.share} style={{ height: 30, width: 27 }} />
-                                            </View>
-                                        </TouchableOpacity>
-
-                                    </View>
-
-                                </View>
-                            )}
-                        />
-
+                            showsHorizontalScrollIndicator={false}
+                            data={data.Events}
+                            renderItem={({ item, index }) =>
+                                (<Card item={item} index={index}></Card>)} />
 
                     </View>
                 </ScrollView>
@@ -274,7 +276,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: '500',
         // paddingHorizontal: 10
-        marginTop:12
+        marginTop: 12
     },
     duration: {
         borderBottomWidth: 2,

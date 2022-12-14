@@ -1,134 +1,69 @@
-import { ScrollView, StyleSheet, Text, View, TouchableOpacity, Image, Dimensions } from 'react-native'
+import { ScrollView, StyleSheet, Text, View, Image, Dimensions } from 'react-native'
 import React, { useState } from 'react'
-import YoutubePlayer from 'react-native-youtube-iframe'
-// import Share from "react-native-share";
+import BaseUrl from '../../../Component/BaseURL/BaseUrl'
 
 
-const hotels = [
-  {
-    id: '1',
-    videoId: "tghIoadPRgE",
-    name: 'Double Tree Hotel',
-    location: 'Goa',
-    price: 750,
-    // image: require('./assets/hotel1.jpg'),
-    details: "Tucked between lush forest and the calming waters of the Mandovi River, we are located 10 minutes from the UNESCO World Heritage Site at Old Goa. Goa capital city Panaji and Miramar Beach are both 15 minutes away, as is a choice of shoping, dining, and nightlife. Goa International Airport can be reached in 45 minutes.",
-  },
-]
 const MainYoutube = ({ navigation, route }) => {
 
   const item = route.params;
-  console.log(item, "fhfrtyurtuyr");
-  // const { videocount } = route.params;
-  // const [videocount, setVideoCount] = useState(0);
-  // const increment = () => {
-  //   if (videocount <= videocount) {
-  //     setVideoCount(videocount + 1)
-  //   }
-  // }
-  const [likecount, setLikeCount] = useState(0);
-  const increments = () => {
-    if (likecount <= likecount) {
-      setLikeCount(likecount + 1)
-    }
-  }
-  const [playing, setPlaying] = useState(false);
-const url = "https://www.excellencetechnology.in/privacy-policy/";
-  const title = "Awesome Contents";
-  const message = "Please check this out.";
-  const options = {
-    url,
-  };
-  const share = async (customOptions = options) => {
-    try {
-      await Share.open(customOptions);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  // function checksellerprofile() {
-  //   // let data = { videocount }
-  //   fetch("https://douryou.herokuapp.com/douryou-user/user-requrinment/", {
-  //     method: 'POST',
-  //     headers: {
-  //       "Accept": 'application/json',
-  //       "Content-Type": 'application/json',
-  //     },
-  //     body: JSON.stringify(data)
-  //   }).then((result) => {
-  //     result.json().then((resp) => {
-  //       console.log('resp', resp)
-  //       navigation.navigate('ProfileDetails', {
-  //         videocount
-  //       })
-  //     })
-  //   })
-  // }
+
+  const [data, setData] = useState(item)
+  console.log(data, "fhfrtyurtuyr");
+
+
   return (
     <ScrollView style={styles.mainContainer}>
       <View>
 
-      <View style={styles.Name1}>
-                <View style={styles.topmain}>
-                    <View style={styles.topad}>
-                        <Image source={require('../../HomeScreen/assets/ads.png')} style={styles.ad} />
-                    </View>
-
-                    <View style={styles.maintext}>
-                        <Text style={styles.toptext}>Yours Ads</Text>
-                    </View>
-
-                </View>
+        <View style={styles.Name1}>
+          <View style={styles.topmain}>
+            <View style={styles.topad}>
+              <Image source={require('../../HomeScreen/assets/ads.png')} style={styles.ad} />
             </View>
+
+            <View style={styles.maintext}>
+              <Text style={styles.toptext}>Yours Ads</Text>
+            </View>
+
+          </View>
+        </View>
         <View style={styles.Name}>
-        
-          <Image source={require('../assets/Ads.png')}style={{ height: 350, width:'100%',borderRadius:8, marginTop:10}}  />
+
+          <Image source={{ uri: BaseUrl + data.UploadAdsPhoto }} style={{ height: 350, width: '100%', borderRadius: 8, marginTop: 10 }} />
         </View>
-       
+
         <View style={styles.listboarder}>
           <View style={{ flexDirection: 'row', }}>
             <View>
-              {/* <Image source={require('./assets/category.png')} style={styles.icon} /> */}
-            </View>
-            <View>
-              <Text style={styles.text}>Category :-</Text>
+              <Text style={styles.text}>Category :-  {data.Catagery}</Text>
             </View>
           </View>
         </View>
         <View style={styles.listboarder}>
           <View style={{ flexDirection: 'row', }}>
             <View>
-              {/* <Image source={require('./assets/title.png')} style={styles.icon} /> */}
-            </View>
-            <View>
-              <Text style={styles.text}>Post Title :-</Text>
+              <Text style={styles.text}>Post Title :-  {data.DealTitle}</Text>
             </View>
           </View>
         </View>
         <View style={styles.listboarder}>
           <View style={{ flexDirection: 'row', }}>
             <View>
-              {/* <Image source={require('./assets/date.png')} style={styles.icon} /> */}
-            </View>
-            <View>
-              <Text style={styles.text}>Post Date & Time</Text>
+              <Text style={styles.text}>date :- {data.DealPostDateandTime}</Text>
             </View>
           </View>
         </View>
         <View style={styles.listboarderdescription}>
           <View style={{ flexDirection: 'row', }}>
             <View>
-              {/* <Image source={require('./assets/des.png')} style={styles.icon} /> */}
-            </View>
-            <View>
-              <Text style={styles.text}>Description</Text>
+              <Text style={styles.text}>Descriptions :-</Text>
               <Text style={styles.text}>
-                Enter text here
+                {data.DealAddDiscription}
               </Text>
             </View>
           </View>
         </View>
-       
+
       </View>
     </ScrollView>
   )
@@ -143,33 +78,31 @@ const styles = StyleSheet.create({
     width: "90%",
     borderWidth: 3,
     marginTop: 10,
-    // marginHorizontal: 7,
     borderRadius: 10,
     borderColor: '#000000',
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     alignSelf: 'center'
-},
-topmain: {
+  },
+  topmain: {
     flexDirection: "row",
-},
-ad: {
+  },
+  ad: {
     height: 38,
     width: 36,
-},
-maintext: {
+  },
+  maintext: {
     alignItems: "center",
     justifyContent: "center",
     marginLeft: 20,
-    // marginRight:25,
-},
-toptext: {
+  },
+  toptext: {
     textAlign: "center",
     fontSize: 25,
     fontWeight: "600",
     color: "#000"
-},
+  },
   Name: {
     height: 'auto',
     width: '97%',
@@ -271,27 +204,8 @@ toptext: {
     marginLeft: 1,
     marginTop: 8,
     width: Dimensions.get('window').width / 5,
-    // width: Dimensions.get('window').width * 0.2,
   },
-  eye: {
-    height: 15,
-    width: 21,
-    margin: 10,
-    // marginLeft:30
-  },
-  like: {
-    height: 20,
-    width: 22,
-    margin: 7,
-    marginLeft: -30
-  },
-  share: {
-    height: 20,
-    width: 18,
-    marginTop: 8,
-    margin: 20,
-    marginLeft: 25
-  },
+
   thum: {
     height: 23,
     width: 25,

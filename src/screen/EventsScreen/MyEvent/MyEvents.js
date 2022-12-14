@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList,
     TouchableOpacity, TextInput, Pressable, Dimensions } from 'react-native';
-import React from 'react'
 
+import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const gustData = [
 
@@ -29,12 +31,132 @@ const gustData = [
         type: '',
         no: '',
     },
-
-
-
 ]
 
+ 
+
 const MyEvents = ({navigation}) => {
+
+    
+    let name=AsyncStorage.setItem("name",'rahull')
+    console.log(name,"name check krna hai")
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
+
+
+    useEffect(() => {
+        fetch(BaseUrl + '/douryou-seller-api/seller-fetch-all-booked-events/', {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'Authorization': 'Bearer ' + accessToken,
+            },
+        }).then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) =>
+                // alert(error))
+                console.error(error))
+            .finally(() => setLoading(false));
+    }, []);
+
+    const Card = ({ item, index }) => {
+        return (
+
+            <View style={styles.mainList}>
+            <TouchableOpacity>
+                <View style={styles.fav}>
+                    <Image source={item.fav} style={{ height: 50, width: 50 }} />
+                </View>
+            </TouchableOpacity>
+
+            <View style={{ flexDirection: 'row' }}>
+
+                <View style={styles.Pic}>
+                    <Image source={item.image} style={styles.pic} />
+                </View>
+
+                <View >
+                    <Text style={{ fontSize: 35, fontWeight: '600', color: '#000', }}>{item.City}</Text>
+                </View>
+
+
+
+            </View>
+            <View style={styles.adress}>
+                <View style={styles.mainadress}>
+                    <View>
+                        <Text style={styles.label} >Events Date: </Text>
+                    </View>
+                    <View>
+                        <TextInput style={styles.name}>
+                            {item.date}
+                        </TextInput>
+                    </View>
+                </View>
+
+                <View style={styles.mainadress}>
+                    <View>
+                        <Text style={styles.label} >Events Duration: </Text>
+                    </View>
+                    <View>
+                        <TextInput style={styles.name}>
+                            {item.duration}
+                        </TextInput>
+                    </View>
+                </View>
+
+                <View style={styles.mainadress}>
+                    <View>
+                        <Text style={styles.label} >Events Type: </Text>
+                    </View>
+                    <View>
+                        <TextInput style={styles.name}>
+                            {item.type}
+                        </TextInput>
+                    </View>
+                </View>
+
+                <View style={styles.mainadress}>
+                    <View>
+                        <Text style={styles.label} >No. of Stall: </Text>
+                    </View>
+                    <View>
+                        <TextInput style={styles.name}>
+                            {item.no}
+                        </TextInput>
+                    </View>
+                </View>
+
+            </View>
+            <View >
+                <TouchableOpacity onPress={() => navigation.navigate('ViewVisitor')} style={styles.Btn}>
+                    <Text style={styles.btn}>View Visitor</Text>
+                </TouchableOpacity>
+            </View>
+
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 }}>
+
+                <TouchableOpacity>
+                    <View style={{ marginRight: 20, margin: 2 }}>
+                        <Image source={item.chat} style={{ height: 30, width: 32 }} />
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={{ marginRight: 10, margin: 2 }}>
+                        <Image source={item.share} style={{ height: 30, width: 27 }} />
+                    </View>
+                </TouchableOpacity>
+
+            </View>
+
+        </View>
+            )
+        }
+    
 
     return (
         <>
@@ -61,102 +183,13 @@ const MyEvents = ({navigation}) => {
                         </View>
 
                         <FlatList
-                            // horizontal
-                            data={gustData}
-                            keyExtractor={item => item.id}
-                            renderItem={({item})=>(
-                                <View style={styles.mainList}>
-                                <TouchableOpacity>
-                                    <View style={styles.fav}>
-                                        <Image source={item.fav} style={{ height: 50, width: 50 }} />
-                                    </View>
-                                </TouchableOpacity>
-                    
-                                <View style={{ flexDirection: 'row' }}>
-                    
-                                    <View style={styles.Pic}>
-                                        <Image source={item.image} style={styles.pic} />
-                                    </View>
-                    
-                                    <View >
-                                        <Text style={{ fontSize: 35, fontWeight: '600', color: '#000', }}>{item.City}</Text>
-                                    </View>
-                    
-                    
-                    
-                                </View>
-                                <View style={styles.adress}>
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Events Date: </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.date}
-                                            </TextInput>
-                                        </View>
-                                    </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Events Duration: </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.duration}
-                                            </TextInput>
-                                        </View>
-                                    </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >Events Type: </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.type}
-                                            </TextInput>
-                                        </View>
-                                    </View>
-                    
-                                    <View style={styles.mainadress}>
-                                        <View>
-                                            <Text style={styles.label} >No. of Stall: </Text>
-                                        </View>
-                                        <View>
-                                            <TextInput style={styles.name}>
-                                                {item.no}
-                                            </TextInput>
-                                        </View>
-                                    </View>
-                    
-                                </View>
-                                <View >
-                                    <TouchableOpacity onPress={() => navigation.navigate('ViewVisitor')} style={styles.Btn}>
-                                        <Text style={styles.btn}>View Visitor</Text>
-                                    </TouchableOpacity>
-                                </View>
-                    
-                                <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 }}>
-                    
-                                    <TouchableOpacity>
-                                        <View style={{ marginRight: 20, margin: 2 }}>
-                                            <Image source={item.chat} style={{ height: 30, width: 32 }} />
-                                        </View>
-                                    </TouchableOpacity>
-                    
-                                    <TouchableOpacity>
-                                        <View style={{ marginRight: 10, margin: 2 }}>
-                                            <Image source={item.share} style={{ height: 30, width: 27 }} />
-                                        </View>
-                                    </TouchableOpacity>
-                    
-                                </View>
-                    
-                            </View>
+                            showsHorizontalScrollIndicator={false}
+                            data={data.Events}
+                            renderItem={({ item, index }) =>
+                                (<Card item={item} index={index}></Card>)} />
+                           
 
-                            )}
-                        />
+                      
 
 
                     </View>

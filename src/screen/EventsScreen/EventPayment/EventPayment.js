@@ -3,7 +3,9 @@ import React from 'react'
 
 
 
-const EventPayment = ({ navigation }) => {
+const EventPayment = ({ navigation,route }) => {
+    const {plan,price}=route.params
+    console.log(price, 'is plan')
     return (
         <>
             <StatusBar
@@ -25,7 +27,7 @@ const EventPayment = ({ navigation }) => {
 
                             <View style={styles.planchoose}>
                                 <Text style={styles.textplan}> You Choose </Text>
-                                <Text style={styles.textplan2}> : Professional</Text>
+                                <Text style={styles.textplan2}> : {plan}</Text>
                             </View>
 
                             <View style={styles.planchoose}>

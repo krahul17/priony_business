@@ -40,7 +40,7 @@ export default function CustomTodatDeal({ route }) {
         // }
   
   
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
+        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
         setAccess(accessToken)
 
 

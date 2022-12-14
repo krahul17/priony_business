@@ -1,9 +1,8 @@
 import { StyleSheet, Text, View, FlatList, StatusBar, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
-import React from 'react'
+import React,{useEffect} from 'react'
 
-const ViewAds = ({route}) => {
+const ViewAds = () => {
     
-    const [title] =route.prems
 const gustData = [
   
     {
@@ -15,10 +14,26 @@ const gustData = [
       Name: 'Harsimranjeet Singh Tarwal',
       Email: 'simranjeet.extech2202155452@gmail.com',
       DistName: 'Dist. Name',
-      DateTime:'View Date & Time:-'
+      DateTime:'Like Date & Time:-'
     },
     
   ]
+
+
+  useEffect(() => {
+    fetch(BaseUrl + '/douryou-seller-api/seller-view-todays-deals-added/', {
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            'Authorization': 'Bearer ' + accessToken,
+        },
+    }).then((response) => response.json())
+        .then((json) => setData(json))
+        .catch((error) =>
+            // alert(error))
+            console.error(error))
+        .finally(() => setLoading(false));
+}, []);
 
   const GustData = ({ item }) => {
     return (
@@ -37,9 +52,6 @@ const gustData = [
 
                 <View style={styles.adress}>
                     <View style={{ flexDirection: 'row' }}>
-                        {/* <View>
-                            <Text style={styles.label} >Name: </Text>
-                        </View> */}
                         <View>
                             <Text style={styles.name}>
                                 {item.Name}
@@ -48,9 +60,6 @@ const gustData = [
                     </View>
 
                     <View style={{ flexDirection: 'row' }}>
-                        {/* <View>
-                            <Text style={styles.label} >E-mail ID: </Text>
-                        </View> */}
                         <View>
                             <Text style={styles.email}>
                                 {item.Email}
@@ -59,9 +68,6 @@ const gustData = [
                     </View>
 
                     <View style={{ flexDirection: 'row' }}>
-                        {/* <View>
-                            <Text style={styles.label} >Dist.Name: </Text>
-                        </View> */}
                         <View>
                             <Text style={styles.dist}>
                                 {item.DistName}
@@ -110,14 +116,10 @@ return (
         <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>
             <View>
 
-                {/* <View style={styles.navbar}>
-                    <Image source={require('../assets/logo.png')} style={styles.Logo} />
-                </View> */}
-
                 <View style={styles.Name1}>
                     <View style={styles.topmain}>
                         <View style={styles.topad}>
-                            <Image source={require('../assets/ad.png')} style={styles.ad} />
+                            <Image source={require('../assets/profile.png')} style={styles.ad} />
                         </View>
 
                         <View style={styles.maintext}>
@@ -145,7 +147,6 @@ export default ViewAds
 
 const styles = StyleSheet.create({
 Logo: {
-    // color: '#D1070A',
     marginTop: 10,
     height: 50,
     width: 90
@@ -173,7 +174,6 @@ maintext: {
     alignItems: "center",
     justifyContent: "center",
     marginLeft: 20,
-    // marginRight:25,
 },
 toptext: {
     textAlign: "center",
@@ -203,21 +203,19 @@ label: {
   fontSize: 16,
   fontWeight: '700',
   color: '#000',
-  // marginVertical: 2,
+
 },
 name: {
     fontSize: 15,
     fontWeight: '500',
   color: '#000',
   marginTop: 2,
-//   width:Dimensions.get('screen').width*0.45,
 },
 email: {
     fontSize: 15,
     fontWeight: '200',
     color: '#000',
     marginTop:8,
-  //   width:Dimensions.get('screen').width/1.1,
   width:280
 },
 dist: {

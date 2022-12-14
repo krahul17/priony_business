@@ -1,6 +1,9 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Animated, Button, View, Text, SafeAreaView, StyleSheet, ScrollView, TextInput, Touchable, TouchableOpacity, FlatList, Dimensions, Image } from "react-native"
-import YoutubePlayer from 'react-native-youtube-iframe';
+// import YoutubePlayer from 'react-native-youtube-iframe';
+import BaseUrl from "../../../Component/BaseURL/BaseUrl";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 1.2;
 const COLORS = {
@@ -42,125 +45,143 @@ const hotels = [
     },
 ];
 const YoutubeInterview = ({ navigation }) => {
-    const [videocount, setVideoCount] = useState(0);
-    const increment = () => {
-        if (videocount <= videocount) {
-            setVideoCount(videocount + 1)
-        }
-    }
-    const [likecount, setLikeCount] = useState(0);
-    const increments = () => {
-        if (likecount <= likecount) {
-            setLikeCount(likecount + 1)
-        }
-    }
-    const [favselect, setFavSelect] = useState(true)
+    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    // let [accessToken, setAccessToken] = useState()
+    console.log(data.Sellers, "acces token")
+
+    useEffect(() => {
+        fetch(BaseUrl + '/douryou-seller-api/seller-see-admin-interview-for-him/', {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'Authorization': 'Bearer ' + accessToken,
+            },
+        }).then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) =>
+                // alert(error))
+                console.error(error))
+            .finally(() => setLoading(false));
+    }, []);
 
 
-    const Card = ({ hotel, index }) => {
+    // function getData(accessToken) {
+    //   fetch(BaseUrl + '/douryou-user/seller-see-admin-interview-for-him/', {
+    //         headers: {
+    //             "Accept": "application/json",
+    //             "Content-Type": "multipart/form-data",
+    //             'Authorization': 'Bearer ' + accessToken,
+    //         },
+    //     }).then((response) => response.json())
+    //         .then((json) => setData(json))
+    //         .catch((error) => console.error(error))
+    //         .finally(() => setLoading(false));
+    // }
+
+    // useEffect(async () => {
+    //     let accessToken = await AsyncStorage.getItem("accessToken")
+    //     console.log(accessToken)
+    //    getData(accessToken)
+    //     setAccessToken(accessToken)
+    // }, [])
+    console.log(data + "acces token")
+
+    const Card = ({ item, index }) => {
 
         return (
             <>
                 <View style={style.mainBorder}>
 
 
-                    <TouchableOpacity style={style.BtnToutube} onPress={() => navigation.navigate('MainYoutube')} >
+                    <TouchableOpacity style={style.BtnToutube} onPress={() => navigation.navigate('MainYoutube', item)} >
                         <Image source={require('../assets/YoutubeBtn.png')} style={style.youtubeBtn} />
                     </TouchableOpacity>
                     <View style={style.youtube}>
-                        <Image source={require('../assets/Ads.png')} style={{ height: 200, width: '100%' }} />
+                        <Image source={{ uri: BaseUrl + item.Thumbnail }} style={{ height: 200, width: '100%' }} />
                     </View>
 
                     <View style={style.cardDetails}>
                         <View style={style.bar}>
 
-                            <Text style={style.Study}>STUDY VISA</Text>
+                            <Text style={style.Study}>{item.CatageryName}</Text>
                         </View>
                         <View style={{ marginTop: 5, flexDirection: 'row' }}>
 
                             <View style={{ marginVertical: 5, marginHorizontal: 5 }}>
-                                <Text style={style.company}>Canada Study Visa</Text>
-                                {/* <TouchableOpacity onPress={() => navigation.navigate('AdsActivityPremium')}> */}
-                                    <Text style={style.link}>Eazyvisa Immigration Cusultalt</Text>
-                                {/* </TouchableOpacity> */}
+                                <Text style={style.company}>{item.SellerIs.ContactPersonName}</Text>
+                                <Text style={style.link}>{item.SellerIs.CompanyAddress}</Text>
 
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-around',marginLeft:30 }}>
-                        <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                                    <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
-                                        <Image source={require('../assets/eye.png')} style={style.like} />
-                                    </TouchableOpacity>
-                                    <View style={style.viewcount}>
-                                        <Text >{likecount}</Text>
-                                    </View>
-                                </View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-around',  }}>
+                            <View style={{ flexDirection: 'row', marginLeft: 30 }}>
+                                <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
+                                    <Image source={require('../assets/eye.png')} style={style.eye} />
+                                </TouchableOpacity>
+                               
+                            </View>
 
-                            <View style={{ flexDirection: 'row',marginLeft:50 }}>
-                                    <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
-                                        <Image source={require('../assets/thumb.png')} style={style.like} />
-                                    </TouchableOpacity>
-                                    <View style={style.viewcount}>
-                                        <Text >{likecount}</Text>
-                                    </View>
-                                </View>
+                            <View style={{ flexDirection: 'row', marginLeft: 50 }}>
+                                <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
+                                    <Image source={require('../assets/thumb.png')} style={style.like} />
+                                </TouchableOpacity>
+                             
+                            </View>
 
-                            <View style={{ flexDirection: 'row' ,marginLeft:30}}>
+                            <View style={{ flexDirection: 'row', marginLeft: 30 }}>
 
                                 <TouchableOpacity onPress={() => navigation.navigate("ShareAds")}>
                                     <Image source={require('../assets/share.png')} style={style.share} />
                                 </TouchableOpacity>
-                                <View style={style.sharecount}>
-                                    <Text >{likecount}</Text>
-                                </View>
+                              
                             </View>
                         </View>
 
                     </View>
-                </View>        
-                
+                </View>
+
             </>
         )
     }
 
-    const Title='Yours Interviews';
+    const Title = 'Yours Interviews';
     return (
         <>
-        <View style={{ backgroundColor: '#fff' }}>
-            {/* <View style={style.main}>
-                <View>
-                    <Image source={require('../../LoginFlow/assets/logo.png')} style={style.logo} />
-                </View>
+            <ScrollView>
+                <View style={{ backgroundColor: '#fff' }}>
 
-            </View>  */}
-            <View style={style.Name1}>
-                <View style={style.topmain}>
-                    <View style={style.topad}>
-                        <Image source={require('../../../Navigation-Flow/TopTabNavigation/assets/four.png')} style={style.ad} />
+                    <View style={style.Name1}>
+                        <View style={style.topmain}>
+                            <View style={style.topad}>
+                                <Image source={require('../../../Navigation-Flow/TopTabNavigation/assets/four.png')} style={style.ad} />
+                            </View>
+
+                            <View style={style.maintext}>
+                                <Text style={style.toptext}>{Title}</Text>
+                            </View>
+
+                        </View>
                     </View>
 
-                    <View style={style.maintext}>
-                        <Text style={style.toptext}>{Title}</Text>
+                    <View>
+                        <FlatList
+                            showsHorizontalScrollIndicator={false}
+                            data={data.Sellers}
+                            renderItem={({ item, index }) =>
+                                (<Card item={item} index={index}></Card>)}
+                            keyExtractor={SellerIs => SellerIs.id} />
+
                     </View>
 
                 </View>
-            </View>
+            </ScrollView>
 
-            <View>
-            <FlatList
-                data={hotels}
-                renderItem={Card}
-                keyExtractor={item => item.id}
-            />
-        </View>  
 
-        </View>
-        <ScrollView>
-             
-        </ScrollView>
-           
-       
-        </>    );
+        </>);
 }
 
 export default YoutubeInterview;
@@ -253,7 +274,7 @@ const style = StyleSheet.create({
         height: 70,
         width: 90,
         alignSelf: 'center',
-        marginVertical:15
+        marginVertical: 15
     },
     Study: {
         fontSize: 23,
@@ -309,7 +330,7 @@ const style = StyleSheet.create({
         width: Dimensions.get('window').width / 5,
 
     },
-    sharecount:{
+    sharecount: {
         marginLeft: 15,
         marginTop: 9,
         width: Dimensions.get('window').width / 5,
@@ -322,7 +343,7 @@ const style = StyleSheet.create({
         height: 20,
         width: 27,
         margin: 12,
-        marginLeft: -10
+        marginLeft: -30
     },
     like: {
         height: 22,
@@ -349,8 +370,8 @@ const style = StyleSheet.create({
         marginLeft: 12,
         marginTop: 6
     },
-    backbtn:{
-        backgroundColor:'#EFD757'
-     
+    backbtn: {
+        backgroundColor: '#EFD757'
+
     },
 });

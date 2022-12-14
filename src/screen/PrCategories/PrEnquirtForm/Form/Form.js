@@ -5,15 +5,15 @@ import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
 
 
 const Form = ({ route }) => {
-  const { value } = route.params
+  const { value, value2 } = route.params
   let item = value
-  console.log(item, 'igydsayufashgdvu')
-  let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
+  // console.log(item, 'igydsayufashgdvu')
+  let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
 
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
-  console.log(data, "userdataprofil")
+  // console.log(data, "userdataprofil")
   // useEffect(() => {
   //   fetch(BaseUrl + '/douryou-seller-api/seller-sell-franchise/', {
   //     headers: {
@@ -27,7 +27,33 @@ const Form = ({ route }) => {
   //     .finally(() => setLoading(false));
   // }, []);
 
-  console.log(data, 'jdddkjfhdjf')
+  console.log(data.Name, 'my namae')
+
+  useEffect(() => {
+    fetch(BaseUrl + '/douryou-seller-api/seller-pr-enquiery-detail/' + value2 + "/", {
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        'Authorization': 'Bearer ' + accessToken,
+      },
+    }).then((response) => response.json())
+      .then((json) => {
+
+        //    console.log(json.Sellers[0].username.first_name)
+        setData(json.SellerProfile)
+
+
+      })
+      .catch((error) =>
+        alert('something went wrong'))
+      // console.error(error)),
+      .finally(() => setLoading(false));
+
+    // console.log(data.Sellers.first_name, "userdataprofil")
+    // console.log('sdfdgffj'seller)
+
+  }, []);
+  // console.log(data.Name,'name is my')
 
   return (
     <>
@@ -40,41 +66,36 @@ const Form = ({ route }) => {
             <Text style={styles.textonly}>Attech PR Form</Text>
           </View>
 
-          {/* <FlatList
-            showsHorizontalScrollIndicator={false}
-            data={item}
-            renderItem={({ item, index }) =>
-              (<Getdata item={item} index={index}></Getdata>)} /> */}
           <View style={styles.borderMain}>
 
-            <CustomText Name={item.Name} />
-            <CustomText Name={item.FatherName} />
-            <CustomText Name={item.Address} />
-            <CustomText Name={item.City} />
-            <CustomText Name={item.MobileNumber} />
-            <CustomText Name={item.Email} />
-            <CustomText Name={item.ApplyFor} />
-            <CustomText Name={item.CourceCity} />
+            <CustomText Name={data.Name} />
+            <CustomText Name={data.FatherName} />
+            <CustomText Name={data.Address} />
+            <CustomText Name={data.City} />
+            <CustomText Name={data.MobileNumber} />
+            <CustomText Name={data.Email} />
+            <CustomText Name={data.ApplyFor} />
+            <CustomText Name={data.CourceCity} />
 
-            <CustomText Name={item.Status} />
-            <CustomText Name={item.Level}/>
-            <CustomText Name={item.Field} />
-            <CustomText Name={item.PassingYear} />
-            <CustomText Name={item.Percentage} />
-            <CustomText Name={item.BoardUniversity} />
+            <CustomText Name={data.Status} />
+            <CustomText Name={data.Level} />
+            <CustomText Name={data.Field} />
+            <CustomText Name={data.PassingYear} />
+            <CustomText Name={data.Percentage} />
+            <CustomText Name={data.BoardUniversity} />
             <View style={styles.input1}>
               <Text style={styles.headertext1}>Entry Level Exam</Text>
             </View>
-            <CustomText Name={item.PassportNumber} />
-            <CustomText Name={item.AdharCard} />
-            <CustomText Name={item.TestDate} />
-            <CustomText Name={item.ListeningBand} />
-            <CustomText Name={item.ReadingBand} />
-            <CustomText Name={item.WritingBand} />
-            <CustomText Name={item.SpeakingBand} />
-            <CustomText Name={item.OverallBand} />
-           
-           
+            <CustomText Name={data.PassportNumber} />
+            <CustomText Name={data.AdharCard} />
+            <CustomText Name={data.TestDate} />
+            <CustomText Name={data.ListeningBand} />
+            <CustomText Name={data.ReadingBand} />
+            <CustomText Name={data.WritingBand} />
+            <CustomText Name={data.SpeakingBand} />
+            <CustomText Name={data.OverallBand} />
+
+
             <View style={styles.input1}>
               <Text style={styles.headertext1}>Work Experience</Text>
             </View>
@@ -85,7 +106,7 @@ const Form = ({ route }) => {
             <CustomText Name={item.TravelHistory} />
             <CustomText Name={item.AnyRefusal} />
             <CustomText Name={item.WhyRefusalVisa} />
-           
+
             <View style={styles.borderTitle}>
 
             </View>
@@ -96,8 +117,24 @@ const Form = ({ route }) => {
             <CustomText Name={item.MotherOccupation} />
             <CustomText Name={item.FamiltyBackgrounf} />
             <CustomText Name={item.EnterYourDetail} />
-            
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10 }}>
+
+              <View style={{ marginRight: 20, margin: 2 }}>
+                <TouchableOpacity>
+                  <Image source={require('../../../../screen/Lists/assets/chat1.png')} style={{ height: 26, width: 27 }} />
+                </TouchableOpacity>
+              </View>
+
+              <View style={{ marginRight: 10, margin: 2 }}>
+                <TouchableOpacity>
+                  <Image source={require('../../../../screen/Lists/assets/share.png')} style={{ height: 23, width: 20 }} />
+                </TouchableOpacity>
+              </View>
+
+            </View>
+
           </View>
+
         </View>
       </ScrollView>
     </>
@@ -124,6 +161,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor: '#000000',
     backgroundColor: "#fff",
+    marginBottom:5
   },
 
   pr: {

@@ -20,14 +20,14 @@ const YourOfferJob = ({ navigation }) => {
     }
 
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
+    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
 
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
     console.log(data, "userdataprofil")
     useEffect(() => {
-        fetch(BaseUrl + '/douryou-seller-api/seller-job-offer/', {
+        fetch(BaseUrl + '/douryou-seller-api/seller-job-offer-added/', {
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const YourOfferJob = ({ navigation }) => {
         }).then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => 
-            alert('something went wrong'))
+            alert(error))
             // console.error(error)),
             .finally(() => setLoading(false));
     }, []);
@@ -136,7 +136,7 @@ const YourOfferJob = ({ navigation }) => {
 
                     <FlatList
                         showsHorizontalScrollIndicator={false}
-                        data={data.Events}
+                        data={data.JobOffers}
                         renderItem={({ item, index }) => (<Offer item={item} index={index}></Offer>)} />
 
                 </View>
