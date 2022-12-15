@@ -6,6 +6,8 @@ import CustomUpload from '../CustomUpload';
 import CustomTextInput from '../CustomTextInput/CustomTextInput';
 import ImagePicker from 'react-native-image-crop-picker';
 import BaseUrl from '../BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export default function CustomTodatDeal({ route }) {
 
@@ -32,6 +34,8 @@ export default function CustomTodatDeal({ route }) {
                 setUploadAdsPhoto(UploadAdsPhoto.path)
             });
     }
+
+
 
     const SaveData = async()=> {
         // if (!( CompanyLogo && CompanyName && CompanyAddress && CompanyDistrictName && CompanyStateName && CompanyEmailID && CompanyWebsiteLink && CompanyLoginPhoneNo)) {

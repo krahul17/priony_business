@@ -1,4 +1,4 @@
-com.priony.seller
+com.priony.business
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1546,7 +1546,6 @@ drawable src_screen_homescreen_assets_user
 drawable src_screen_homescreen_assets_vistor
 drawable src_screen_homescreen_assets_weekly
 drawable src_screen_lists_assets_ad
-drawable src_screen_lists_assets_ads
 drawable src_screen_lists_assets_bell
 drawable src_screen_lists_assets_chat1
 drawable src_screen_lists_assets_eye

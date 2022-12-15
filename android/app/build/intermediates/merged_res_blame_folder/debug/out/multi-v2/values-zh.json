@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.priony.seller.app-mergeDebugResources-29:/values-zh/values-zh.xml",
+            "outputFile": "com.priony.business.app-mergeDebugResources-29:/values-zh/values-zh.xml",
             "map": [
                 {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\4c4e47c61aad9122cb269c11957ecc05\\transformed\\jetified-ucrop-2.2.6-native\\res\\values-zh\\values-zh.xml",

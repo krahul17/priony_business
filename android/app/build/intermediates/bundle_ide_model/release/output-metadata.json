@@ -4,14 +4,14 @@
     "type": "BUNDLE",
     "kind": "RegularFile"
   },
-  "applicationId": "com.priony.seller",
+  "applicationId": "com.priony.business",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "outputFile": "../../../../release/app-release.aab"
+      "outputFile": "../../../outputs/bundle/release/app-release.aab"
     }
   ],
   "elementType": "File"

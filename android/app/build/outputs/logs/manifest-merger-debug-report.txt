@@ -80,9 +80,9 @@ INJECTED from D:\priony_business\priony_business\android\app\src\debug\AndroidMa
 INJECTED from D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:2:1-13:12
 INJECTED from D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:2:3-30
+		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:2:3-32
 		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:2:3-30
+		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:2:3-32
 		INJECTED from D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
@@ -152,7 +152,7 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\extec\.gradle\cach
 	android:name
 		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:7:7-38
 		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:7:7-38
-activity#com.priony.seller.MainActivity
+activity#com.priony.business.MainActivity
 ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:15:7-26:18
 	android:label
 		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:17:9-41

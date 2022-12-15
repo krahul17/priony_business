@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.priony.seller",
+  "applicationId": "com.priony.business",
   "variantName": "debug",
   "elements": [
     {
