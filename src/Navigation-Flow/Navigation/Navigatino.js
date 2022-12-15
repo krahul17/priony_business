@@ -98,6 +98,7 @@ import Franchise from '../../screen/Lists/FranchiseList/Franchise';
 import FavCustomer from '../../screen/Lists/FavCustomer/FavCoutomer';
 import Form from '../../screen/PrCategories/PrEnquirtForm/Form/Form';
 import PlanComingSoon from '../../screen/LoginFlow/Profile/PlanComingSoon/PlanComingSoon';
+import Loader from '../../Component/Loader/Loader';
 
 
 
@@ -156,6 +157,7 @@ const Navigatino = () => {
 
 
         {/* <Stack.Screen name="PaymentGateWay" component={PaymentGateWay} /> */}
+        {/* <Stack.Screen name="Loader" component={Loader} /> */}
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         {/* <Stack.Screen name="Login" component={Login} /> */}
         <Stack.Screen name="ProfileDetails" component={ProfileDetails} />

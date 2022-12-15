@@ -1,34 +1,39 @@
 import React, { useState, useEffect } from 'react'
-import {
-    StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList,
-    TouchableOpacity, TextInput, Pressable, Dimensions
-} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput, Pressable, Dimensions} from 'react-native';
 import BaseUrl from '../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Loader from '../../Component/Loader/Loader';
 
 
 
 
 
 const EventsScreen = ({ navigation }) => {
+  
+
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false);
 
     let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
 
     console.log(data, 'data is comiong')
     useEffect(() => {
+        setModalVisible(true)
         fetch(BaseUrl + '/douryou-seller-api/seller-fetch-all-events/', {
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
                 'Authorization': 'Bearer ' + accessToken,
             },
-        }).then((response) => response.json())
+        }).then((response) => response.json(),
+        setModalVisible(false))
             .then((json) => setData(json))
-            .catch((error) =>
+            .catch((error) =>{
+                setModalVisible(false);
                 // alert(error))
-                console.error(error))
+                console.error(error)})
             .finally(() => setLoading(false));
     }, []);
 
@@ -51,9 +56,9 @@ const EventsScreen = ({ navigation }) => {
 
                     <View>
                         <View 
-                        // style={{width:'90%'}}
+                        style={{width:'86%'}}
                         >
-                            <Text style={{ width:'45%',fontSize: 22, fontWeight: '600', color: '#000', }}>{item.EventAddress}</Text>
+                            <Text style={{ fontSize: 22, fontWeight: '600', color: '#000', }}>{item.EventAddress}</Text>
                         </View>
                     </View>
 
@@ -156,7 +161,7 @@ const EventsScreen = ({ navigation }) => {
 
                             </View>
                         </View>
-
+                         <Loader modalVisible={modalVisible} setModalVisible={setModalVisible}/>
                         <FlatList
                             showsHorizontalScrollIndicator={false}
                             data={data.Events}
