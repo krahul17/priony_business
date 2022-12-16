@@ -1,16 +1,21 @@
 import { StyleSheet, Text, View, FlatList, StatusBar, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
 import React,{useState,useEffect} from 'react'
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const Airport = () => {
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
 
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const [accessToken, setAccess] = useState(null);
+
   console.log(data, "userdataprofil")
-  useEffect(() => {
+  useEffect(  async () => {
+    const accessToken = await AsyncStorage.getItem("accessToken");
+    setAccess(accessToken);
+
       fetch(BaseUrl + '/douryou-seller-api/seller-api-for-Intersted-Visitor-in-transport-for-airport', {
           headers: {
               "Accept": "application/json",

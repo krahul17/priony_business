@@ -15,12 +15,17 @@ const EventsScreen = ({ navigation }) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [modalVisible, setModalVisible] = useState(false);
+    const [accessToken, setAccess] = useState(null);
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
 
     console.log(data, 'data is comiong')
-    useEffect(() => {
+    useEffect( async () => {
         setModalVisible(true)
+
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
+
         fetch(BaseUrl + '/douryou-seller-api/seller-fetch-all-events/', {
             headers: {
                 "Accept": "application/json",

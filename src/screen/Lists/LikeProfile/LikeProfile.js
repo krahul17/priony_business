@@ -1,17 +1,21 @@
 import { StyleSheet, Text, View, FlatList, StatusBar, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
 import React, { useState, useEffect } from 'react'
-import BaseUrl from '../../../Component/BaseURL/BaseUrl'
+import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const LikeProfile = () => {
 
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
-
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
+    const [accessToken, setAccess] = useState(null);
 
     console.log(data, 'data is comiong')
-    useEffect(() => {
+    useEffect( async () => {
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
         fetch(BaseUrl + '/douryou-seller-api/seller-profile-likes/', {
             headers: {
                 "Accept": "application/json",

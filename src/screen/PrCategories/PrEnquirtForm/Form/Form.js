@@ -2,17 +2,18 @@ import { StyleSheet, Text, View, Image, ScrollView, FlatList, StatusBar, Touchab
 import React, { useState, useEffect } from 'react'
 import CustomText from '../../../../Component/CustomText/CustomText';
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const Form = ({ route }) => {
   const { value, value2 } = route.params
   let item = value
   // console.log(item, 'igydsayufashgdvu')
-  let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
 
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const [accessToken, setAccess] = useState(null);
   // console.log(data, "userdataprofil")
   // useEffect(() => {
   //   fetch(BaseUrl + '/douryou-seller-api/seller-sell-franchise/', {
@@ -29,7 +30,10 @@ const Form = ({ route }) => {
 
   console.log(data.Name, 'my namae')
 
-  useEffect(() => {
+  useEffect(async () => {
+    const accessToken = await AsyncStorage.getItem("accessToken");
+    setAccess(accessToken);
+
     fetch(BaseUrl + '/douryou-seller-api/seller-pr-enquiery-detail/' + value2 + "/", {
       headers: {
         "Accept": "application/json",
@@ -161,7 +165,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor: '#000000',
     backgroundColor: "#fff",
-    marginBottom:5
+    marginBottom: 5
   },
 
   pr: {

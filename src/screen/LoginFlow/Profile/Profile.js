@@ -37,12 +37,8 @@ const Profile = ({ navigation }) => {
 
    const SaveData = async () => {
       
-      let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
-
-
-      // let accessToken = await AsyncStorage.getItem('accessToken');
-      // setAccess(accessToken)
-
+      const accessToken = await AsyncStorage.getItem("accessToken");
+      setAccess(accessToken);
     
       let formData = new FormData();
       let filename = ContactPersonPic.split('/').pop();

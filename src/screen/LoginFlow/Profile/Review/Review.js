@@ -174,12 +174,9 @@ const Review = ({ navigation }) => {
       //    alert('Enter all felid')
       //    return
       // }
-      let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
+      const accessToken = await AsyncStorage.getItem("accessToken");
+      setAccess(accessToken);
 
-      // let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxMjU2MDU4LCJqdGkiOiI2ZGZiNTk3Y2JjMTk0OGUyOWMzMjIxNTA5NDE3NmNjYiIsInVzZXJfaWQiOjE4fQ.YE69RJoVDXtlr92Q5Hq7vLHV8fztatiVtbsRV9KWMLE"
-      // setAccess(accessToken)
-      // let accessToken = await AsyncStorage.getItem('accessToken');
-      // setAccess(accessToken)
 
 
       let formData = new FormData();

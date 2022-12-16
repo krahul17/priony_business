@@ -11,7 +11,7 @@ const status = [
     { id: 3, sName: 'Business Page' },
     { id: 4, sName: 'Add manually' },
 ]
-const Chexk = ({ navigation }) => {
+const Check = ({ navigation }) => {
     const [imagefront, setImagefront] = useState(null);
     const [imageback, setImageback] = useState(null);
     const [seletedImage, setSeletedImage] = useState("");
@@ -158,7 +158,7 @@ const Chexk = ({ navigation }) => {
         </ScrollView>
     )
 }
-export default Chexk
+export default Check
 const styles = StyleSheet.create({
     mainConst: {
         flex: 1,

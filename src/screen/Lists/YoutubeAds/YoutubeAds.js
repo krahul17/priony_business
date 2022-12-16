@@ -21,12 +21,15 @@ const YoutubeAds = ({ navigation }) => {
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
-    
+    const [accessToken, setAccess] = useState(null);
 
-    let accessToken ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
-
+   
     console.log(data, "userdataprofil")
-    useEffect(() => {
+    useEffect( async () => {
+
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
         fetch(BaseUrl + '/douryou-seller-api/seller-view-todays-deals-added/', {
             headers: {
                 "Accept": "application/json",
@@ -40,34 +43,7 @@ const YoutubeAds = ({ navigation }) => {
                 console.error(error))
             .finally(() => setLoading(false));
     }, []);
-    // let Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0 k"
-    // useEffect(async () => {
-    //     AsyncStorage.setItem("accessToken", Token);
-    // }, [])
-
-    // let [accessToken, setAccessToken] = useState()
-    // const [loading, setLoading] = useState(false);
-    // const [data, setData] = useState([]);
-    // function getData(accessToken) {
-    //     fetch(BaseUrl + '/douryou-seller-api/seller-view-todays-deals-added/', {
-    //         headers: {
-    //             "Accept": "application/json",
-    //             "Content-Type": "multipart/form-data",
-    //             'Authorization': 'Bearer ' + accessToken,
-    //         },
-    //     }).then((response) => response.json())
-    //         .then((json) => setData(json))
-    //         .catch((error) => console.error(error))
-    //         .finally(() => setLoading(false));
-    // }
-    // useEffect(async () => {
-    //     let accessToken = await AsyncStorage.getItem("accessToken")
-    //     console.log(accessToken)
-    //     getData(accessToken)
-    //     setAccessToken(accessToken)
-    // }, [])
   
-    // console.log(accessToken + "acces token")
     const Card = ({ item, index }) => {
 
         return (

@@ -7,7 +7,7 @@ import CustomUpload from '../../../Component/CustomUpload';
 import ImagePicker from 'react-native-image-crop-picker';
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function SellFranchise({ route }) {
 
@@ -49,13 +49,8 @@ export default function SellFranchise({ route }) {
         //    alert('Enter all felid')
         //    return
         // }
-
-
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
-        setAccess(accessToken)
-
-        //    let accessToken = await AsyncStorage.getItem('accessToken');
-        //  setAccess(accessToken)
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
 
         let formData = new FormData();
         let filename = UploadAdsPhoto.split('/').pop();

@@ -110,136 +110,105 @@ import Loader from '../../Component/Loader/Loader';
 
 
 const Navigatino = () => {
-
   const Stack = createNativeStackNavigator();
-
   const [showWellcome, setShowWellcome] = useState(true)
-  // const [showWellcome1, setShowWellcome1] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
       setShowWellcome(false)
     }, 1000);
   }, []);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowWellcome1(false)
-  //   }, 2000);
-  // }, []);
+
 
   return (
 
-   
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {showWellcome ? <Stack.Screen
-          name="WellComeScreen" component={WellComeScreen} />
-          : null}
 
-        {/* <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="VerifyCode" component={VerifyCode} />
-        <Stack.Screen name="CreateProfie" component={CreateProfie} />
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Aboutus" component={Aboutus} />
-        <Stack.Screen name="MyMatch" component={MyMatch} />
-        <Stack.Screen name="UploadeOfficePic" component={UploadeOfficePic} />
-        <Stack.Screen name="Certificate" component={Certificate} />
-        <Stack.Screen name="Result" component={Result} />
-        <Stack.Screen name="Review" component={Review} />
-        <Stack.Screen name="FreePlan" component={FreePlan} />
-        <Stack.Screen name="AllPlanList" component={AllPlanList} />
-        <Stack.Screen name="PlanComingSoon" component={PlanComingSoon} />
-        <Stack.Screen name="Business" component={Business} />
-        <Stack.Screen name="Ultimate" component={Ultimate} />
-        <Stack.Screen name="Profenssional" component={Profenssional} />
-        <Stack.Screen name="PaymentGateWay" component={PaymentGateWay} /> 
-         <Stack.Screen name="PaymentConfirm" component={PaymentConfirm} /> */}
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      {showWellcome ? <Stack.Screen
+        name="WellComeScreen" component={WellComeScreen} />
+        : null}
 
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="ProfileDetails" component={ProfileDetails} />
+      <Stack.Screen name="PrCategories" component={PrCategories} />
+      <Stack.Screen name="PrEnquirtForm" component={PrEnquirtForm} />
+      <Stack.Screen name="Form" component={Form} />
+      <Stack.Screen name="PrForm" component={PrForm} />
+      <Stack.Screen name="Canada" component={Canada} />
+      <Stack.Screen name="CanadaList" component={CanadaList} />
+      <Stack.Screen name="UsaList" component={UsaList} />
+      <Stack.Screen name="Usa" component={Usa} />
+      <Stack.Screen name="Uk" component={Uk} />
+      <Stack.Screen name="UkList" component={UkList} />
+      <Stack.Screen name="Australia" component={Australia} />
+      <Stack.Screen name="AustrilaList" component={AustrilaList} />
+      <Stack.Screen name="NewZealand" component={NewZealand} />
+      <Stack.Screen name="NewZealandList" component={NewZealandList} />
+      <Stack.Screen name="Demo" component={Demo} />
+      <Stack.Screen name="StudentFee" component={StudentFee} />
+      <Stack.Screen name="ClassTiming" component={ClassTiming} />
+      <Stack.Screen name="MyClass" component={MyClass} />
+      <Stack.Screen name="AICustomer" component={AICustomer} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="HotArea" component={HotArea} />
+      <Stack.Screen name="EventsScreen" component={EventsScreen} />
+      <Stack.Screen name="EventSecond" component={EventSecond} />
+      <Stack.Screen name="MyEvents" component={MyEvents} />
+      <Stack.Screen name="ViewVisitor" component={ViewVisitor} />
+      <Stack.Screen name="ViewAds" component={ViewAds} />
+      <Stack.Screen name="LikeAds" component={LikeAds} />
+      <Stack.Screen name="YourOfferJob" component={YourOfferJob} />
+      <Stack.Screen name="ShareAds" component={ShareAds} />
+      <Stack.Screen name="ViewInterview" component={ViewInterview} />
+      <Stack.Screen name="LikeInterview" component={LikeInterview} />
+      <Stack.Screen name="ShareInterview" component={ShareInterview} />
+      <Stack.Screen name="ViewProfile" component={ViewProfile} />
+      <Stack.Screen name="LikeProfile" component={LikeProfile} />
+      <Stack.Screen name="ShareProfile" component={ShareProfile} />
+      <Stack.Screen name="CustomTodatDeal" component={CustomTodatDeal} />
+      <Stack.Screen name="JobOffer" component={JobOffer} />
+      <Stack.Screen name="SellFranchise" component={SellFranchise} />
+      <Stack.Screen name="InterstedVistor" component={InterstedVistor} />
+      <Stack.Screen name="Ielts" component={Ielts} />
+      <Stack.Screen name="StudyVisa" component={StudyVisa} />
+      <Stack.Screen name="Passport" component={Passport} />
+      <Stack.Screen name="Education" component={Education} />
+      <Stack.Screen name="AirTicket" component={AirTicket} />
+      <Stack.Screen name="Insurance" component={Insurance} />
+      <Stack.Screen name="Money" component={Money} />
+      {/* <Stack.Screen name="TravelInsurance" component={TravelInsurance} /> */}
 
-
-        {/* <Stack.Screen name="PaymentGateWay" component={PaymentGateWay} /> */}
-        {/* <Stack.Screen name="Loader" component={Loader} /> */}
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        {/* <Stack.Screen name="Login" component={Login} /> */}
-        <Stack.Screen name="ProfileDetails" component={ProfileDetails} />
-        <Stack.Screen name="PrCategories" component={PrCategories} />
-        <Stack.Screen name="PrEnquirtForm" component={PrEnquirtForm} />
-        <Stack.Screen name="Form" component={Form} />
-        <Stack.Screen name="PrForm" component={PrForm} />
-        <Stack.Screen name="Canada" component={Canada} />
-        <Stack.Screen name="CanadaList" component={CanadaList} />
-        <Stack.Screen name="UsaList" component={UsaList} />
-        <Stack.Screen name="Usa" component={Usa} />
-        <Stack.Screen name="Uk" component={Uk} />
-        <Stack.Screen name="UkList" component={UkList} />
-        <Stack.Screen name="Australia" component={Australia} />
-        <Stack.Screen name="AustrilaList" component={AustrilaList} />
-        <Stack.Screen name="NewZealand" component={NewZealand} />
-        <Stack.Screen name="NewZealandList" component={NewZealandList} />
-        <Stack.Screen name="Demo" component={Demo} />
-        <Stack.Screen name="StudentFee" component={StudentFee} />
-        <Stack.Screen name="ClassTiming" component={ClassTiming} />
-        <Stack.Screen name="MyClass" component={MyClass} />
-        <Stack.Screen name="AICustomer" component={AICustomer} />
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="HotArea" component={HotArea} />
-        <Stack.Screen name="EventsScreen" component={EventsScreen} />
-        <Stack.Screen name="EventSecond" component={EventSecond} />
-        <Stack.Screen name="MyEvents" component={MyEvents} />
-        <Stack.Screen name="ViewVisitor" component={ViewVisitor} />
-        <Stack.Screen name="ViewAds" component={ViewAds} />
-        <Stack.Screen name="LikeAds" component={LikeAds} />
-        <Stack.Screen name="YourOfferJob" component={YourOfferJob} />
-        <Stack.Screen name="ShareAds" component={ShareAds} />
-        <Stack.Screen name="ViewInterview" component={ViewInterview} />
-        <Stack.Screen name="LikeInterview" component={LikeInterview} />
-        <Stack.Screen name="ShareInterview" component={ShareInterview} />
-        <Stack.Screen name="ViewProfile" component={ViewProfile} />
-        <Stack.Screen name="LikeProfile" component={LikeProfile} />
-        <Stack.Screen name="ShareProfile" component={ShareProfile} />
-        <Stack.Screen name="CustomTodatDeal" component={CustomTodatDeal} />
-        <Stack.Screen name="JobOffer" component={JobOffer} />
-        <Stack.Screen name="SellFranchise" component={SellFranchise} />
-        <Stack.Screen name="InterstedVistor" component={InterstedVistor} />
-        <Stack.Screen name="Ielts" component={Ielts} />
-        <Stack.Screen name="StudyVisa" component={StudyVisa} />
-        <Stack.Screen name="Passport" component={Passport} />
-        <Stack.Screen name="Education" component={Education} />
-        <Stack.Screen name="AirTicket" component={AirTicket} />
-        <Stack.Screen name="Insurance" component={Insurance} />
-        <Stack.Screen name="Money" component={Money} />
-        {/* <Stack.Screen name="TravelInsurance" component={TravelInsurance} /> */}
-
-        <Stack.Screen name="AirPort" component={AirPort} />
-        <Stack.Screen name="TouristVisa" component={TouristVisa} />
-        <Stack.Screen name="WorkPermit" component={WorkPermit} />
-        <Stack.Screen name="JobAbroad" component={JobAbroad} />
-        <Stack.Screen name="Accomodation" component={Accomodation} />
-        <Stack.Screen name="PR" component={PR} />
-        <Stack.Screen name="Tour" component={Tour} />
-        <Stack.Screen name="Courier" component={Courier} />
-        <Stack.Screen name="Advisor" component={Advisor} />
-        <Stack.Screen name="EventPayment" component={EventPayment} />
-        <Stack.Screen name="PassConfirm" component={PassConfirm} />
-        <Stack.Screen name="HelpSupport" component={HelpSupport} />
-        <Stack.Screen name="YoutubeAds" component={YoutubeAds} />
-        <Stack.Screen name="YoutubeInterview" component={YoutubeInterview} />
-        <Stack.Screen name="MainYoutube" component={MainYoutube} />
-        <Stack.Screen name="YourMainAds" component={YourMainAds} />
-        <Stack.Screen name="Franchise" component={Franchise} />
-        <Stack.Screen name="FavCustomer" component={FavCustomer} />
+      <Stack.Screen name="AirPort" component={AirPort} />
+      <Stack.Screen name="TouristVisa" component={TouristVisa} />
+      <Stack.Screen name="WorkPermit" component={WorkPermit} />
+      <Stack.Screen name="JobAbroad" component={JobAbroad} />
+      <Stack.Screen name="Accomodation" component={Accomodation} />
+      <Stack.Screen name="PR" component={PR} />
+      <Stack.Screen name="Tour" component={Tour} />
+      <Stack.Screen name="Courier" component={Courier} />
+      <Stack.Screen name="Advisor" component={Advisor} />
+      <Stack.Screen name="EventPayment" component={EventPayment} />
+      <Stack.Screen name="PassConfirm" component={PassConfirm} />
+      <Stack.Screen name="HelpSupport" component={HelpSupport} />
+      <Stack.Screen name="YoutubeAds" component={YoutubeAds} />
+      <Stack.Screen name="YoutubeInterview" component={YoutubeInterview} />
+      <Stack.Screen name="MainYoutube" component={MainYoutube} />
+      <Stack.Screen name="YourMainAds" component={YourMainAds} />
+      <Stack.Screen name="Franchise" component={Franchise} />
+      <Stack.Screen name="FavCustomer" component={FavCustomer} />
 
 
-        <Stack.Screen name="UserRequirement" component={UserRequirement} />
-        <Stack.Screen name="WeeklyTest" component={WeeklyTest} />
-        <Stack.Screen name="CommingSoon" component={CommigSoon} />
-        <Stack.Screen name="ListofStudent" component={ListofStudent} />
-        <Stack.Screen name="MyMatchList" component={MyMatchList} />
-        <Stack.Screen name="Jsonfile" component={Jsonfile} />
-        <Stack.Screen name="Checks" component={Checks} />
+      <Stack.Screen name="UserRequirement" component={UserRequirement} />
+      <Stack.Screen name="WeeklyTest" component={WeeklyTest} />
+      <Stack.Screen name="CommingSoon" component={CommigSoon} />
+      <Stack.Screen name="ListofStudent" component={ListofStudent} />
+      <Stack.Screen name="MyMatchList" component={MyMatchList} />
+      <Stack.Screen name="Jsonfile" component={Jsonfile} />
+      <Stack.Screen name="Checks" component={Checks} />
 
 
-      </Stack.Navigator>
-   
+    </Stack.Navigator>
+
 
   )
 }

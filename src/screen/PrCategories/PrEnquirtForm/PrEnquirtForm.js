@@ -1,14 +1,15 @@
 import { StyleSheet, Text, View, FlatList, StatusBar, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
 import React, { useState, useEffect } from 'react'
-import BaseUrl from '../../../Component/BaseURL/BaseUrl'
+import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const PrEnquirtForm = ({ navigation }) => {
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
+    const [accessToken, setAccess] = useState(null);
     console.log(data, "userdataprofil")
 
 
@@ -22,7 +23,10 @@ const PrEnquirtForm = ({ navigation }) => {
     }
 
 
-    useEffect(() => {
+    useEffect( async () => {
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
         fetch(BaseUrl + '/douryou-seller-api/seller-see-all-users-enuiiery-forms/', {
             headers: {
                 "Accept": "application/json",

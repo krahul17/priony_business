@@ -1,25 +1,35 @@
 import React,{useState,useEffect} from 'react'
 import { StyleSheet, Text, View,Dimensions, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput } from 'react-native';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const UserRequirement = () => {
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
+    // let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
 
+   
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
+    const [access,setAccessToken]=useState(null)
     console.log(data, "userdataprofil")
     console.log(data, "mydata")
 
+    
+    // let accessToken = AsyncStorage.getItem("accessToken");
+    // setAccessToken(access)
 
-    useEffect(() => {
+
+    useEffect( async () => {
+        let accessToken = await AsyncStorage.getItem("accessToken");
+        setAccessToken(access)
         fetch(BaseUrl + '/douryou-seller-api/seller-see-user-your-requrienment/', {
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                'Authorization': 'Bearer ' + accessToken,
+                'Authorization': 'Bearer ' 
+                + accessToken,
             },
         }).then((response) => response.json())
             .then((json) => setData(json))
@@ -29,6 +39,36 @@ const UserRequirement = () => {
             .finally(() => setLoading(false));
             
     }, []);
+
+
+        // let [accessToken, setAccessToken] = useState()
+    // const [loading, setLoading] = useState(false);
+    // const [data, setData] = useState([]);
+
+
+    // function getData(accessToken) {
+    //     fetch(BaseUrl + '/douryou-seller-api/seller-see-user-your-requrienment/', {
+    //         headers: {
+    //             "Accept": "application/json",
+    //             "Content-Type": "multipart/form-data",
+    //             'Authorization': 'Bearer ' + accessToken,
+    //         },
+    //     }).then((response) => response.json())
+    //         .then((json) => setData(json))
+    //         .catch((error) => console.error(error))
+    //         .finally(() => setLoading(false));
+    // }
+    // useEffect(async () => {
+    //     let accessToken = await AsyncStorage.getItem("accessToken")
+    //     console.log(accessToken)
+    //     // getData(accessToken)
+    //     setAccessToken(accessToken)
+    //     getData(accessToken)
+    // }, [])
+    // console.log(accessToken + "acces token")
+    // console.log(data, "DATllA")
+
+   
 
 
     const GustData = ({ item }) => {

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import CustomText from '../../../Component/CustomText/CustomText'
 import CustomUpload from '../../../Component/CustomUpload';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Franchise = ({ navigation }) => {
 
@@ -21,13 +22,18 @@ const Franchise = ({ navigation }) => {
         }
     }
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
+    // let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
 
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
+    const [accessToken, setAccess] = useState(null);
+
     console.log(data, "userdataprofil")
-    useEffect(() => {
+    useEffect( async () => {
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
         fetch(BaseUrl + '/douryou-seller-api/seller-sell-franchise/', {
             headers: {
                 "Accept": "application/json",

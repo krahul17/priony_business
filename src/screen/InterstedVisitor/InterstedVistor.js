@@ -11,15 +11,7 @@ const InterstedVistor = ({ navigation }) => {
             <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>
                 <View>
 
-                    {/* <View style={styles.navbar}>
-                        <View>
-                            <Image source={require('../HomeScreen/assets/logo.png')} style={styles.Logo} />
-                        </View>
-                        <View style={{ flexDirection: 'row', padding: 5, justifyContent: 'space-around' }}>
-                        </View>
-                    </View> */}
-
-                   
+                
                     <View style={styles.Name1}>
                     <View style={styles.topmain}>
                         <View style={styles.topad}>

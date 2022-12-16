@@ -32,7 +32,6 @@ export const AuthProvider = ({ children }) => {
         setAccess(accessToken)
         console.log(accessToken)
 
-    
     }
 
     

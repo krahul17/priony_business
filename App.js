@@ -20,7 +20,7 @@
 
 import { StyleSheet, Text, View } from 'react-native';
 import React, { useContext, useState, useEffect } from 'react';
-import Navigatino from './src/Navigation-Flow/Navigation/Navigatino'
+// import Navigatino from './src/Navigation-Flow/Navigation/Navigatino'
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AuthContext, AuthProvider } from './context/AuthContext';
@@ -42,6 +42,9 @@ import FreePlan from './src/screen/LoginFlow/Profile/FreePlan/FreePlan';
 import Profenssional from './src/screen/LoginFlow/Profile/Profenssional/Profenssional';
 import PaymentGateWay from './src/screen/LoginFlow/Profile/PaymentGateWay/PaymentGateWay';
 import PaymentConfirm from './src/screen/LoginFlow/Profile/PaymentGateWay/PaymentConfirm/PaymentConfirm';
+import Navigatino from './src/Navigation-Flow/Navigation/Navigatino';
+import AllPlanList from './src/screen/LoginFlow/Profile/AllPlanList/AllPlanList';
+import PlanComingSoon from './src/screen/LoginFlow/Profile/PlanComingSoon/PlanComingSoon';
 
 
 
@@ -64,9 +67,13 @@ function AuthStack() {
       <Stack.Screen name="Result" component={Result} />
       <Stack.Screen name="Review" component={Review} />
       <Stack.Screen name="FreePlan" component={FreePlan} />
+      <Stack.Screen name="AllPlanList" component={AllPlanList} />
       <Stack.Screen name="Profenssional" component={Profenssional} />
+      <Stack.Screen name="PlanComingSoon" component={PlanComingSoon} />  
       <Stack.Screen name="PaymentGateWay" component={PaymentGateWay} />
       <Stack.Screen name="PaymentConfirm" component={PaymentConfirm} />
+      
+      {/* <Stack.Screen name="Navigatino" component={Navigatino} /> */}
    
     
     </Stack.Navigator>
@@ -74,12 +81,11 @@ function AuthStack() {
 }
 function AppNav() {
   const { userToken } = useContext(AuthContext)
-  // console.log(userToken + Request.user, "sadkjfsk")
   console.log("user Token = " + userToken)
   console.log("statement = " + userToken !== null)
   return (
     <NavigationContainer>
-      {userToken !== null ?   <AuthStack></AuthStack> :<Navigatino></Navigatino>   }
+      {userToken !== null ? <Navigatino></Navigatino> :  <AuthStack></AuthStack>    }
     </NavigationContainer>
   )
 }

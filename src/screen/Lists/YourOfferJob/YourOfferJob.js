@@ -7,6 +7,7 @@ import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 const YourOfferJob = ({ navigation }) => {
 
     const [videocount, setVideoCount] = useState(0);
+    const [accessToken, setAccess] = useState(null);
     const increment = () => {
         if (videocount <= videocount) {
             setVideoCount(videocount + 1)
@@ -20,13 +21,15 @@ const YourOfferJob = ({ navigation }) => {
     }
 
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
-
+    
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
     console.log(data, "userdataprofil")
-    useEffect(() => {
+    useEffect( async () => {
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+        
         fetch(BaseUrl + '/douryou-seller-api/seller-job-offer-added/', {
             headers: {
                 "Accept": "application/json",

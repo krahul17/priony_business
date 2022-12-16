@@ -731,9 +731,9 @@ const HomeScreen = ({ navigation }) => {
           </View>
 
           <TouchableOpacity 
-          // onPress={logout}
-          onPress={()=>{navigation.navigate('Login')}}
-          >
+          onPress={logout}>
+   
+         
             <View style={{ backgroundColor: '#0006C1', padding: 15, marginHorizontal: 7, borderRadius: 13, marginVertical: 10 }}>
               <Text style={{ textAlign: 'center', color: '#fff', fontSize: 25, fontWeight: '800' }}>LOG OUT</Text>
             </View>

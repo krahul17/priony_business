@@ -14,7 +14,7 @@ const VerifyCode = ({ navigation, route }) => {
    // const [number, setNumber] = useState(phone_number);
    const [otpis, setOtpis] = useState("");
 
-   const {login} =useContext(AuthContext)
+   const {login,signup} =useContext(AuthContext)
 
    console.log(phone_number, 'phone_number')
    console.log(otpis, "otpisotpis")
@@ -47,28 +47,31 @@ const VerifyCode = ({ navigation, route }) => {
                console.log(response, "Response check")
                console.log(response.status)
                if (response.status == true) {
-                  AsyncStorage.setItem("userInfo", JSON.stringify(response));
-                  // console.log("referesh token = " + response.token.refresh);
-                  AsyncStorage.setItem("refereshToken", response.token.refresh);
-                  AsyncStorage.setItem("accessToken", response.token.access);
-                  // console.log(userInfo,'userInfo')
-                  login();
                  navigation.navigate('HomeScreen')
+                 signup()
                }
-               else {
+               else if (response.status == false) {
+                  AsyncStorage.setItem("userInfo", JSON.stringify(response))
+                   AsyncStorage.setItem("refereshToken", response.token.refresh);
+                  AsyncStorage.setItem("accessToken", response.token.access);
+                  // login();
+
                   navigation.navigate("CreateProfie", {
                      phone_number
                   });
+                  // console.log(response.token.access,'user token set ')
                   console.log("else  is working");
                   
                }
+            }).catch((err)=>{
+               alert('invalid Otp')
             })
             console.log(data.status)
          
          })
          // setNumbId(result);
       } catch (error) {
-         console.log('code', code)
+         // alert('code', code)
          alert(error);
       }
    }

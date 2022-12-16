@@ -45,15 +45,20 @@ const hotels = [
     },
 ];
 const YoutubeInterview = ({ navigation }) => {
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
-
+   
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [accessToken, setAccess] = useState(null);
 
     // let [accessToken, setAccessToken] = useState()
     console.log(data.Sellers, "acces token")
 
-    useEffect(() => {
+    useEffect( async () => {
+
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
+
         fetch(BaseUrl + '/douryou-seller-api/seller-see-admin-interview-for-him/', {
             headers: {
                 "Accept": "application/json",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput, ImageBackground,TouchableOpacity, Image } from "react-native";
+import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput, ImageBackground, TouchableOpacity, Image } from "react-native";
 import CustomDropDown from '../../../Component/CustomDropDown/CustomDropDown';
 import { Picker } from '@react-native-picker/picker';
 import CustomGender from '../../../Component/CustomGender/CustomGender';
@@ -7,6 +7,7 @@ import CustomUpload from '../../../Component/CustomUpload';
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput';
 import ImagePicker from 'react-native-image-crop-picker';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function JobOffer() {
 
@@ -27,7 +28,7 @@ export default function JobOffer() {
     const [showoption, setShowoption] = useState(false)
 
     const [accessToken, setAccess] = useState(null);
-    console.log('CHECJ', title, )
+    console.log('CHECJ', title,)
 
     const openGalleryFront = () => {
         ImagePicker
@@ -46,12 +47,8 @@ export default function JobOffer() {
         //    return
         // }
 
-
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzg4Njk5LCJqdGkiOiI0NWE2ZTlmNjUzMmE0YzljOWI5YzE2ODQ2NWQ1NTYzMiIsInVzZXJfaWQiOjJ9.X8ljmYCCzEnJPRs-QsYrmV7l3GDdylMlA7Ukj95mQn0"
-        setAccess(accessToken)
-
-        //    let accessToken = await AsyncStorage.getItem('accessToken');
-        //  setAccess(accessToken)
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
 
         let formData = new FormData();
         let filename = UploadAdsPhoto.split('/').pop();
@@ -89,7 +86,7 @@ export default function JobOffer() {
                 console.log(response, "Response");
                 alert("DATA SAVE")
             }).catch((error) => {
-                console.log(error);
+                alert(error);
             });
         })
     }

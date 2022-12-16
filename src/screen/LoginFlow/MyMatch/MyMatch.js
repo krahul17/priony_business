@@ -43,10 +43,8 @@ const MyMatch = ({ navigation, route }) => {
       alert('select option')
       return
     }
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
-
-    // let accessToken = await AsyncStorage.getItem('accessToken');
-    // setAccess(accessToken)
+    const accessToken = await AsyncStorage.getItem("accessToken");
+    setAccess(accessToken);
 
     let formData = new FormData();
   
@@ -74,76 +72,7 @@ const MyMatch = ({ navigation, route }) => {
     })
  }
 
-  const onSubmit = () => {
-
-    let furtherAssistanceData = []
-    if (checkBoxOne) {
-      furtherAssistanceData.push(checkBoxOne)
-    }
-    if (checkBoxTwo) {
-      furtherAssistanceData.push(checkBoxTwo)
-    }
-    if (checkBoxThree) {
-      furtherAssistanceData.push(checkBoxThree)
-    }
-    if (checkBoxFour) {
-      furtherAssistanceData.push(checkBoxFour)
-    }
-    if (checkBoxFive) {
-      furtherAssistanceData.push(checkBoxFive)
-    }
-    if (checkBoxSix) {
-      furtherAssistanceData.push(checkBoxSix)
-    }
-    if (checkBoxSeven) {
-      furtherAssistanceData.push(checkBoxSeven)
-    }
-    if (checkBoxEight) {
-      furtherAssistanceData.push(checkBoxEight)
-    }
-    if (checkBoxNine) {
-      furtherAssistanceData.push(checkBoxNine)
-    }
-    if (checkBoxTen) {
-      furtherAssistanceData.push(checkBoxTen)
-    }
-    if (checkBoxEleven) {
-      furtherAssistanceData.push(checkBoxEleven)
-    }
-    if (checkBoxTwelve) {
-      furtherAssistanceData.push(checkBoxTwelve)
-    }
-    if (checkBoxThirteen) {
-      furtherAssistanceData.push(checkBoxThirteen)
-    }
-    if (checkBoxFourteen) {
-      furtherAssistanceData.push(checkBoxFourteen)
-    }
-    if (checkBoxFifteen) {
-      furtherAssistanceData.push(checkBoxFifteen)
-    }
-    if (checkBoxSixteen) {
-      furtherAssistanceData.push(checkBoxSixteen)
-    }
-    if (checkBoxSeventeen) {
-      furtherAssistanceData.push(checkBoxSeventeen)
-    }
-    if (checkBoxEighteen) {
-      furtherAssistanceData.push(checkBoxSeventeen)
-    }
-    if (checkBoxNineteen) {
-      furtherAssistanceData.push(checkBoxSeventeen)
-    }
-    const assistanceData = {
-      ...businessData,
-      furtherAssistanceData: furtherAssistanceData,
-      note: note
-    }
-    // console.log(assistanceData, "assistanceData");
-    console.log(furtherAssistanceData, "furtherAssistanceData");
-    navigation.navigate('SetPasscode', { assistanceData })
-  }
-
+ 
   return (
     <>
       <StatusBar

@@ -19,16 +19,18 @@ const EventSecond = ({ navigation, route }) => {
     const [desigation, setDesignation] = useState('')
     const [number, setNumber] = useState('')
     const [quintity, setQuintity] = useState('')
-    const [accessToken2, setAccess] = useState(null);
+    const [accessToken, setAccess] = useState(null);
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
 
     console.log(data, 'data is comiong')
 
-    useEffect(() => {
+    useEffect( async () => {
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
         fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
             headers: {
                 "Accept": "application/json",

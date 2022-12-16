@@ -1,5 +1,5 @@
 import { StyleSheet, ScrollView, number, Text, View, TouchableOpacity, Image, TextInput, ImageBackground, TouchableHighlight, StatusBar } from 'react-native'
-import React, { useState, useContext } from 'react'
+import React, { useState, useEffect,useContext } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 import { AuthContext } from '../../../../context/AuthContext';
@@ -9,7 +9,7 @@ import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 
 const CreateProfie = ({ navigation, route }) => {
 
-   const { phone_number } = route.params;
+   const { phone_number,token } = route.params;
 
    // const { signup } = useContext(AuthContext)
 
@@ -22,12 +22,9 @@ const CreateProfie = ({ navigation, route }) => {
    const [CompanyLoginPhoneNo, setCompanyLoginPhoneNo] = useState(phone_number)
    const [accessToken, setAccess] = useState(null);
 
-   console.log(accessToken, "accessToken")
-
-   let usernames = AsyncStorage.getItem('username');
-   console.log('usernames', usernames)
 
 
+   const [nickname, setNickname] = useState();
 
    const [CompanyLogo, setCompanyLogo] = useState('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWR8UleGP6xe2whajk4Tq7rb08APejJOkf042F3Eo_TbVBg8Sj');
    const [showoption, setShowoption] = useState(false)
@@ -53,10 +50,8 @@ const CreateProfie = ({ navigation, route }) => {
          alert('Enter all felid')
          return
       }
-      let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
-
-      // let accessToken = await AsyncStorage.getItem('accessToken');
-      // setAccess(accessToken)
+      const accessToken = await AsyncStorage.getItem("accessToken");
+      setAccess(accessToken);
 
       let formData = new FormData();
       let filename = CompanyLogo.split('/').pop();
@@ -90,11 +85,6 @@ const CreateProfie = ({ navigation, route }) => {
             console.log(response, "Response");
 
             navigation.navigate('Profile')
-            // AsyncStorage.setItem("userInfo", JSON.stringify(response));
-            // console.log("referesh token = " + response.token.refresh);
-            // AsyncStorage.setItem("refereshToken", response.token.refresh);
-            // AsyncStorage.setItem("accessToken", response.token.access);
-            // signup();
             alert("DATA SAVE")
          }).catch((error) => {
             alert('something went wrong')

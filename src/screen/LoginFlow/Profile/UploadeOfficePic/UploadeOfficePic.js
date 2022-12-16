@@ -190,10 +190,9 @@ const UploadeOfficePic = ({ navigation }) => {
       //    return
       // }
 
-      let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNTI3ODI1LCJqdGkiOiJmNGIzOWE2MDE4ZWU0M2M3Yjc0NmU0N2ZmOGJiOTBiZCIsInVzZXJfaWQiOjEwfQ.0m9C02ZpNM5ibIUPbwQMRiseSf9evKxj07F00jiBzGs"
+      const accessToken = await AsyncStorage.getItem("accessToken");
+      setAccess(accessToken);
 
-      // let accessToken = await AsyncStorage.getItem('accessToken');
-      // setAccess(accessToken)
 
       let formData = new FormData();
       let filename = CompanyCertificationPic1.split('/').pop();
