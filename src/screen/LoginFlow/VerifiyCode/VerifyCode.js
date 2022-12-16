@@ -55,7 +55,7 @@ const VerifyCode = ({ navigation, route }) => {
                    AsyncStorage.setItem("refereshToken", response.token.refresh);
                   AsyncStorage.setItem("accessToken", response.token.access);
                   // login();
-
+ 
                   navigation.navigate("CreateProfie", {
                      phone_number
                   });

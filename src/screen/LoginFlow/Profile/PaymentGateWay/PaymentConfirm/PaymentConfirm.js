@@ -1,8 +1,27 @@
 import { StyleSheet,SafeAreaView, Text, View ,StatusBar,Image,ScrollView,TouchableOpacity} from 'react-native'
-import React from 'react'
+import React, { useEffect,useState,useContext } from 'react'
+import { AuthContext } from '../../../../../../context/AuthContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const PaymentConfirm = ({navigation}) => {
+
+    const {login,signup} =useContext(AuthContext)
+    const [accessToken, setAccessToken] = useState();
+
+    useEffect(() => {
+        const firstLoad = async () => {
+            try {
+                const token = await AsyncStorage.getItem("accessToken");
+                setAccessToken(token);
+                login()
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        firstLoad();
+    }, []);
+
   return (
     <>
     <StatusBar
@@ -15,7 +34,7 @@ const PaymentConfirm = ({navigation}) => {
                     <Image source={require('../../../../assetsLogo/logo.png')} style={styles.img}/>
                 </View>
                 <View style={styles.confirm}>
-                    <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+                    <TouchableOpacity>
                         <Text style={styles.text}> Wait for ADMIN confirmation{'\n'} for Payment</Text>
                     </TouchableOpacity>
                 </View>
