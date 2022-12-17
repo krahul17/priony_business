@@ -3,6 +3,7 @@ import React, { useState,useEffect } from 'react'
 import CustomText from '../../../Component/CustomText/CustomText'
 import CustomUpload from '../../../Component/CustomUpload';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const YourOfferJob = ({ navigation }) => {
 
@@ -68,10 +69,10 @@ const YourOfferJob = ({ navigation }) => {
                 <Image source={{uri : BaseUrl + item.BannerPhoto}} style={{width:350,height:350,borderRadius:5}}/>
                    </View>
 
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginLeft: 30 }}>
-                    <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                            <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
-                                <Image source={require('../../../screen/Lists/assets/eye.png')} style={styles.like} />
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <View style={{ flexDirection: 'row', marginLeft: 30 }}>
+                            <TouchableOpacity onPress={() => navigation.navigate('ViewAds')}>
+                                <Image source={require('../../../screen/Lists/assets/eye.png')} style={styles.eye} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
                             </TouchableOpacity>
@@ -235,7 +236,7 @@ const styles = StyleSheet.create({
         height: 20,
         width: 27,
         margin: 12,
-        marginLeft: -10
+        marginLeft: 20
     },
     like: {
         height: 22,

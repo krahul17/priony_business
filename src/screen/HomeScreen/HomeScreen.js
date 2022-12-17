@@ -1,11 +1,22 @@
 import { StyleSheet, Text, View, StatusBar, Modal, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
-import React, { useState,useContext } from 'react'
+import React, { useState,useContext,useEffect } from 'react'
 import { AuthContext } from '../../../context/AuthContext'
-const HomeScreen = ({ navigation }) => {
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import BaseUrl from '../../Component/BaseURL/BaseUrl'
+
+
+const HomeScreen = ({ navigation,item,Events }) => {
   const [count, setCount] = useState(0);
   const [count1, setCount1] = useState(0);
   const [modalshow, setModalShow] = useState(false)
   const [modalshowpackage, setModalShowPackage] = useState(false)
+
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [accessToken, setAccessToken] = useState();
+
+  console.log(data.CompanyName,"useinfo getting herr")
+
 
   const increment = () => {
     if (count <= count) {
@@ -17,7 +28,36 @@ const HomeScreen = ({ navigation }) => {
       setCount1(count1 + 1)
     }
   }
+
   const { logout } = useContext(AuthContext)
+
+  const firstLoad = async () => {
+    try {
+
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccessToken(accessToken);
+
+        await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
+          headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json",
+              'Authorization': 'Bearer ' + accessToken,
+          },
+      }).then((response) => response.json())
+          .then((json) => setData(json))
+          .catch((error) => console.error(error))
+          .finally(() => setLoading(false));
+
+        // console.log(data,"useinfo getting herr")
+
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+  useEffect(() => {
+    firstLoad();
+}, []);
 
   return (
     <>
@@ -73,7 +113,9 @@ const HomeScreen = ({ navigation }) => {
               </View>
               <View style={{ marginVertical: 15 }}>
                 <TouchableOpacity>
-                  <Text style={styles.link}>Eazyvisa Immigration Cusultalt</Text>
+                  <Text style={styles.link}>EAZY WALING CONSULTANT
+                    {/* {data.Events.ContactPersonNumber} */}
+                    </Text>
                 </TouchableOpacity>
                 <View>
                   <Text style={styles.adress}>Sco-40-41</Text>

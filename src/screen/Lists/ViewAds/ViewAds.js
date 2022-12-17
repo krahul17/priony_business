@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View, FlatList, StatusBar, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react';
+import BaseUrl from '../../../Component/BaseURL/BaseUrl'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ViewAds = () => {
     
@@ -18,9 +20,15 @@ const gustData = [
     },
     
   ]
+  const [accessToken, setAccess] = useState(null);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(null);
 
+  useEffect( async () => {
 
-  useEffect(() => {
+    const accessToken = await AsyncStorage.getItem("accessToken");
+    setAccess(accessToken);
+
     fetch(BaseUrl + '/douryou-seller-api/seller-view-todays-deals-added/', {
         headers: {
             "Accept": "application/json",

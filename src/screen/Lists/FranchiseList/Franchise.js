@@ -30,11 +30,12 @@ const Franchise = ({ navigation }) => {
     const [accessToken, setAccess] = useState(null);
 
     console.log(data, "userdataprofil")
-    useEffect( async () => {
+    useEffect(() => {
+        const loadData = async () => {
         const accessToken = await AsyncStorage.getItem("accessToken");
         setAccess(accessToken);
 
-        fetch(BaseUrl + '/douryou-seller-api/seller-sell-franchise/', {
+      await fetch(BaseUrl + '/douryou-seller-api/seller-sell-franchise/', {
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
@@ -44,6 +45,8 @@ const Franchise = ({ navigation }) => {
             .then((json) => setData(json))
             .catch((error) => console.error(error))
             .finally(() => setLoading(false));
+    }
+    loadData();
     }, []);
 
     console.log(data, 'jdddkjfhdjf')
@@ -76,10 +79,10 @@ const Franchise = ({ navigation }) => {
 
 
 
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginLeft: 30 }}>
-                        <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                            <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
-                                <Image source={require('../../../screen/Lists/assets/thumb.png')} style={styles.like} />
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
+                        <View style={{ flexDirection: 'row', marginLeft: 30 }}>
+                            <TouchableOpacity onPress={() => navigation.navigate('ViewAds')}>
+                                <Image source={require('../../../screen/Lists/assets/eye.png')} style={styles.eye} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
                             </TouchableOpacity>
@@ -243,7 +246,7 @@ const styles = StyleSheet.create({
         height: 20,
         width: 27,
         margin: 12,
-        marginLeft: -10
+        marginLeft: 20
     },
     like: {
         height: 22,
