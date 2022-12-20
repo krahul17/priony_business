@@ -3,8 +3,12 @@ import React, { useState,useEffect } from 'react'
 // import { Rating } from 'react-native-ratings'
 import TopTabNavigation from '../../Navigation-Flow/TopTabNavigation/TopTabNavigation'
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
+import BaseUrl from '../../Component/BaseURL/BaseUrl';
 
-const ProfileDetails = ({ navigation }) => {
+const ProfileDetails = ({ navigation,route }) => {
+
+  const {data}=route.params
+  console.log(data,'heello im data')
 
   const [videocount, setVideoCount] = useState(0);
   const increment = () => {
@@ -14,50 +18,8 @@ const ProfileDetails = ({ navigation }) => {
   }
 
   
-  // const testing = async () => {
-  //   AsyncStorage.setItem('data', "Check value");
-  //   console.log("user name set ",data )
-  // }
 
-  // const [loading, setLoading] = useState(false);
-  // const [data, setData] = useState([]);
-  // // let accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwOTM0NDQ1LCJpYXQiOjE2NzAwNzA0NDUsImp0aSI6Ijk0MmVmZGUzODk3NjQxNTU5YjE1ODZhMWEwMjU3MjJlIiwidXNlcl9pZCI6NH0.1xCiWyoFZVV3PZCFCXH7QEEx3Bk5ZM6Y8bWvlQIL00s';
-  // useEffect(() => {
-  //   fetch('https://random-data-api.com/api/v2/users',
-  //   // 'http://127.0.0.1:8000/douryou-seller-api/seller-ielts-all-seller/',
-  //    {
-  //     headers: {
-  //       "Accept": "application/json",
-  //       "Content-Type": "multipart/form-data",
-  //       'Authorization': 'Bearer ' 
-  //       // + accessToken,
-  //     },
-  //   }).then((response) => response.json())
-  //   .then(async (json) => {
-  //     setData(json)
-  //     testing()
-  //     let data = await AsyncStorage.getItem('data');
-  //     console.log("profile details scrren" + data)
-  //   })
-  //   .catch((error) => console.error(error))
-  //   .finally(() => setLoading(false));
-  // }, []);
-
-
-  useEffect(() => {
-    fetch(
-      'http://127.0.0.1:8000/douryou-seller-api/seller-registration/'
-      // 'https://random-data-api.com/api/v2/users'
-      )
-       .then((response) => response.json())
-       .then((data) => {
-          console.log(data);
-          setPosts(data);
-       })
-       .catch((err) => {
-          console.log(err.message);
-       });
- }, []);
+ 
   return (
     <>
       <StatusBar
@@ -69,15 +31,17 @@ const ProfileDetails = ({ navigation }) => {
             <View style={styles.row}>
               <View>
                 <TouchableOpacity>
-                  <Image source={require('../ProfileDetails/assets/rose.jpg')} style={styles.dp} />
+                  <Image source={{uri:BaseUrl + data.CompanyLogo}} style={styles.dp} />
                 </TouchableOpacity>
               </View>
 
               <View >
                 <TouchableOpacity>
-                  <Text style={styles.link}>Eazyvisa Immigration Cusultalt </Text>
+                  <Text style={styles.link}>{data.CompanyName} </Text>
                 </TouchableOpacity>
-                <Text style={styles.address}>Sco-40-41,{'\n'}Sector-34A, Chandigarh</Text>
+                <View style={{width:'90%'}}>
+                <Text style={styles.address}>{data.CompanyAddress}</Text>
+                </View>
               </View>
             </View>
 
@@ -104,7 +68,7 @@ const ProfileDetails = ({ navigation }) => {
                 <Image source={require('../ProfileDetails/assets/About.png')} style={styles.icon} />
               </View>
                 <TouchableOpacity>
-                  <Text style={styles.text}>About us</Text>
+                  <Text style={styles.text}>{data.AboutCompany}</Text>
                 </TouchableOpacity>
             </View>
           </View>
@@ -117,7 +81,7 @@ const ProfileDetails = ({ navigation }) => {
               </View>
           
                 <TouchableOpacity>
-                  <Text style={styles.text}>Our Specialization</Text>
+                  <Text style={styles.text}>{data.SpecializationOfCompany}</Text>
                 </TouchableOpacity>
               
              
@@ -150,12 +114,12 @@ const ProfileDetails = ({ navigation }) => {
 
               <View style={styles.Flex2}>
                 <View>
-                  <Image source={require('../ProfileDetails/assets/dppic.png')} style={styles.dppic} />
+                  <Image source={{uri:BaseUrl + data.ContactPersonPic}} style={styles.dppic} />
                 </View>
                 <View style={styles.input}>
                   <View style={{ flexDirection: 'row', }}>
                     <View>
-                      <Text style={styles.profile}>Name</Text>
+                      <Text style={styles.profile}>{data.ContactPersonName}</Text>
                     </View>
 
                   </View>

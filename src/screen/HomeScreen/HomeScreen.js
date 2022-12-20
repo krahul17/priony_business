@@ -15,7 +15,8 @@ const HomeScreen = ({ navigation,item,Events }) => {
   const [data, setData] = useState([]);
   const [accessToken, setAccessToken] = useState();
 
-  console.log(data.CompanyName,"useinfo getting herr")
+  console.log(data.AboutCompany
+    ,"useinfo getting herr")
 
 
   const increment = () => {
@@ -36,6 +37,7 @@ const HomeScreen = ({ navigation,item,Events }) => {
 
         const accessToken = await AsyncStorage.getItem("accessToken");
         setAccessToken(accessToken);
+        console.log(accessToken,' hello im token')
 
         await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
           headers: {
@@ -44,7 +46,7 @@ const HomeScreen = ({ navigation,item,Events }) => {
               'Authorization': 'Bearer ' + accessToken,
           },
       }).then((response) => response.json())
-          .then((json) => setData(json))
+          .then((json) => setData(json.Events))
           .catch((error) => console.error(error))
           .finally(() => setLoading(false));
 
@@ -107,19 +109,17 @@ const HomeScreen = ({ navigation,item,Events }) => {
 
             <View style={{ flexDirection: 'row' }}>
               <View>
-                <TouchableOpacity onPress={() => navigation.navigate('ProfileDetails')}>
-                  <Image source={require('../HomeScreen/assets/rose.jpg')} style={styles.dp} />
+                <TouchableOpacity onPress={() => navigation.navigate('ProfileDetails',{data})}>
+                  <Image source={{uri:BaseUrl + data.CompanyLogo}} style={styles.dp} />
                 </TouchableOpacity>
               </View>
               <View style={{ marginVertical: 15 }}>
                 <TouchableOpacity>
-                  <Text style={styles.link}>EAZY WALING CONSULTANT
-                    {/* {data.Events.ContactPersonNumber} */}
+                  <Text style={styles.link}>{data.CompanyName}
                     </Text>
                 </TouchableOpacity>
-                <View>
-                  <Text style={styles.adress}>Sco-40-41</Text>
-                  <Text style={styles.adress}>Sector-34A, Chandigarh</Text>
+                <View style={{width:'90%'}}>
+                  <Text style={styles.adress}>{data.CompanyAddress}</Text>
                 </View>
               </View>
             </View>
