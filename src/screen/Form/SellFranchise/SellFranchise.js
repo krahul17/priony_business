@@ -9,7 +9,7 @@ import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function SellFranchise({ route }) {
+export default function SellFranchise({ navigation,route }) {
 
     const [cname, setCName] = useState('')
     const [address, setAddress] = useState('')
@@ -88,7 +88,8 @@ export default function SellFranchise({ route }) {
         }).then((result) => {
             result.json().then((response) => {
                 console.log(response, "Response");
-                alert("DATA SAVE")
+                navigation.navigate("HomeScreen")
+                alert("Successfully Submit")
             }).catch((error) => {
                 console.log(error);
             });

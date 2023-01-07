@@ -71,7 +71,7 @@ const YourOfferJob = ({ navigation }) => {
 
                     <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
                     <View style={{ flexDirection: 'row', marginLeft: 30 }}>
-                            <TouchableOpacity onPress={() => navigation.navigate('ViewAds')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('ViewsJobOffer',{item})}>
                                 <Image source={require('../../../screen/Lists/assets/eye.png')} style={styles.eye} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
@@ -82,7 +82,7 @@ const YourOfferJob = ({ navigation }) => {
                         </View>
 
                         <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                            <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('LikeJobOffer',{item})}>
                                 <Image source={require('../../../screen/Lists/assets/thumb.png')} style={styles.like} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
@@ -94,7 +94,7 @@ const YourOfferJob = ({ navigation }) => {
 
                         <View style={{ flexDirection: 'row', marginLeft: 30 }}>
 
-                            <TouchableOpacity onPress={() => navigation.navigate("ShareAds")}>
+                            <TouchableOpacity onPress={() => navigation.navigate("ShareJobOffer",{item})}>
                                 <Image source={require('../assets/share.png')} style={styles.share} />
                             </TouchableOpacity>
                             <View style={styles.sharecount}>

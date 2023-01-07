@@ -1,15 +1,19 @@
 import { StyleSheet, ScrollView, number, Text, View, TouchableOpacity, Image, TextInput, ImageBackground, TouchableHighlight, StatusBar } from 'react-native'
-import React, { useState, useEffect,useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 import { AuthContext } from '../../../../context/AuthContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../Component/Loader/Loader';
 
 
 const CreateProfie = ({ navigation, route }) => {
 
-   const { phone_number,token } = route.params;
+   const { phone_number, token } = route.params;
+   const [modalVisible, setModalVisible] = useState(false);
+
+   const companylogo2 = 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWR8UleGP6xe2whajk4Tq7rb08APejJOkf042F3Eo_TbVBg8Sj'
 
    // const { signup } = useContext(AuthContext)
 
@@ -26,7 +30,7 @@ const CreateProfie = ({ navigation, route }) => {
 
    const [nickname, setNickname] = useState();
 
-   const [CompanyLogo, setCompanyLogo] = useState('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWR8UleGP6xe2whajk4Tq7rb08APejJOkf042F3Eo_TbVBg8Sj');
+   const [CompanyLogo, setCompanyLogo] = useState();
    const [showoption, setShowoption] = useState(false)
 
 
@@ -52,6 +56,8 @@ const CreateProfie = ({ navigation, route }) => {
       }
       const accessToken = await AsyncStorage.getItem("accessToken");
       setAccess(accessToken);
+
+      setModalVisible(true)
 
       let formData = new FormData();
       let filename = CompanyLogo.split('/').pop();
@@ -83,11 +89,13 @@ const CreateProfie = ({ navigation, route }) => {
       }).then((result) => {
          result.json().then((response) => {
             console.log(response, "Response");
-
-            navigation.navigate('Profile')
+            setModalVisible(false)
             alert("DATA SAVE")
+            navigation.navigate('Profile')
+           
          }).catch((error) => {
-            alert('something went wrong')
+            setModalVisible(false)
+            alert(error)
             console.log(error);
          });
       })
@@ -122,16 +130,23 @@ const CreateProfie = ({ navigation, route }) => {
                         <Image source={require('../CreateProfile/assets/Camerab.png')} style={styles.camera} />
                      </TouchableOpacity>
 
+                     { CompanyLogo ?
+
                      <View style={{ borderWidth: 1, borderRadius: 10, height: 150, position: 'relative' }}>
-
-                        <ImageBackground source={{ uri: CompanyLogo }} style={styles.dp} />
-
+                      <ImageBackground source={{ uri: CompanyLogo }} style={styles.dp} />
                      </View>
+                     :
+                     <View style={{ borderWidth: 1, borderRadius: 10, height: 150, position: 'relative' }}>
+                        <ImageBackground source={{ uri: companylogo2 }} style={styles.dp} />
+                     </View>
+
+                     }
+
                   </View>
 
                </View>
 
-               
+
                <CustomTextInput label={'Company Name'} value={CompanyName} setValue={setCompanyName} />
                <CustomTextInput label={'Company Adress'} value={CompanyAddress} setValue={setCompanyAddress} />
                <CustomTextInput label={'District Name'} value={CompanyDistrictName} setValue={setCompanyDistrictName} />
@@ -149,6 +164,7 @@ const CreateProfie = ({ navigation, route }) => {
                </TouchableOpacity>
 
 
+               <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
             </View>
          </ScrollView>

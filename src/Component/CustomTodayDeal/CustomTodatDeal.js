@@ -9,7 +9,7 @@ import BaseUrl from '../BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-export default function CustomTodatDeal({ route }) {
+export default function CustomTodatDeal({navigation, route }) {
 
 
     console.disableYellowBox = true
@@ -72,7 +72,8 @@ export default function CustomTodatDeal({ route }) {
         }).then((result) => {
            result.json().then((response) => {
               console.log(response, "Response");
-              alert("DATA SAVE")
+              navigation.navigate("HomeScreen")
+              alert("Successfully Submit")
            }).catch((error) => {
             alert(error)
             //   console.log(error);

@@ -9,7 +9,7 @@ import ImagePicker from 'react-native-image-crop-picker';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function JobOffer() {
+export default function JobOffer({navigation}) {
 
     const [title, setTitle] = useState('')
     const [employee, setEmployee] = useState('')
@@ -84,7 +84,8 @@ export default function JobOffer() {
         }).then((result) => {
             result.json().then((response) => {
                 console.log(response, "Response");
-                alert("DATA SAVE")
+                navigation.navigate("HomeScreen")
+                alert("Successfully Submit")
             }).catch((error) => {
                 alert(error);
             });

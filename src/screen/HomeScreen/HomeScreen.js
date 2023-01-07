@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, StatusBar, Modal, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
-import React, { useState,useContext,useEffect } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { AuthContext } from '../../../context/AuthContext'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import BaseUrl from '../../Component/BaseURL/BaseUrl'
 
 
-const HomeScreen = ({ navigation,item,Events }) => {
+const HomeScreen = ({ navigation, item, Events }) => {
   const [count, setCount] = useState(0);
   const [count1, setCount1] = useState(0);
   const [modalshow, setModalShow] = useState(false)
@@ -15,8 +15,12 @@ const HomeScreen = ({ navigation,item,Events }) => {
   const [data, setData] = useState([]);
   const [accessToken, setAccessToken] = useState();
 
-  console.log(data.AboutCompany
-    ,"useinfo getting herr")
+  console.log(data,"useinfo getting herr")
+
+  const [first, setfirst] = useState(data.plan);
+
+  console.log(data.plan,' plan is ....')
+
 
 
   const increment = () => {
@@ -35,31 +39,31 @@ const HomeScreen = ({ navigation,item,Events }) => {
   const firstLoad = async () => {
     try {
 
-        const accessToken = await AsyncStorage.getItem("accessToken");
-        setAccessToken(accessToken);
-        console.log(accessToken,' hello im token')
+      const accessToken = await AsyncStorage.getItem("accessToken");
+      setAccessToken(accessToken);
+      console.log(accessToken, ' hello im token')
 
-        await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
-          headers: {
-              "Accept": "application/json",
-              "Content-Type": "application/json",
-              'Authorization': 'Bearer ' + accessToken,
-          },
+      await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          'Authorization': 'Bearer ' + accessToken,
+        },
       }).then((response) => response.json())
-          .then((json) => setData(json.Events))
-          .catch((error) => console.error(error))
-          .finally(() => setLoading(false));
+        .then((json) => setData(json.Events))
+        .catch((error) => console.error(error))
+        .finally(() => setLoading(false));
 
-        // console.log(data,"useinfo getting herr")
+      // console.log(data,"useinfo getting herr")
 
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-};
+  };
 
   useEffect(() => {
     firstLoad();
-}, []);
+  }, []);
 
   return (
     <>
@@ -109,17 +113,22 @@ const HomeScreen = ({ navigation,item,Events }) => {
 
             <View style={{ flexDirection: 'row' }}>
               <View>
-                <TouchableOpacity onPress={() => navigation.navigate('ProfileDetails',{data})}>
-                  <Image source={{uri:BaseUrl + data.CompanyLogo}} style={styles.dp} />
+                <TouchableOpacity onPress={() => navigation.navigate('ProfileDetails',
+                  { data }
+                )}>
+                  <Image source={{ uri: BaseUrl + data.CompanyLogo }} style={styles.dp} />
                 </TouchableOpacity>
               </View>
-              <View style={{ marginVertical: 15 }}>
+              <View style={{ marginVertical: 15, width: '75%' }}>
                 <TouchableOpacity>
-                  <Text style={styles.link}>{data.CompanyName}
-                    </Text>
+                  <Text style={styles.link}>
+                    {data.CompanyName}
+                  </Text>
                 </TouchableOpacity>
-                <View style={{width:'90%'}}>
-                  <Text style={styles.adress}>{data.CompanyAddress}</Text>
+                <View>
+                  <Text style={styles.adress}>
+                    {data.CompanyAddress}
+                  </Text>
                 </View>
               </View>
             </View>
@@ -143,20 +152,32 @@ const HomeScreen = ({ navigation,item,Events }) => {
               </Modal>
             </View>
 
+            {/* { first === 'free_PLAN' &&
+              <View style={styles.bar}>
 
+                <View style={{ marginVertical: 10 }}>
+                  <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>FreePlan</Text>
+                </View>
 
-            <View style={styles.bar}>
-              <View style={{ marginVertical: 10 }}>
-                <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
               </View>
-              <View style={{ flexDirection: 'row', marginVertical: 12 }}>
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+            } */}
+
+            {first === 'PORFENSSIONAL Plan'  &&
+              <View style={styles.bar}>
+
+                <View style={{ marginVertical: 10 }}>
+                  <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
+                </View>
+                <View style={{ flexDirection: 'row', marginVertical: 12 }}>
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                </View>
+
               </View>
-            </View>
+            }
 
           </View>
 
@@ -772,10 +793,10 @@ const HomeScreen = ({ navigation,item,Events }) => {
 
           </View>
 
-          <TouchableOpacity 
-          onPress={logout}>
-   
-         
+          <TouchableOpacity
+            onPress={logout}>
+
+
             <View style={{ backgroundColor: '#0006C1', padding: 15, marginHorizontal: 7, borderRadius: 13, marginVertical: 10 }}>
               <Text style={{ textAlign: 'center', color: '#fff', fontSize: 25, fontWeight: '800' }}>LOG OUT</Text>
             </View>
@@ -796,10 +817,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     // marginHorizontal: 20,
     height: 72,
-    width:'100%'
+    width: '100%'
   },
   Logo: {
-    marginTop:20,
+    marginTop: 20,
     marginHorizontal: 10,
     height: 45,
     width: 160
@@ -863,7 +884,7 @@ const styles = StyleSheet.create({
     color: '#000',
     marginTop: 10,
     marginVertical: -10,
-    marginHorizontal: 5
+    marginHorizontal: 5,
   },
   pen: {
     height: 35,

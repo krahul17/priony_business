@@ -123,17 +123,7 @@ const Form = ({ route }) => {
             <CustomText Name={item.EnterYourDetail} />
             <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10 }}>
 
-              <View style={{ marginRight: 20, margin: 2 }}>
-                <TouchableOpacity>
-                  <Image source={require('../../../../screen/Lists/assets/chat1.png')} style={{ height: 26, width: 27 }} />
-                </TouchableOpacity>
-              </View>
-
-              <View style={{ marginRight: 10, margin: 2 }}>
-                <TouchableOpacity>
-                  <Image source={require('../../../../screen/Lists/assets/share.png')} style={{ height: 23, width: 20 }} />
-                </TouchableOpacity>
-              </View>
+             
 
             </View>
 

@@ -1,10 +1,13 @@
 import React,{useState,useEffect} from 'react'
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView,Linking, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput, Dimensions } from 'react-native';
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 import CustomText from '../../../Component/CustomText/CustomText';
 import EventsScreen from '../EventsScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Share from 'react-native-share'
+import { ShareUrl } from '../../../Component/BaseURL/BaseUrl';
+import { AdminChatNo } from '../../../Component/BaseURL/BaseUrl';
 
 const EventSecond = ({ navigation, route }) => {
 
@@ -12,8 +15,44 @@ const EventSecond = ({ navigation, route }) => {
 
     const { value } = route.params
     const item=value;
-    console.log(item.id,"jdhfuj item event")
+    const EventId=item.id
+
+    console.log(item.id," event id jdhfuj item event")
     console.log('mera event jdfjdfbd',item.EventCatagory)
+
+    const url = ShareUrl;
+    const options = {url};
+    const share = async (customOptions = options) => {
+        try {
+            await Share.open(customOptions);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    const [mobileNumber, setMobileNumber] = useState(AdminChatNo);
+    console.log(item.phone_number,'phone number gett')
+    // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
+    const WhatsAppchat = () => {
+      // Check for perfect 10 digit length
+      if (mobileNumber.length != 10) {
+        alert('Please insert correct WhatsApp number');
+        return;
+      }
+      // Using 91 for India
+      // You can change 91 with your country code
+      let url =
+        'whatsapp://send?text=' +
+        //  whatsAppMsg +
+        '&phone=91'+ mobileNumber;
+      Linking.openURL(url)
+        .then((data) => {
+          console.log('WhatsApp Opened');
+        })
+        .catch(() => {
+          alert('Make sure Whatsapp installed on your device');
+        });
+    };
 
     const [contactPerson, setContactPerson] = useState('')
     const [desigation, setDesignation] = useState('')
@@ -24,6 +63,7 @@ const EventSecond = ({ navigation, route }) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
+     const finalamount=item.FirstPrice*quintity
 
     console.log(data, 'data is comiong')
 
@@ -44,6 +84,7 @@ const EventSecond = ({ navigation, route }) => {
                 console.error(error))
             .finally(() => setLoading(false));
     }, []);
+
     const SaveData = async () => {
 
         // if (!( select_catgry && title && desc && UploadAdsPhoto )) {
@@ -51,17 +92,12 @@ const EventSecond = ({ navigation, route }) => {
         //    return
         // }
 
-
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
-        setAccess(accessToken)
-        //    let accessToken = await AsyncStorage.getItem('accessToken');
-        //  setAccess(accessToken)
-
         let formData = new FormData();
         formData.append('ContactPerson', contactPerson)
         formData.append('Designation', desigation)
         formData.append('ContactNumber', number)
         formData.append('BookedQuentity', quintity)
+        formData.append('WhichEvent', EventId)
    
       
 
@@ -71,7 +107,7 @@ const EventSecond = ({ navigation, route }) => {
                 "Accept": "application/json",
                 "Content-Type": "multipart/form-data",
                 'Authorization': 'Bearer ' 
-                // + accessToken2,
+                + accessToken,
             },
             body: formData
         }).then((result) => {
@@ -79,7 +115,7 @@ const EventSecond = ({ navigation, route }) => {
                 console.log(response, "Response");
                 alert("DATA SAVE")
                 navigation.navigate('EventPayment',{
-                    plan:item.EventCatagory,})
+                    plan:item.EventCatagory,finalamount})
             }).catch((error) => {
                 console.log(error);
             });
@@ -122,8 +158,11 @@ const EventSecond = ({ navigation, route }) => {
                                 </View>
 
                                 <View>
-                                    <View style={{ marginTop: 10 }}>
-                                    <Text style={{ width:"50%",fontSize: 22, fontWeight: '600', color: '#000', }}>{item.EventAddress}</Text>
+                                    <View style={{ marginTop: 10 , width:"90%"}}>
+                                    <Text style={{ fontSize: 22, fontWeight: '600', color: '#000', }}>
+                                        {item.EventAddress}
+                                        
+                                        </Text>
                                     </View>
                                    
                                 </View>
@@ -211,7 +250,7 @@ const EventSecond = ({ navigation, route }) => {
                                 </View>
                                 <View style={styles.mainadress}>
                                     <View>
-                                        <Text style={styles.label} >         Quintity </Text>
+                                        <Text style={styles.label} >        Quintity </Text>
                                     </View>
                                     <View>
                                         <TextInput style={styles.name2} placeholder={'please Enter quintity'} value={quintity} onChangeText={setQuintity}>
@@ -230,15 +269,15 @@ const EventSecond = ({ navigation, route }) => {
                                 </View>
                             </TouchableOpacity>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -45 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -45, marginBottom:15 }}>
 
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={() => { WhatsAppchat();}}>
                                     <View style={{ marginRight: 20, margin: 2 }}>
                                         <Image source={require('../assets/chat1.png')} style={{ height: 30, width: 32 }} />
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={async () => {await share();}}>
                                     <View style={{ marginRight: 10, margin: 2 }}>
                                         <Image source={require('../assets/share.png')} style={{ height: 30, width: 27 }} />
                                     </View>

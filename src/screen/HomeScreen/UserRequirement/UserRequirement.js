@@ -1,29 +1,36 @@
 import React,{useState,useEffect} from 'react'
-import { StyleSheet, Text, View,Dimensions, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View,Dimensions, Image, SafeAreaView, Linking,ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput } from 'react-native';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Share from 'react-native-share'
+import { ShareUrl } from '../../../Component/BaseURL/BaseUrl';
 
 
 const UserRequirement = () => {
-
-    // let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
-
    
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
-    const [access,setAccessToken]=useState(null)
+    const [accessToken,setAccessToken]=useState(null)
     console.log(data, "userdataprofil")
     console.log(data, "mydata")
 
-    
-    // let accessToken = AsyncStorage.getItem("accessToken");
-    // setAccessToken(access)
+    const url = ShareUrl;
+    const options = {url};
+    const share = async (customOptions = options) => {
+        try {
+            await Share.open(customOptions);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
 
     useEffect( async () => {
+        
         let accessToken = await AsyncStorage.getItem("accessToken");
-        setAccessToken(access)
+        setAccessToken(accessToken)
+
         fetch(BaseUrl + '/douryou-seller-api/seller-see-user-your-requrienment/', {
             headers: {
                 "Accept": "application/json",
@@ -39,39 +46,37 @@ const UserRequirement = () => {
             .finally(() => setLoading(false));
             
     }, []);
-
-
-        // let [accessToken, setAccessToken] = useState()
-    // const [loading, setLoading] = useState(false);
-    // const [data, setData] = useState([]);
-
-
-    // function getData(accessToken) {
-    //     fetch(BaseUrl + '/douryou-seller-api/seller-see-user-your-requrienment/', {
-    //         headers: {
-    //             "Accept": "application/json",
-    //             "Content-Type": "multipart/form-data",
-    //             'Authorization': 'Bearer ' + accessToken,
-    //         },
-    //     }).then((response) => response.json())
-    //         .then((json) => setData(json))
-    //         .catch((error) => console.error(error))
-    //         .finally(() => setLoading(false));
-    // }
-    // useEffect(async () => {
-    //     let accessToken = await AsyncStorage.getItem("accessToken")
-    //     console.log(accessToken)
-    //     // getData(accessToken)
-    //     setAccessToken(accessToken)
-    //     getData(accessToken)
-    // }, [])
-    // console.log(accessToken + "acces token")
-    // console.log(data, "DATllA")
-
    
 
 
     const GustData = ({ item }) => {
+
+
+        const [mobileNumber, setMobileNumber] = useState(item.username.phone_number.slice(3,13));
+
+        console.log(item.phone,'12WhatsApp Opened');
+        // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
+        const WhatsAppchat = () => {
+          // Check for perfect 10 digit length
+          if (mobileNumber.length != 10) {
+            alert('Please insert correct WhatsApp number');
+            return;
+          }
+          // Using 91 for India
+          // You can change 91 with your country code
+          let url =
+            'whatsapp://send?text=' +
+            //  whatsAppMsg +
+            '&phone=91' + mobileNumber;
+          Linking.openURL(url)
+            .then((data) => {
+              console.log('WhatsApp Opened');
+            })
+            .catch(() => {
+              alert('Make sure Whatsapp installed on your device');
+            });
+        };
+
         return (
             <View style={styles.mainList}>
     
@@ -164,13 +169,13 @@ const UserRequirement = () => {
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10 }}>
     
                     <View style={{ marginRight: 20, margin: 2 }}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => { WhatsAppchat();}}>
                             <Image source={require('../../../screen/Lists/assets/chat1.png')} style={{ height: 27, width: 29 }} />
                         </TouchableOpacity>
                     </View>
     
                     <View style={{ marginRight: 10, margin: 2 }}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={async () => {await share();}}>
                             <Image source={require('../../../screen/Lists/assets/share.png')} style={{ height: 28, width: 25 }} />
                         </TouchableOpacity>
                     </View>
@@ -179,7 +184,7 @@ const UserRequirement = () => {
     
                 <View>
                     <View style={{ backgroundColor: '#0006C1', padding: 10,marginTop:10 }}>
-                        <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', marginLeft: 10 }}>{item.date}</Text>
+                        <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', marginLeft: 10 }}>Date Addded :- {item.date.slice(0,10)}</Text>
                     </View>
                 </View>
     

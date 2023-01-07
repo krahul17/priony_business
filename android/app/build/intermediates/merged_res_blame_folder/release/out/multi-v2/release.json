@@ -2933,6 +2933,23 @@
                     }
                 },
                 {
+                    "source": "D:\\priony_business\\priony_mainbusiness\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "51",
+                        "endOffsets": "63"
+                    },
+                    "to": {
+                        "startLines": "743",
+                        "startColumns": "4",
+                        "startOffsets": "47629",
+                        "endColumns": "51",
+                        "endOffsets": "47676"
+                    }
+                },
+                {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\f871fb77c088eda10a778a68cf4c2659\\transformed\\jetified-drawee-2.5.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,141",
@@ -3009,20 +3026,22 @@
                     }
                 },
                 {
-                    "source": "D:\\priony_business\\priony_business\\android\\app\\build\\generated\\res\\resValues\\release\\values\\gradleResValues.xml",
+                    "source": "D:\\priony_business\\priony_mainbusiness\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "163,273",
-                        "endColumns": "63,68",
-                        "endOffsets": "222,337"
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "267"
                     },
                     "to": {
-                        "startLines": "705,706",
-                        "startColumns": "4,4",
-                        "startOffsets": "44959,45023",
-                        "endColumns": "63,68",
-                        "endOffsets": "45018,45087"
+                        "startLines": "881",
+                        "startColumns": "4",
+                        "startOffsets": "63777",
+                        "endLines": "884",
+                        "endColumns": "12",
+                        "endOffsets": "63955"
                     }
                 },
                 {
@@ -3042,6 +3061,23 @@
                         "endLines": "7220",
                         "endColumns": "24",
                         "endOffsets": "392559"
+                    }
+                },
+                {
+                    "source": "D:\\priony_business\\priony_mainbusiness\\android\\app\\build\\generated\\res\\resValues\\release\\values\\gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "163,273",
+                        "endColumns": "63,68",
+                        "endOffsets": "222,337"
+                    },
+                    "to": {
+                        "startLines": "705,706",
+                        "startColumns": "4,4",
+                        "startOffsets": "44959,45023",
+                        "endColumns": "63,68",
+                        "endOffsets": "45018,45087"
                     }
                 },
                 {
@@ -3155,23 +3191,6 @@
                     }
                 },
                 {
-                    "source": "D:\\priony_business\\priony_business\\android\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "51",
-                        "endOffsets": "63"
-                    },
-                    "to": {
-                        "startLines": "743",
-                        "startColumns": "4",
-                        "startOffsets": "47629",
-                        "endColumns": "51",
-                        "endOffsets": "47676"
-                    }
-                },
-                {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\4c4e47c61aad9122cb269c11957ecc05\\transformed\\jetified-ucrop-2.2.6-native\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,64,71,80,89,98,104,112",
@@ -3224,25 +3243,6 @@
                         "startOffsets": "47546",
                         "endColumns": "82",
                         "endOffsets": "47624"
-                    }
-                },
-                {
-                    "source": "D:\\priony_business\\priony_business\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "267"
-                    },
-                    "to": {
-                        "startLines": "881",
-                        "startColumns": "4",
-                        "startOffsets": "63777",
-                        "endLines": "884",
-                        "endColumns": "12",
-                        "endOffsets": "63955"
                     }
                 },
                 {

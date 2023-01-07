@@ -1,11 +1,12 @@
 import { StyleSheet, ScrollView, number, Text, View, TouchableOpacity, Image, TextInput, ImageBackground, StatusBar, Dimensions } from 'react-native'
-import React, { useState,useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker'
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 import PhoneInput from 'react-native-phone-number-input';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 import { AuthContext } from '../../../../context/AuthContext';
-import  AsyncStorage  from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Loader from '../../../Component/Loader/Loader';
 
 
 const Profile = ({ navigation }) => {
@@ -14,8 +15,11 @@ const Profile = ({ navigation }) => {
    const [ContactPersonNumber, setContactPersonNumber] = useState('')
    const [ContactPersonDesigation, setContactPersonDesigation] = useState()
    const [accessToken, setAccess] = useState(null);
+   const ContactPersonPic2 = 'https://icon-library.com/images/upload-image-icon-png/upload-image-icon-png-26.jpg'
+  
+   const [modalVisible, setModalVisible] = useState(false);
 
-   const [ContactPersonPic, setContactPersonPic] = useState('https://icon-library.com/images/upload-image-icon-png/upload-image-icon-png-26.jpg');
+   const [ContactPersonPic, setContactPersonPic] = useState();
    const [showoption, setShowoption] = useState(false)
 
    const openGalleryFront = () => {
@@ -31,15 +35,22 @@ const Profile = ({ navigation }) => {
    }
 
 
-  
+
 
    // const {signup} =useContext(AuthContext)
 
    const SaveData = async () => {
-      
+      if (!(ContactPersonPic && ContactPersonName && ContactPersonDesigation && ContactPersonNumber )) {
+         alert('Enter all felid')
+         return
+      }
+       
+
       const accessToken = await AsyncStorage.getItem("accessToken");
       setAccess(accessToken);
-    
+
+      setModalVisible(true)
+
       let formData = new FormData();
       let filename = ContactPersonPic.split('/').pop();
       console.log("filename = " + filename);
@@ -48,35 +59,38 @@ const Profile = ({ navigation }) => {
       let type = match ? `image/${match[1]}` : `image`;
       console.log("type = " + type);
       formData.append('ContactPersonName', ContactPersonName)
-      formData.append('ContactPersonNumber', "ContactPersonNumber")
+      formData.append('ContactPersonNumber', ContactPersonNumber)
       formData.append('ContactPersonDesigation', ContactPersonDesigation)
       formData.append('ContactPersonPic', { uri: ContactPersonPic, name: filename, type })
-  
+
       formData.append("is_active", true)
       formData.append("is_user", true)
 
       fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
          method: 'Patch',
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "multipart/form-data",
-          'Authorization': 'Bearer ' + accessToken,
-        },
-        body: formData
+         headers: {
+            "Accept": "application/json",
+            "Content-Type": "multipart/form-data",
+            'Authorization': 'Bearer ' + accessToken,
+         },
+         body: formData
       }).then((result) => {
-        result.json().then((response) => {
-          console.log(response, "Response");
-          navigation.navigate('Aboutus')
-          alert("DATA SAVE")
-         
-     
-        }).catch((error) => {
-         alert('something went wrong')
-         console.log(error);
-      });
+         result.json().then((response) => {
+            setModalVisible(false)
+            console.log(response, "Response");
+            alert("DATA SAVE")
+            navigation.navigate('Aboutus')
+            
+
+
+         }).catch((error) => {
+            setModalVisible(false)
+            alert(error)
+            console.log(error);
+         });
       })
       console.log()
-    }
+   }
 
    return (
       <>
@@ -112,11 +126,16 @@ const Profile = ({ navigation }) => {
                            </View>
                         </TouchableOpacity>
                      </View>
-                     <View style={{ borderWidth: 1, borderRadius: 10, height: 150, position: 'relative' }}>
+                     {ContactPersonPic ?
+                        < View style={{ borderWidth: 1, borderRadius: 10, height: 150, position: 'relative' }}>
+                           <ImageBackground source={{ uri: ContactPersonPic }} style={styles.dp} />
+                        </View>
+                        :
+                        <View style={{ borderWidth: 1, borderRadius: 10, height: 150, position: 'relative' }}>
+                           <ImageBackground source={{ uri: ContactPersonPic2 }} style={styles.dp} />
+                        </View>
+                     }
 
-                        <ImageBackground source={{ uri: ContactPersonPic }} style={styles.dp} />
-
-                     </View>
                   </View>
 
                </View>
@@ -126,7 +145,7 @@ const Profile = ({ navigation }) => {
                <CustomTextInput label={'Contact Person Name'} value={ContactPersonName} setValue={setContactPersonName} />
                {/* <CustomTextInput label={'Contact Whatsapp Number'} value={ContactPersonNumber} setValue={setContactPersonNumber} /> */}
 
-               <Text style={{color:'#000',fontWeight:"400",marginVertical:5,fontSize:15,marginLeft:40}}>Enter Your Whatsapp Number For Chat</Text>
+               <Text style={{ color: '#000', fontWeight: "400", marginVertical: 5, fontSize: 15, marginLeft: 40 }}>Enter Your Whatsapp Number For Chat</Text>
 
                <View style={styles.PhoneInput}>
                   <PhoneInput
@@ -163,6 +182,7 @@ const Profile = ({ navigation }) => {
                <TouchableOpacity onPress={SaveData} style={styles.Btn}>
                   <Text style={styles.btn}> Submit </Text>
                </TouchableOpacity>
+               <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
 
             </View>
@@ -179,7 +199,7 @@ const styles = StyleSheet.create({
       height: 160,
       alignSelf: 'center',
       marginTop: '10%',
-      resizeMode:'contain'
+      resizeMode: 'contain'
    },
    wel: {
       marginVertical: 20,

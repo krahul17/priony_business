@@ -77,24 +77,30 @@ const YoutubeAds = ({ navigation }) => {
 
                             <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
                                 <View style={{ flexDirection: 'row', marginLeft: 30 }}>
-                                    <TouchableOpacity onPress={() => navigation.navigate('ViewAds')}>
+                                    <TouchableOpacity onPress={() => navigation.navigate('ViewAds',{item})}>
                                         <Image source={require('../assets/eye.png')} style={style.eye} />
                                     </TouchableOpacity>
+                                    <Text style={{color:'#000', marginTop:10, fontSize:16}}>{item.ViewsCount}</Text>
+
 
                                 </View>
 
                                 <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                                    <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
+                                    <TouchableOpacity onPress={() => navigation.navigate('LikeAds',{item})}>
                                         <Image source={require('../assets/thumb.png')} style={style.like} />
                                     </TouchableOpacity>
+
+                                    <Text style={{color:'#000', marginTop:9, fontSize:16}}>{item.LikeCount}</Text>
 
                                 </View>
 
                                 <View style={{ flexDirection: 'row', marginLeft: 30 }}>
 
-                                    <TouchableOpacity onPress={() => navigation.navigate("ShareAds")}>
+                                    <TouchableOpacity onPress={() => navigation.navigate("ShareAds",{item})}>
                                         <Image source={require('../assets/share.png')} style={style.share} />
                                     </TouchableOpacity>
+                                    <Text style={{color:'#000', marginTop:9, marginLeft:10, fontSize:16}}>{item.ShearCount}</Text>
+
 
                                 </View>
                             </View>

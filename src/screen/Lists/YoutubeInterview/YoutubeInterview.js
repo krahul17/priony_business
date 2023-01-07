@@ -74,25 +74,7 @@ const YoutubeInterview = ({ navigation }) => {
     }, []);
 
 
-    // function getData(accessToken) {
-    //   fetch(BaseUrl + '/douryou-user/seller-see-admin-interview-for-him/', {
-    //         headers: {
-    //             "Accept": "application/json",
-    //             "Content-Type": "multipart/form-data",
-    //             'Authorization': 'Bearer ' + accessToken,
-    //         },
-    //     }).then((response) => response.json())
-    //         .then((json) => setData(json))
-    //         .catch((error) => console.error(error))
-    //         .finally(() => setLoading(false));
-    // }
 
-    // useEffect(async () => {
-    //     let accessToken = await AsyncStorage.getItem("accessToken")
-    //     console.log(accessToken)
-    //    getData(accessToken)
-    //     setAccessToken(accessToken)
-    // }, [])
     console.log(data + "acces token")
 
     const Card = ({ item, index }) => {
@@ -124,24 +106,27 @@ const YoutubeInterview = ({ navigation }) => {
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around',  }}>
                             <View style={{ flexDirection: 'row', marginLeft: 30 }}>
-                                <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
+                                <TouchableOpacity onPress={() => navigation.navigate('InterviewYoutubeView',{item})}>
                                     <Image source={require('../assets/eye.png')} style={style.eye} />
                                 </TouchableOpacity>
+                                <Text style={{color:'#000', marginTop:10, fontSize:16}}>{item.ViewsCount}</Text>
                                
                             </View>
 
                             <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                                <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
+                                <TouchableOpacity onPress={() => navigation.navigate('InterviewYoutubeLike',{item})}>
                                     <Image source={require('../assets/thumb.png')} style={style.like} />
                                 </TouchableOpacity>
+                                <Text style={{color:'#000', marginTop:10, fontSize:16}}>{item.LikeCount}</Text>
                              
                             </View>
 
                             <View style={{ flexDirection: 'row', marginLeft: 30 }}>
 
-                                <TouchableOpacity onPress={() => navigation.navigate("ShareAds")}>
+                                <TouchableOpacity onPress={() => navigation.navigate("InterviewYoutubeShare",{item})}>
                                     <Image source={require('../assets/share.png')} style={style.share} />
                                 </TouchableOpacity>
+                                <Text style={{color:'#000', marginTop:10, marginLeft:10, fontSize:16}}>{item.ShearCount}</Text>
                               
                             </View>
                         </View>

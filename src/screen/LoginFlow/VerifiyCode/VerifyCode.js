@@ -4,6 +4,7 @@ import RnOtpTimer from 'rn-otp-timer';
 import { AuthContext } from '../../../../context/AuthContext'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../Component/Loader/Loader';
 
 
 const VerifyCode = ({ navigation, route }) => {
@@ -13,6 +14,8 @@ const VerifyCode = ({ navigation, route }) => {
    const { phone_number } = route.params;
    // const [number, setNumber] = useState(phone_number);
    const [otpis, setOtpis] = useState("");
+   const [modalVisible, setModalVisible] = useState(false);
+
 
    const {login,signup} =useContext(AuthContext)
 
@@ -32,6 +35,8 @@ const VerifyCode = ({ navigation, route }) => {
          let  data =  { phone_number, otpis }
 
                 console.log( 'check', data)
+
+                setModalVisible(true)
                // console.log()
 
          fetch(BaseUrl +'/douryou-seller-api/seller-verify-otp/', {
@@ -47,10 +52,15 @@ const VerifyCode = ({ navigation, route }) => {
                console.log(response, "Response check")
                console.log(response.status)
                if (response.status == true) {
-                 navigation.navigate('HomeScreen')
-                 signup()
+                  setModalVisible(false)
+                  AsyncStorage.setItem("userInfo", JSON.stringify(response))
+                  AsyncStorage.setItem("refereshToken", response.token.refresh);
+                 AsyncStorage.setItem("accessToken", response.token.access);
+              
+                login()
                }
                else if (response.status == false) {
+                  setModalVisible(false)
                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
                    AsyncStorage.setItem("refereshToken", response.token.refresh);
                   AsyncStorage.setItem("accessToken", response.token.access);
@@ -63,6 +73,7 @@ const VerifyCode = ({ navigation, route }) => {
                   
                }
             }).catch((err)=>{
+               setModalVisible(false)
                alert('invalid Otp')
             })
             console.log(data.status)
@@ -198,6 +209,7 @@ const VerifyCode = ({ navigation, route }) => {
                   </View>
                </TouchableOpacity>
 
+               <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
 
             </View>

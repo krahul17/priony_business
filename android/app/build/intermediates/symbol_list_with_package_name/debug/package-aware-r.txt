@@ -2958,6 +2958,7 @@ styleable ucrop_UCropView ucrop_aspect_ratio_x ucrop_aspect_ratio_y ucrop_circle
 xml file_provider_paths
 xml ivpusic_imagepicker_provider_paths
 xml rn_dev_preferences
+xml share_download_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

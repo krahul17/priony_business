@@ -49,7 +49,7 @@ const MainYoutube = ({ navigation, route }) => {
         <View style={styles.listboarder}>
           <View style={{ flexDirection: 'row', }}>
             <View>
-              <Text style={styles.text}>date :- {data.DealPostDateandTime}</Text>
+              <Text style={styles.text}>Date :- {data.DealPostDateandTime.slice(0,10)}   Time :- {data.DealPostDateandTime.slice(11,19)}</Text>
             </View>
           </View>
         </View>

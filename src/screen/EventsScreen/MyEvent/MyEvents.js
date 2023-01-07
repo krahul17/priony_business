@@ -1,53 +1,47 @@
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList,
-    TouchableOpacity, TextInput, Pressable, Dimensions } from 'react-native';
+    TouchableOpacity, Linking,TextInput, Pressable, Dimensions } from 'react-native';
 
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Share from 'react-native-share'
+import { ShareUrl } from '../../../Component/BaseURL/BaseUrl';
+import { AdminChatNo } from '../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../Component/Loader/Loader';
 
-const gustData = [
 
-    {
-        id: '1',
-        image: require('../assets/cityimage.png'),
-        fav: require('../assets/fav.png'),
-        chat: require('../assets/chat1.png'),
-        share: require('../assets/share.png'),
-        City: 'Moga,Punjab',
-        date: '',
-        duration: '',
-        type: '',
-        no: '',
-    },
-    {
-        id: '2',
-        image: require('../assets/cityimage.png'),
-        fav: require('../assets/fav.png'),
-        chat: require('../assets/chat1.png'),
-        share: require('../assets/share.png'),
-        City: 'Moga,Punjab',
-        date: '',
-        duration: '',
-        type: '',
-        no: '',
-    },
-]
 
  
 
 const MyEvents = ({navigation}) => {
 
     
-    let name=AsyncStorage.setItem("name",'rahull')
-    console.log(name,"name check krna hai")
+  
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [accessToken, setAccess] = useState(null);
+    console.log(data,' getting my events')
 
-    let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxODU3ODkyLCJqdGkiOiI3MTIxNmUwMTY3NzE0NGZkYjU2ZWQ4MjViOGMwZDE2YSIsInVzZXJfaWQiOjJ9.ll2CM8AbCT5p1IBUSmnB0n5veDgI1lmbJLTqHGSGEPQ"
+    const [modalVisible, setModalVisible] = useState(false);
 
+    const url = ShareUrl;
+    const options = {url};
+    const share = async (customOptions = options) => {
+        try {
+            await Share.open(customOptions);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-    useEffect(() => {
+   
+
+    useEffect(async() => {
+
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
         fetch(BaseUrl + '/douryou-seller-api/seller-fetch-all-booked-events/', {
             headers: {
                 "Accept": "application/json",
@@ -63,6 +57,32 @@ const MyEvents = ({navigation}) => {
     }, []);
 
     const Card = ({ item, index }) => {
+
+        const [mobileNumber, setMobileNumber] = useState(AdminChatNo);
+        // console.log(item.phone_number,'phone number gett')
+        // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
+        const WhatsAppchat = () => {
+          // Check for perfect 10 digit length
+          if (mobileNumber.length != 10) {
+            alert('Please insert correct WhatsApp number');
+            return;
+          }
+          // Using 91 for India
+          // You can change 91 with your country code
+          let url =
+            'whatsapp://send?text=' +
+            //  whatsAppMsg +
+            '&phone=91'+ mobileNumber;
+          Linking.openURL(url)
+            .then((data) => {
+              console.log('WhatsApp Opened');
+            })
+            .catch(() => {
+              alert('Make sure Whatsapp installed on your device');
+            });
+        };
+
+
         return (
 
             <View style={styles.mainList}>
@@ -75,11 +95,11 @@ const MyEvents = ({navigation}) => {
             <View style={{ flexDirection: 'row' }}>
 
                 <View style={styles.Pic}>
-                    <Image source={item.image} style={styles.pic} />
+                    <Image source={{uri:BaseUrl + item.WhichEvent.EventImage}} style={styles.pic} />
                 </View>
 
-                <View >
-                    <Text style={{ fontSize: 35, fontWeight: '600', color: '#000', }}>{item.City}</Text>
+                <View  style={{width:'60%'}}>
+                    <Text style={{ fontSize: 35, fontWeight: '600', color: '#000', }}>{item.WhichEvent.EventAddress}</Text>
                 </View>
 
 
@@ -92,7 +112,7 @@ const MyEvents = ({navigation}) => {
                     </View>
                     <View>
                         <TextInput style={styles.name}>
-                            {item.date}
+                            {item.WhichEvent.EventDate}
                         </TextInput>
                     </View>
                 </View>
@@ -103,7 +123,8 @@ const MyEvents = ({navigation}) => {
                     </View>
                     <View>
                         <TextInput style={styles.name}>
-                            {item.duration}
+                            {item.WhichEvent.EventLength
+}
                         </TextInput>
                     </View>
                 </View>
@@ -114,7 +135,7 @@ const MyEvents = ({navigation}) => {
                     </View>
                     <View>
                         <TextInput style={styles.name}>
-                            {item.type}
+                            {item.WhichEvent.EventCatagory}
                         </TextInput>
                     </View>
                 </View>
@@ -125,7 +146,8 @@ const MyEvents = ({navigation}) => {
                     </View>
                     <View>
                         <TextInput style={styles.name}>
-                            {item.no}
+                            {item.WhichEvent.FirstQuentity
+}
                         </TextInput>
                     </View>
                 </View>
@@ -137,17 +159,17 @@ const MyEvents = ({navigation}) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 ,marginBottom:5}}>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => { WhatsAppchat();}}>
                     <View style={{ marginRight: 20, margin: 2 }}>
-                        <Image source={item.chat} style={{ height: 30, width: 32 }} />
+                        <Image source={require('../assets/chat1.png')} style={{ height: 30, width: 32 }} />
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={async () => {await share();}}>
                     <View style={{ marginRight: 10, margin: 2 }}>
-                        <Image source={item.share} style={{ height: 30, width: 27 }} />
+                        <Image source={require('../assets/share.png')} style={{ height: 30, width: 27 }} />
                     </View>
                 </TouchableOpacity>
 
@@ -185,6 +207,7 @@ const MyEvents = ({navigation}) => {
                         <FlatList
                             showsHorizontalScrollIndicator={false}
                             data={data.Events}
+                            keyExtractor={WhichEvent=>WhichEvent.id}
                             renderItem={({ item, index }) =>
                                 (<Card item={item} index={index}></Card>)} />
                            

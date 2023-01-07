@@ -1,16 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-33:12
-MERGED from [:react-native-pager-view] D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-safe-area-context] D:\priony_business\priony_business\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-screens] D:\priony_business\priony_business\node_modules\react-native-screens\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-21:12
+ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_mainbusiness\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-picker_picker] D:\priony_business\priony_mainbusiness\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-33:12
+MERGED from [:react-native-pager-view] D:\priony_business\priony_mainbusiness\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-safe-area-context] D:\priony_business\priony_mainbusiness\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] D:\priony_business\priony_mainbusiness\node_modules\react-native-screens\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-21:12
+MERGED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-21:12
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\ba7fa702a3c1017659fd2beae850ff2f\transformed\jetified-react-native-0.70.6-release\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\50fb421c5eeb58c9cf65552dd3327c5f\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.react:hermes-engine:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\59cfd67c08ea7941192e653d83b99a6d\transformed\jetified-hermes-engine-0.70.6-release\AndroidManifest.xml:2:1-9:12
@@ -68,33 +69,35 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\extec\.gradle\
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\264bfea9cec9553b72567ddd2a81a286\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\extec\.gradle\caches\transforms-3\45af113d889b5bbfb6fd11bbb9367944\transformed\jetified-fbcore-2.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\54294f5f857978835a11e24fc1422778\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
 	package
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:2:3-32
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:2:3-32
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:1-28:12
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:4:5-67
+ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:6:5-27:19
-MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:5-31:19
-MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:5-31:19
-MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
-MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
+ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:6:5-27:19
+MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:5-31:19
+MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:5-31:19
+MERGED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\ba7fa702a3c1017659fd2beae850ff2f\transformed\jetified-react-native-0.70.6-release\AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\ba7fa702a3c1017659fd2beae850ff2f\transformed\jetified-react-native-0.70.6-release\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\ff7f9e1ea9c2e709fffb9e018f2252cf\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
@@ -114,61 +117,63 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\extec\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\extec\.gradle\caches\transforms-3\63a3df243d2d102452600006144a86df\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:10:7-39
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:10:7-39
 	android:roundIcon
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:12:7-52
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:12:7-52
 	android:icon
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:11:7-41
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:11:7-41
 	android:allowBackup
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:13:7-34
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:13:7-34
 	android:theme
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:14:7-38
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:14:7-38
 	android:usesCleartextTraffic
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:9:7-42
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:9:7-42
 	android:name
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:7:7-38
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:7:7-38
 activity#com.priony.business.MainActivity
-ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:15:7-26:18
+ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:15:7-26:18
 	android:label
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:17:9-41
 	android:launchMode
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:19:9-40
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:19:9-40
 	android:windowSoftInputMode
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:20:9-51
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:20:9-51
 	android:exported
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:21:9-32
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:21:9-32
 	android:configChanges
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:18:9-118
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:18:9-118
 	android:name
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:16:9-37
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:16:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:22:9-25:25
+ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:22:9-25:25
 action#android.intent.action.MAIN
-ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:13-65
+ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:23:13-65
 	android:name
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:21-62
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:23:21-62
 category#android.intent.category.LAUNCHER
-ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:24:13-73
+ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:24:13-73
 	android:name
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:24:23-70
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml:24:23-70
 uses-sdk
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-pager-view] D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-pager-view] D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] D:\priony_business\priony_business\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] D:\priony_business\priony_business\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] D:\priony_business\priony_business\node_modules\react-native-screens\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] D:\priony_business\priony_business\node_modules\react-native-screens\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_mainbusiness\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_mainbusiness\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-picker_picker] D:\priony_business\priony_mainbusiness\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-picker_picker] D:\priony_business\priony_mainbusiness\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-pager-view] D:\priony_business\priony_mainbusiness\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-pager-view] D:\priony_business\priony_mainbusiness\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] D:\priony_business\priony_mainbusiness\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] D:\priony_business\priony_mainbusiness\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] D:\priony_business\priony_mainbusiness\node_modules\react-native-screens\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] D:\priony_business\priony_mainbusiness\node_modules\react-native-screens\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\ba7fa702a3c1017659fd2beae850ff2f\transformed\jetified-react-native-0.70.6-release\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\ba7fa702a3c1017659fd2beae850ff2f\transformed\jetified-react-native-0.70.6-release\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\50fb421c5eeb58c9cf65552dd3327c5f\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -283,60 +288,70 @@ MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\extec\.gradle\caches\tra
 MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\extec\.gradle\caches\transforms-3\45af113d889b5bbfb6fd11bbb9367944\transformed\jetified-fbcore-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\54294f5f857978835a11e24fc1422778\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\54294f5f857978835a11e24fc1422778\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\priony_business\priony_mainbusiness\android\app\src\main\AndroidManifest.xml
 queries
-ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-13:15
+ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-13:15
 intent#action:name:android.media.action.IMAGE_CAPTURE
-ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-12:18
+ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-12:18
 action#android.media.action.IMAGE_CAPTURE
-ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-73
+ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-73
 	android:name
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:21-70
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:21-70
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:5-81
+ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:5-81
 	android:name
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:22-78
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:22-78
 provider#com.reactnative.ivpusic.imagepicker.IvpusicImagePickerFileProvider
-ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:9-26:20
+ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:9-26:20
 	android:grantUriPermissions
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-47
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-47
 	android:authorities
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-60
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-60
 	android:exported
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-37
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-94
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-94
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-25:78
+ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-25:78
 	android:resource
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:25:17-75
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:25:17-75
 	android:name
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-67
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-67
 activity#com.yalantis.ucrop.UCropActivity
-ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:9-30:72
+ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:9-30:72
 	android:theme
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-69
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-69
 	android:name
-		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:29:13-60
-provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
-ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+		ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:29:13-60
+provider#cl.json.RNShareFileProvider
+ADDED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
-		ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+		ADDED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
 	android:authorities
-		ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-64
+		ADDED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-72
 	android:exported
-		ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+		ADDED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
 	android:name
-		ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-83
+		ADDED from [:react-native-share] D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-55
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-64
+	android:exported
+		ADDED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:react-native-webview] D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-83
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\b6fe4da57007a43d86a66ba4c66459bd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\bc74a39e1ea23fea00bfcf2682a93948\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20

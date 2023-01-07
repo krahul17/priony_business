@@ -4,6 +4,7 @@ import ImageCropPicker from 'react-native-image-crop-picker'
 import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../Component/Loader/Loader';
 
 
 const Aboutus = ({ navigation }) => {
@@ -12,12 +13,16 @@ const Aboutus = ({ navigation }) => {
    const [SpecializationOfCompany, setSpecializationOfCompany] = useState()
    const [accessToken, setAccess] = useState(null);
 
+   const [modalVisible, setModalVisible] = useState(false);
+
    const SaveData = async () => {
 
       if(!(AboutCompany && SpecializationOfCompany)){
          alert('Enter this field')
          return
       }
+      setModalVisible(true)
+
       const accessToken = await AsyncStorage.getItem("accessToken");
       setAccess(accessToken);
 
@@ -39,10 +44,13 @@ const Aboutus = ({ navigation }) => {
       }).then((result) => {
          result.json().then((response) => {
             console.log(response, "Response");
-            navigation.navigate('MyMatch')
+            setModalVisible(false)
             alert("DATA SAVE")
+            navigation.navigate('MyMatch')
+           
          }).catch((error) => {
-            alert('something went wrong')
+            setModalVisible(false)
+            alert(error)
             console.log(error);
          });
       })
@@ -78,6 +86,7 @@ const Aboutus = ({ navigation }) => {
                </TouchableOpacity>
 
 
+               <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
             </View>
          </ScrollView>

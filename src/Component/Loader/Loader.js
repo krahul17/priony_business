@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    // backgroundColor: "white",
-    // borderRadius: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
     padding: 35,
     alignItems: "center",
-    // shadowColor: "#000",
-    // shadowOpacity: 0.25,
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
     
   },
 

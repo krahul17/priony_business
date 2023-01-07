@@ -99,6 +99,12 @@ import FavCustomer from '../../screen/Lists/FavCustomer/FavCoutomer';
 import Form from '../../screen/PrCategories/PrEnquirtForm/Form/Form';
 import PlanComingSoon from '../../screen/LoginFlow/Profile/PlanComingSoon/PlanComingSoon';
 import Loader from '../../Component/Loader/Loader';
+import InterviewYoutubeView from '../../screen/Lists/InterviewYoutubeView/InterviewYoutubeView';
+import InterviewYoutubeLike from '../../screen/Lists/InterviewYoutubeLike/InterviewYoutubeLike';
+import InterviewYoutubeShare from '../../screen/Lists/InterviewYoutubeShare';
+import ViewsJobOffer from '../../screen/Lists/ViewsJobOffer/ViewsJobOffer';
+import LikeJobOffer from '../../screen/Lists/LikeJobOffer/LikejobOffer';
+import ShareJobOffer from '../../screen/Lists/ShareJobOffer/ShareJobOffer';
 
 
 
@@ -132,6 +138,12 @@ const Navigatino = () => {
       <Stack.Screen name="ProfileDetails" component={ProfileDetails} />
       <Stack.Screen name="PrCategories" component={PrCategories} />
       <Stack.Screen name="PrEnquirtForm" component={PrEnquirtForm} />
+      <Stack.Screen name="InterviewYoutubeView" component={InterviewYoutubeView} />
+      <Stack.Screen name="InterviewYoutubeLike" component={InterviewYoutubeLike} />
+      <Stack.Screen name="InterviewYoutubeShare" component={InterviewYoutubeShare} />
+      <Stack.Screen name="ViewsJobOffer" component={ViewsJobOffer} />
+      <Stack.Screen name="LikeJobOffer" component={LikeJobOffer} />
+      <Stack.Screen name="ShareJobOffer" component={ShareJobOffer} />
       <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="PrForm" component={PrForm} />
       <Stack.Screen name="Canada" component={Canada} />

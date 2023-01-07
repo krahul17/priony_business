@@ -1,5 +1,11 @@
-import React from 'react'
-import { StyleSheet, Text, View, Dimensions, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput } from 'react-native';
+import React, { useState, useEffect } from 'react'
+import { StyleSheet, Text, View, Dimensions, Image, SafeAreaView, Linking,ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput } from 'react-native';
+import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Loader from '../../../Component/Loader/Loader';
+import Share from 'react-native-share'
+import { ShareUrl } from '../../../Component/BaseURL/BaseUrl';
+import MyMatch from '../../LoginFlow/MyMatch/MyMatch';
 
 
 const gustData = [
@@ -37,119 +43,192 @@ const gustData = [
 
 ]
 
-const GustData = ({ item }) => {
-    return (
-        <View style={styles.mainList}>
 
-            <TouchableOpacity>
-                <View style={styles.fav}>
-                    <Image source={item.img} style={{ height: 40, width: 40 }} />
-                </View>
-            </TouchableOpacity>
 
-            <View style={{ flexDirection: 'row' }}>
+const MyMatchList = () => {
 
-                <View style={styles.Pic}>
-                    <Image source={item.image} style={styles.pic} />
-                </View>
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false);
+    const [accessToken, setAccess] = useState(null);
+    console.log(accessToken)
 
-                <View style={styles.adress}>
-                    <View style={{ flexDirection: 'row' }}>
+    const url = ShareUrl;
+    const options = { url };
+    const share = async (customOptions = options) => {
+        try {
+            await Share.open(customOptions);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-                        <View>
-                            <Text style={styles.name}>
-                                {item.Name}
-                            </Text>
-                        </View>
+    console.log(data, 'data is comiong')
+
+
+    useEffect(async () => {
+        setModalVisible(true)
+
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+
+
+        fetch(BaseUrl + '/douryou-seller-api/seller-see-user-my-match-by-admin/', {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'Authorization': 'Bearer ' + accessToken,
+            },
+        }).then((response) => response.json(),
+            setModalVisible(false))
+            .then((json) => setData(json))
+            .catch((error) => {
+                setModalVisible(false);
+                // alert(error))
+                console.error(error)
+            })
+            .finally(() => setLoading(false));
+    }, []);
+
+
+
+    const GustData = ({ item }) => {
+
+
+        const [mobileNumber, setMobileNumber] = useState(item.username.phone_number.slice(3,13));
+        // console.log(item.phone_number,'phone number gett')
+        // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
+        const WhatsAppchat = () => {
+          // Check for perfect 10 digit length
+          if (mobileNumber.length != 10) {
+            alert('Please insert correct WhatsApp number');
+            return;
+          }
+          // Using 91 for India
+          // You can change 91 with your country code
+          let url =
+            'whatsapp://send?text=' +
+            //  whatsAppMsg +
+            '&phone=91'+ mobileNumber;
+          Linking.openURL(url)
+            .then((data) => {
+              console.log('WhatsApp Opened');
+            })
+            .catch(() => {
+              alert('Make sure Whatsapp installed on your device');
+            });
+        };
+
+        return (
+            <View style={styles.mainList}>
+
+                <TouchableOpacity>
+                    <View style={styles.fav}>
+                        <Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
+                    </View>
+                </TouchableOpacity>
+
+                <View style={{ flexDirection: 'row' }}>
+
+                    <View style={styles.Pic}>
+                        <Image source={{uri:BaseUrl + item.username.frontimage}} style={styles.pic} />
                     </View>
 
-                    <View style={{ flexDirection: 'row' }}>
+                    <View style={styles.adress}>
+                        <View style={{ flexDirection: 'row' }}>
 
-                        <View>
-                            <Text style={styles.email}>
-                                {item.Email}
-                            </Text>
+                            <View>
+                                <Text style={styles.name}>
+                                    {item.username.first_name}
+                                </Text>
+                            </View>
                         </View>
+
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View>
+                                <Text style={styles.email}>
+                                    {item.username.email}
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View>
+                                <Text style={styles.dist}>
+                                    {item.username.last_name}
+                                </Text>
+                            </View>
+                        </View>
+
                     </View>
 
-                    <View style={{ flexDirection: 'row' }}>
 
-                        <View>
-                            <Text style={styles.dist}>
-                                {item.DistName}
-                            </Text>
-                        </View>
-                    </View>
 
                 </View>
 
 
+                <View style={styles.Select}>
+                    <Text style={styles.selec}>Select a category : Passport </Text>
 
-            </View>
-
-
-            <View style={styles.Select}>
-                <Text style={styles.selec}>{item.Select} : Passport </Text>
-
-            </View>
-
-
-            <View>
-                <View style={styles.Add}>
-                    <Text style={styles.add}>{item.Add} </Text>
                 </View>
-            </View>
-            <View>
-                <View style={styles.Add}>
-                    <Text style={styles.add}>Mobile Number </Text>
-                </View>
-            </View>
-            <View>
-                <View style={styles.Add}>
-                    <Text style={styles.add}>Your Qualification </Text>
-                </View>
-            </View>
 
-            <View>
-                <View style={styles.Add}>
-                    <Text style={styles.add}>{item.When} </Text>
-                </View>
-            </View>
 
-            <View style={styles.Describe}>
                 <View>
-                    <Text style={styles.describe}>{item.Describe} </Text>
+                    <View style={styles.Add}>
+                        <Text style={styles.add}>  {item.title} </Text>
+                    </View>
                 </View>
+                <View>
+                    <View style={styles.Add}>
+                        <Text style={styles.add}> {item.phone} </Text>
+                    </View>
+                </View>
+                <View>
+                    <View style={styles.Add}>
+                        <Text style={styles.add}>{item.quali} </Text>
+                    </View>
+                </View>
+
+                <View>
+                    <View style={styles.Add}>
+                        <Text style={styles.add}>{item.when_require} </Text>
+                    </View>
+                </View>
+
+                <View style={styles.Describe}>
+                    <View>
+                        <Text style={styles.describe}>{item.description} </Text>
+                    </View>
+                </View>
+
+
+                <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10 }}>
+
+                    <View style={{ marginRight: 20, margin: 2 }}>
+                        <TouchableOpacity onPress={() => { WhatsAppchat(); }}>
+                            <Image source={require('../../../screen/Lists/assets/chat1.png')} style={{ height: 27, width: 29 }} />
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={{ marginRight: 10, margin: 2 }}>
+                        <TouchableOpacity onPress={async () => { await share(); }}>
+                            <Image source={require('../../../screen/Lists/assets/share.png')} style={{ height: 28, width: 25 }} />
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
+
+                <View>
+                    <View style={{ backgroundColor: '#0006C1', padding: 10, marginTop: 10 }}>
+                        <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', marginLeft: 10 }}>Date :- {item.date.slice(0,10)}</Text>
+                    </View>
+                </View>
+
             </View>
-
-
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10 }}>
-
-                <View style={{ marginRight: 20, margin: 2 }}>
-                    <TouchableOpacity>
-                        <Image source={item.chat} style={{ height: 27, width: 29 }} />
-                    </TouchableOpacity>
-                </View>
-
-                <View style={{ marginRight: 10, margin: 2 }}>
-                    <TouchableOpacity>
-                        <Image source={item.bell} style={{ height: 28, width: 25 }} />
-                    </TouchableOpacity>
-                </View>
-
-            </View>
-
-            <View>
-                <View style={{ backgroundColor: '#0006C1', padding: 10, marginTop: 10 }}>
-                    <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', marginLeft: 10 }}>{item.DateTime}</Text>
-                </View>
-            </View>
-
-        </View>
-    )
-}
-
-const UserRequirement = () => {
+        )
+    }
 
     return (
         <>
@@ -158,9 +237,6 @@ const UserRequirement = () => {
                 <ScrollView >
 
                     <View>
-                        {/* <View style={styles.mainlogo}>
-                            <Image source={require('../../HomeScreen/assets/logo.png')} style={styles.logo} />
-                        </View> */}
 
                         <View style={styles.Name1}>
                             <View style={styles.topmain}>
@@ -176,12 +252,11 @@ const UserRequirement = () => {
                         </View>
 
                         <FlatList
-                            // horizontal
-                            data={gustData}
-                            renderItem={GustData}
-                            keyExtractor={item => item.id}
-                        />
-
+                            showsHorizontalScrollIndicator={false}
+                            data={data.MyMatch}
+                            keyExtractor={username =>username.id}
+                            renderItem={({ item, index }) =>
+                                (<GustData item={item} index={index}></GustData>)} />
 
                     </View>
                 </ScrollView>
@@ -190,7 +265,7 @@ const UserRequirement = () => {
     )
 }
 
-export default UserRequirement;
+export default MyMatchList;
 
 const styles = StyleSheet.create({
     container: {

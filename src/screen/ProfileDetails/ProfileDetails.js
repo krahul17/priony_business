@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View, Image, ScrollView, Dimensions, StatusBar, TouchableOpacity, TextInput, } from 'react-native';
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 // import { Rating } from 'react-native-ratings'
 import TopTabNavigation from '../../Navigation-Flow/TopTabNavigation/TopTabNavigation'
-import  AsyncStorage  from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../Component/BaseURL/BaseUrl';
 
-const ProfileDetails = ({ navigation,route }) => {
+const ProfileDetails = ({ navigation, route }) => {
 
-  const {data}=route.params
-  console.log(data,'heello im data')
+  const { data } = route.params
+  console.log(data, 'heello im data')
 
   const [videocount, setVideoCount] = useState(0);
   const increment = () => {
@@ -17,9 +17,9 @@ const ProfileDetails = ({ navigation,route }) => {
     }
   }
 
-  
 
- 
+
+
   return (
     <>
       <StatusBar
@@ -31,32 +31,43 @@ const ProfileDetails = ({ navigation,route }) => {
             <View style={styles.row}>
               <View>
                 <TouchableOpacity>
-                  <Image source={{uri:BaseUrl + data.CompanyLogo}} style={styles.dp} />
+                  <Image source={{ uri: BaseUrl + data.CompanyLogo }} style={styles.dp} />
                 </TouchableOpacity>
               </View>
 
-              <View >
+              <View style={{ marginVertical: 15, width: '75%' }} >
                 <TouchableOpacity>
                   <Text style={styles.link}>{data.CompanyName} </Text>
                 </TouchableOpacity>
-                <View style={{width:'90%'}}>
-                <Text style={styles.address}>{data.CompanyAddress}</Text>
+                <View >
+                  <Text style={styles.address}>{data.CompanyAddress}</Text>
                 </View>
               </View>
             </View>
 
-            <View style={styles.bar}>
-              <View>
-                <Text style={styles.professional}>Professional</Text>
+            { data.FREE_Plan === true &&
+              <View style={styles.bar}>
+                <View>
+                  <Text style={styles.professional}>Professional</Text>
+                </View>
+              
               </View>
-              <View style={{ flexDirection: 'row', marginVertical: 12 }}>
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+            }
+
+            {data.BUSINESS_Plan === true &&
+              <View style={styles.bar}>
+                <View>
+                  <Text style={styles.professional}>Professional</Text>
+                </View>
+                <View style={{ flexDirection: 'row', marginVertical: 12 }}>
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                </View>
               </View>
-            </View>
+            }
 
 
           </View>
@@ -67,9 +78,10 @@ const ProfileDetails = ({ navigation,route }) => {
               <View>
                 <Image source={require('../ProfileDetails/assets/About.png')} style={styles.icon} />
               </View>
-                <TouchableOpacity>
-                  <Text style={styles.text}>{data.AboutCompany}</Text>
-                </TouchableOpacity>
+              <TouchableOpacity>
+                <Text>About us:-</Text>
+                <Text style={styles.text}>{data.AboutCompany}</Text>
+              </TouchableOpacity>
             </View>
           </View>
 
@@ -79,12 +91,13 @@ const ProfileDetails = ({ navigation,route }) => {
               <View>
                 <Image source={require('../ProfileDetails/assets/our.png')} style={styles.icon} />
               </View>
-          
-                <TouchableOpacity>
-                  <Text style={styles.text}>{data.SpecializationOfCompany}</Text>
-                </TouchableOpacity>
-              
-             
+
+              <TouchableOpacity>
+                <Text>Our Specialization:-</Text>
+                <Text style={styles.text}>{data.SpecializationOfCompany}</Text>
+              </TouchableOpacity>
+
+
             </View>
           </View>
 
@@ -94,10 +107,11 @@ const ProfileDetails = ({ navigation,route }) => {
               <View>
                 <Image source={require('../ProfileDetails/assets/we.png')} style={styles.icon} />
               </View>
-                <TouchableOpacity>
-                  <Text style={styles.text}>We are Sever in these categories</Text>
-                </TouchableOpacity>
-              
+              <TouchableOpacity>
+                <Text>We are Server in this Category</Text>
+                <Text style={styles.textCategory}>{data.WhyJoin}</Text>
+              </TouchableOpacity>
+
             </View>
           </View>
 
@@ -114,20 +128,20 @@ const ProfileDetails = ({ navigation,route }) => {
 
               <View style={styles.Flex2}>
                 <View>
-                  <Image source={{uri:BaseUrl + data.ContactPersonPic}} style={styles.dppic} />
+                  <Image source={{ uri: BaseUrl + data.ContactPersonPic }} style={styles.dppic} />
                 </View>
                 <View style={styles.input}>
                   <View style={{ flexDirection: 'row', }}>
                     <View>
-                      <Text style={styles.profile}>{data.ContactPersonName}</Text>
+                      <Text style={styles.profile}>Name :- {data.ContactPersonName}</Text>
                     </View>
 
                   </View>
                   <View>
-                    <Text style={styles.profile}>Contact No.</Text>
+                    <Text style={styles.profile}>Contact No. :- {data.ContactPersonNumber}</Text>
                   </View>
                   <View>
-                    <Text style={styles.profile}>Desigation</Text>
+                    <Text style={styles.profile}>Desigation:- {data.ContactPersonDesigation}</Text>
                   </View>
 
                 </View>
@@ -151,28 +165,44 @@ const ProfileDetails = ({ navigation,route }) => {
       <View style={{ backgroundColor: '#fff', height: 60 }}>
         <View style={styles.lsatborder}>
           <View style={{ flexDirection: 'row', }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-              <View style={{ marginLeft: 5 }}>
+
+            <View style={{ flexDirection: 'row', justifyContent:"space-evenly" }}>
+
+              <View style={{flexDirection: 'row', marginLeft: 80 }}>
                 {/* <TouchableOpacity> */}
                 <Image source={require('../ProfileDetails/assets/eye.png')} style={styles.eye} />
                 {/* </TouchableOpacity> */}
+                <View style={{ marginLeft: 10, marginTop: 8, width: '30%' }}>
+                  <Text>{data.ViewsCount}</Text>
+                </View>
               </View>
 
 
-              <View style={{ flexDirection: 'row' }}>
-                {/* <TouchableOpacity> */}
+              <View style={{marginLeft: 20,flexDirection: 'row' }}>
+               
                 <View>
                   <Image source={require('../ProfileDetails/assets/like.png')} style={styles.like} />
                 </View>
-                {/* </TouchableOpacity> */}
+            
                 <View style={{ marginLeft: 10, marginTop: 8, width: '30%' }}>
-                  <Text>{videocount}</Text>
+                  <Text>{data.LikeCount}</Text>
                 </View>
               </View>
 
+              <View style={{ marginLeft: 20,flexDirection: 'row' }}>   
+                <View>
+                  <Image source={require('../ProfileDetails/assets/share.png')} style={styles.like} />
+                </View>
+                <View style={{ marginLeft: 10, marginTop: 8, width: '30%' }}>
+                  <Text>{data.ShearCount}</Text>
+                </View>
+              </View>
+
+             
+
             </View>
 
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginLeft: 30 }}>
+            {/* <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginLeft: 30 }}>
               <TouchableOpacity onPress={() => increment()}>
                 <Image source={require('../ProfileDetails/assets/like.png')} style={styles.thum} />
               </TouchableOpacity>
@@ -182,7 +212,7 @@ const ProfileDetails = ({ navigation,route }) => {
               <TouchableOpacity>
                 <Image source={require('../ProfileDetails/assets/share.png')} style={styles.share} />
               </TouchableOpacity>
-            </View>
+            </View> */}
 
           </View>
         </View>
@@ -241,7 +271,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#EFD757',
     fontStyle: 'italic',
-    marginTop:5
+    marginTop: 5
   },
   star: {
     width: 18,
@@ -249,7 +279,7 @@ const styles = StyleSheet.create({
   },
   listboarder: {
     borderWidth: 3,
-    height: 53,
+    height: 'auto',
     width: '97%',
     marginHorizontal: 7,
     marginVertical: 9,
@@ -262,6 +292,21 @@ const styles = StyleSheet.create({
     marginHorizontal: 5
   },
   text: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 5,
+
+  },
+  textCategory: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 5,
+    marginRight: 5
+
+  },
+  textwhy: {
     fontSize: 15,
     fontWeight: 'bold',
     color: '#000000',
@@ -305,7 +350,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginHorizontal: 10,
-    marginTop:-5
+    marginTop: -5
   },
   profile: {
     color: '#000000',

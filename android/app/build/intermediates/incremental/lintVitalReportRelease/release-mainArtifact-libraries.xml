@@ -1,9 +1,9 @@
 <libraries>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-picker_picker::release"
-      jars="D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\.transforms\94814ff4c26605b27b3d95363446049e\transformed\out\jars\classes.jar"
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-picker_picker::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\@react-native-picker\picker\android\build\.transforms\d6ba7ad44cd9aadb9742274c91401652\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-picker_picker:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\.transforms\94814ff4c26605b27b3d95363446049e\transformed\out"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\@react-native-picker\picker\android\build\.transforms\d6ba7ad44cd9aadb9742274c91401652\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -13,10 +13,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-pager-view::release"
-      jars="D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\.transforms\c8ac1dfe5209834231b3c1241750b30e\transformed\out\jars\classes.jar"
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-pager-view::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\react-native-pager-view\android\build\.transforms\cc28a40ed0c24b65e629cafe69e91286\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-pager-view:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\.transforms\c8ac1dfe5209834231b3c1241750b30e\transformed\out"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\react-native-pager-view\android\build\.transforms\cc28a40ed0c24b65e629cafe69e91286\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -65,10 +65,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-async-storage_async-storage::release"
-      jars="D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\.transforms\9afd12e45aa8d15d271467e890e82c59\transformed\out\jars\classes.jar"
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-async-storage_async-storage::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\@react-native-async-storage\async-storage\android\build\.transforms\2d6cb15d69a9b33dc4b929870826b730\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-async-storage_async-storage:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\.transforms\9afd12e45aa8d15d271467e890e82c59\transformed\out"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\@react-native-async-storage\async-storage\android\build\.transforms\2d6cb15d69a9b33dc4b929870826b730\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -78,10 +78,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-image-crop-picker::release"
-      jars="D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\.transforms\df0fbbf927f6f2a8cb5d337f0377e085\transformed\out\jars\classes.jar"
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-image-crop-picker::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\.transforms\5d4afb90601d25fcb1088a9e26d5944c\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-image-crop-picker:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\.transforms\df0fbbf927f6f2a8cb5d337f0377e085\transformed\out"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\react-native-image-crop-picker\android\build\.transforms\5d4afb90601d25fcb1088a9e26d5944c\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -91,10 +91,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-safe-area-context::release"
-      jars="D:\priony_business\priony_business\node_modules\react-native-safe-area-context\android\build\.transforms\e5caa2ae8455a8b583698633df3a4d5b\transformed\out\jars\classes.jar"
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-safe-area-context::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\react-native-safe-area-context\android\build\.transforms\a75e2191a49c069e68477fefedd73253\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-safe-area-context:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\react-native-safe-area-context\android\build\.transforms\e5caa2ae8455a8b583698633df3a4d5b\transformed\out"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\react-native-safe-area-context\android\build\.transforms\a75e2191a49c069e68477fefedd73253\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -104,10 +104,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-screens::release"
-      jars="D:\priony_business\priony_business\node_modules\react-native-screens\android\build\.transforms\0076b19a6d996717886427968f335c01\transformed\out\jars\classes.jar"
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-screens::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\react-native-screens\android\build\.transforms\ee43a86d9178831c13077895e8a59bd9\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-screens:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\react-native-screens\android\build\.transforms\0076b19a6d996717886427968f335c01\transformed\out"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\react-native-screens\android\build\.transforms\ee43a86d9178831c13077895e8a59bd9\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -117,10 +117,23 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-webview::release"
-      jars="D:\priony_business\priony_business\node_modules\react-native-webview\android\build\.transforms\66cba1f95d9f899ab9fa731099288f77\transformed\out\jars\classes.jar"
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-share::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\.transforms\17263dbee497e9c596c38101662a43ab\transformed\out\jars\classes.jar"
+      resolved="Seller:react-native-share:unspecified"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\react-native-share\android\build\.transforms\17263dbee497e9c596c38101662a43ab\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="D:\priony_business\priony_mainbusiness\android@@:react-native-webview::release"
+      jars="D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\.transforms\29f2d63e538fa780e0d3fa2e9d5b65e1\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-webview:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\react-native-webview\android\build\.transforms\66cba1f95d9f899ab9fa731099288f77\transformed\out"
+      folder="D:\priony_business\priony_mainbusiness\node_modules\react-native-webview\android\build\.transforms\29f2d63e538fa780e0d3fa2e9d5b65e1\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

@@ -4,8 +4,7 @@ import React from 'react'
 
 
 const EventPayment = ({ navigation,route }) => {
-    const {plan,price}=route.params
-    console.log(price, 'is plan')
+    const {plan,finalamount}=route.params
     return (
         <>
             <StatusBar
@@ -32,7 +31,7 @@ const EventPayment = ({ navigation,route }) => {
 
                             <View style={styles.planchoose}>
                                 <Text style={styles.textplan}> Plan Amount </Text>
-                                <Text style={styles.textplan2}>: 450</Text>
+                                <Text style={styles.textplan2}>: {finalamount}</Text>
                             </View>
 
                         </View>

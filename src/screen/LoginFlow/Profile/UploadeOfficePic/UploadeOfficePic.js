@@ -3,12 +3,14 @@ import React, { useState } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../../Component/Loader/Loader';
 
 const UploadeOfficePic = ({ navigation }) => {
 
 
+const CompanyCertificationPic111122=('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
 
-   const [CompanyCertificationPic1, setCompanyCertificationPic1] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
+   const [CompanyCertificationPic1, setCompanyCertificationPic1] = useState();
    const [showoption, setShowoption] = useState(false)
 
    const [CompanyCertificationPic2, setCompanyCertificationPic2] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
@@ -45,6 +47,7 @@ const UploadeOfficePic = ({ navigation }) => {
    const [showoption12, setShowoption12] = useState(false)
    const [accessToken, setAccess] = useState(null);
 
+   const [modalVisible, setModalVisible] = useState(false);
 
    const openGalleryFront = () => {
       ImageCropPicker.openPicker({
@@ -185,15 +188,16 @@ const UploadeOfficePic = ({ navigation }) => {
 
    const SaveData = async () => {
 
-      // if (!(CompanyCertificationPic1 && CompanyCertificationPic2 && CompanyCertificationPic3 && CompanyCertificationPic4 && CompanyCertificationPic5 && CompanyCertificationPic6 && CompanyCertificationPic7 && CompanyCertificationPic8 && CompanyCertificationPic9 && CompanyCertificationPic10 && CompanyCertificationPic11 && CompanyCertificationPic12)) {
-      //    alert('Enter all felid')
-      //    return
-      // }
+      if (!(CompanyCertificationPic1 )) {
+         alert('Enter Minimum One Image')
+         return
+      }
 
       const accessToken = await AsyncStorage.getItem("accessToken");
       setAccess(accessToken);
-
-
+     
+      setModalVisible(true)
+      
       let formData = new FormData();
       let filename = CompanyCertificationPic1.split('/').pop();
       console.log("filename = " + filename);
@@ -228,9 +232,12 @@ const UploadeOfficePic = ({ navigation }) => {
       }).then((result) => {
          result.json().then((response) => {
             console.log(response, "Response");
-            navigation.navigate('Result')
+            setModalVisible(false)
             alert("DATA SAVE")
+            navigation.navigate('Result')
+            
          }).catch((error) => {
+            setModalVisible(false)
             alert(error)
             console.log(error);
          });
@@ -280,9 +287,13 @@ const UploadeOfficePic = ({ navigation }) => {
                   <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginVertical: 5, }}>
 
                      <TouchableOpacity onPress={() => openGalleryFront()}>
+                        {CompanyCertificationPic1 ?
                         <ImageBackground source={{ uri: CompanyCertificationPic1 }} style={styles.dp} />
+                        :
+                        <ImageBackground source={{ uri: CompanyCertificationPic111122 }} style={styles.dp} />
+                        }
                      </TouchableOpacity>
-
+                 
                      <TouchableOpacity onPress={() => openGalleryFront2()}>
                         <ImageBackground source={{ uri: CompanyCertificationPic2 }} style={styles.dp} />
                      </TouchableOpacity>
@@ -347,6 +358,8 @@ const UploadeOfficePic = ({ navigation }) => {
                      <Text style={styles.btn}> Submit </Text>
                   </View>
                </TouchableOpacity>
+
+               <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
             </View>
          </ScrollView>

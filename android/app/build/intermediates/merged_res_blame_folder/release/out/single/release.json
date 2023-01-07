@@ -92,10 +92,6 @@
         "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_homescreen_assets_chat1.png"
     },
     {
-        "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_homescreen_assets_rose.jpg.flat",
-        "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_homescreen_assets_rose.jpg"
-    },
-    {
         "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_eventsscreen_assets_logo.png.flat",
         "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_eventsscreen_assets_logo.png"
     },
@@ -138,10 +134,6 @@
     {
         "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_homescreen_assets_permit.png.flat",
         "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_homescreen_assets_permit.png"
-    },
-    {
-        "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_profiledetails_assets_dppic.png.flat",
-        "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_profiledetails_assets_dppic.png"
     },
     {
         "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_lists_assets_eye.png.flat",
@@ -304,10 +296,6 @@
         "source": "com.priony.business.app-react-25:/drawable-mdpi/src_navigationflow_toptabnavigation_assets_five.png"
     },
     {
-        "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_profiledetails_assets_rose.jpg.flat",
-        "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_profiledetails_assets_rose.jpg"
-    },
-    {
         "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_homescreen_assets_deal.png.flat",
         "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_homescreen_assets_deal.png"
     },
@@ -338,10 +326,6 @@
     {
         "merged": "com.priony.business.app-merged_res-30:/drawable-xxxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
         "source": "com.priony.business.app-react-25:/drawable-xxxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
-    },
-    {
-        "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_profiledetails_assets_message.png.flat",
-        "source": "com.priony.business.app-react-25:/drawable-mdpi/src_screen_profiledetails_assets_message.png"
     },
     {
         "merged": "com.priony.business.app-merged_res-30:/drawable-mdpi_src_screen_homescreen_assets_book.png.flat",

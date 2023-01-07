@@ -2,6 +2,7 @@ import { StyleSheet, ScrollView, number, Text, View, TouchableOpacity, Image, St
 import React,{useState} from 'react';
 import PhoneInput from 'react-native-phone-number-input';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../Component/Loader/Loader'
 
 
 
@@ -9,13 +10,14 @@ const Login = ({ navigation }) => {
 
     const [phone_number, setPhone_number] = useState("");
      console.log(phone_number, "number is here")
+     const [modalVisible, setModalVisible] = useState(false);
 
     function login(){        
         if (!(phone_number && phone_number.length > 9)) {
             alert('Enter your number')
             return
          }
-
+         setModalVisible(true)
         let data={phone_number}
         fetch(BaseUrl +"/douryou-seller-api/seller-send-otp/",{
             method:"POST",
@@ -27,9 +29,11 @@ const Login = ({ navigation }) => {
         }).then((result)=>{
                 result.json().then((resp)=>{
                     console.log(resp,"12345566566")
+                    setModalVisible(false)
                      navigation.navigate('VerifyCode',{
                         phone_number
                      });
+                    
                 }) .catch((error) => {
                     console.log(error);
                   });
@@ -88,7 +92,7 @@ const Login = ({ navigation }) => {
                             <Text style={styles.btn}> Submit </Text>
                         
                     </TouchableOpacity>
-
+                    <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
                 </View>
             </ScrollView>
         </>

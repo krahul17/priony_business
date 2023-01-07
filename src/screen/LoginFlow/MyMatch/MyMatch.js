@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, FlatList, Image, Pressable, TouchableOpacity, S
 import React, { useContext, useState } from "react";
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../Component/Loader/Loader';
 
 const MyMatch = ({ navigation, route }) => {
 
@@ -27,6 +28,9 @@ const MyMatch = ({ navigation, route }) => {
   const [checkBoxNineteen, setCheckBoxNineteen] = useState("")
   const [accessToken, setAccess] = useState(null);
 
+  const [modalVisible, setModalVisible] = useState(false);
+
+
   const [note, setNote] = useState("")
   const [loading, setLoading] = useState(false)
 
@@ -46,6 +50,8 @@ const MyMatch = ({ navigation, route }) => {
     const accessToken = await AsyncStorage.getItem("accessToken");
     setAccess(accessToken);
 
+    setModalVisible(true)
+
     let formData = new FormData();
   
     formData.append('WhyJoin', WhyJoin)
@@ -62,10 +68,13 @@ const MyMatch = ({ navigation, route }) => {
        body: formData
     }).then((result) => {
        result.json().then((response) => {
+        setModalVisible(false)
           console.log(response, "Response");
-          navigation.navigate('UploadeOfficePic')
           alert("DATA SAVE")
+          navigation.navigate('UploadeOfficePic')
+          
        }).catch((error) => {
+        setModalVisible(false)
         alert(error)
           console.log(error);
        });
@@ -470,34 +479,15 @@ const MyMatch = ({ navigation, route }) => {
 
           </View>
 
-          {/* <View style={styles.cont}>
-            <Pressable onPress={() => {
-              if (checkBoxNineteen == "") {
-                setCheckBoxNineteen("International Matrimonial")
-              } else {
-                setCheckBoxNineteen("")
-              }
-            }} >
-              {checkBoxNineteen == "" ?
-                <View style={[{ borderColor: "#A3A1A1" }, styles.box]}></View>
-                :
-                <View style={[{ borderColor: '#0006C1', backgroundColor: '#0006C1', alignItems: 'center', justifyContent: 'center' }, styles.box]}></View>
-              }
-              <View>
-              <Text style={styles.text}>International Matrimonial</Text>
-
-              </View>
-            </Pressable>
-           
-          </View> */}
-
+          
         </View>
+       
 
         <TouchableOpacity onPress={SaveData} style={styles.Btn}>
         {/* <TouchableOpacity onPress={()=>navigation.navigate('UploadeOfficePic')} style={styles.Btn}> */}
           <Text style={styles.btn}>Submit</Text>
         </TouchableOpacity>
-
+        <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
       </ScrollView>
     </>
   )

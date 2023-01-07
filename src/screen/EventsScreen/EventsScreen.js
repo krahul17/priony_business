@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput, Pressable, Dimensions} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, Linking,ScrollView, Label, StatusBar, FlatList, TouchableOpacity, TextInput, Pressable, Dimensions} from 'react-native';
 import BaseUrl from '../../Component/BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Loader from '../../Component/Loader/Loader';
+import Share from 'react-native-share'
+import { ShareUrl } from '../../Component/BaseURL/BaseUrl';
+import { AdminChatNo } from '../../Component/BaseURL/BaseUrl';
 
 
 
@@ -16,9 +19,21 @@ const EventsScreen = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
     const [modalVisible, setModalVisible] = useState(false);
     const [accessToken, setAccess] = useState(null);
+    console.log(accessToken)
 
+    const url = ShareUrl;
+    const options = {url};
+    const share = async (customOptions = options) => {
+        try {
+            await Share.open(customOptions);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     console.log(data, 'data is comiong')
+
+
     useEffect( async () => {
         setModalVisible(true)
 
@@ -44,6 +59,31 @@ const EventsScreen = ({ navigation }) => {
 
 
     const Card = ({ item, index }) => {
+
+        const [mobileNumber, setMobileNumber] = useState(AdminChatNo);
+        // console.log(item.phone_number,'phone number gett')
+        // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
+        const WhatsAppchat = () => {
+          // Check for perfect 10 digit length
+          if (mobileNumber.length != 10) {
+            alert('Please insert correct WhatsApp number');
+            return;
+          }
+          // Using 91 for India
+          // You can change 91 with your country code
+          let url =
+            'whatsapp://send?text=' +
+            //  whatsAppMsg +
+            '&phone=91'+ mobileNumber;
+          Linking.openURL(url)
+            .then((data) => {
+              console.log('WhatsApp Opened');
+            })
+            .catch(() => {
+              alert('Make sure Whatsapp installed on your device');
+            });
+        };
+
         return (
 
             <View style={styles.mainList}>
@@ -97,6 +137,7 @@ const EventsScreen = ({ navigation }) => {
                     <View style={styles.mainadress}>
                         <View>
                             <Text style={styles.label} >Events Type: </Text>
+                           
                         </View>
                         <View>
                             <Text style={styles.name}>
@@ -108,6 +149,7 @@ const EventsScreen = ({ navigation }) => {
                     <View style={styles.mainadress}>
                         <View>
                             <Text style={styles.label} >No. of Stall: </Text>
+                           
                         </View>
                         <View>
                             <Text style={styles.name}>
@@ -125,13 +167,13 @@ const EventsScreen = ({ navigation }) => {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 }}>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => { WhatsAppchat();}}>
                         <View style={{ marginRight: 20, marginTop: -15 }}>
                             <Image source={require('../EventsScreen/assets/chat1.png')} style={{ height: 30, width: 32 }} />
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={async () => {await share();}}>
                         <View style={{ marginRight: 10, marginTop: -15 }}>
                             <Image source={require('../EventsScreen/assets/share.png')} style={{ height: 30, width: 27 }} />
                         </View>
