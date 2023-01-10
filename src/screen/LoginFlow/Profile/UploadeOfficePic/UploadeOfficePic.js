@@ -263,7 +263,7 @@ const CompanyCertificationPic111122=('https://encrypted-tbn0.gstatic.com/images?
                </View>
 
                <View style={{ alignItems: 'flex-end', marginRight: 28 }}>
-                  <TouchableOpacity onPress={() => navigation.navigate('PaymentConfirm')}>
+                  <TouchableOpacity onPress={() => navigation.navigate('Result')}>
                      <Text style={styles.skip}>Skip</Text>
                   </TouchableOpacity>
                </View>

@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../../Component/Loader/Loader';
+
 
 const Result = ({ navigation }) => {
 
-   const [CompanyPreviousResultsPic1, setCompanyPreviousResultsPic1] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
+   const [CompanyPreviousResultsPic1, setCompanyPreviousResultsPic1] = useState();
    const [CompanyPreviousResultsPic2, setCompanyPreviousResultsPic2] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
    const [CompanyPreviousResultsPic3, setCompanyPreviousResultsPic3] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
    const [CompanyPreviousResultsPic4, setCompanyPreviousResultsPic4] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
@@ -20,7 +22,8 @@ const Result = ({ navigation }) => {
    const [CompanyPreviousResultsPic12, setCompanyPreviousResultsPic12] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
    const [showoption, setShowoption] = useState(false)
    const [accessToken, setAccess] = useState(null);
-
+ 
+   let CompanyPreviousResultsPic1122 ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU'
 
    const openGalleryFront = () => {
       ImageCropPicker.openPicker({
@@ -158,14 +161,16 @@ const Result = ({ navigation }) => {
 
    const SaveData = async () => {
 
-      // if (!(CompanyPreviousResultsPic1 && CompanyPreviousResultsPic2 && CompanyPreviousResultsPic3 && CompanyPreviousResultsPic4 && CompanyPreviousResultsPic5 && CompanyPreviousResultsPic6 && CompanyPreviousResultsPic7 && CompanyPreviousResultsPic8 && CompanyPreviousResultsPic9 && CompanyPreviousResultsPic10 && CompanyPreviousResultsPic11 && CompanyPreviousResultsPic12)) {
-      //    alert('Enter all felid')
-      //    return
-      // }
+      if (!(CompanyPreviousResultsPic1 )) {
+         alert('Enter Minimum One Image')
+         return
+      }
+
 
       const accessToken = await AsyncStorage.getItem("accessToken");
       setAccess(accessToken);
 
+      setModalVisible(true)
       
       let formData = new FormData();
       let filename = CompanyPreviousResultsPic1.split('/').pop();
@@ -201,10 +206,13 @@ const Result = ({ navigation }) => {
       }).then((result) => {
          result.json().then((response) => {
             console.log(response, "Response");
-            navigation.navigate('Review')
+            setModalVisible(false)
             alert("DATA SAVE")
+            navigation.navigate('Review')
+            
          }).catch((error) => {
-            alert('something went wrong')
+            setModalVisible(false)
+            alert(error)
             console.log(error);
          });
       })
@@ -228,7 +236,7 @@ const Result = ({ navigation }) => {
                </View>
 
                <View style={{ alignItems: 'flex-end', marginRight: 28 }}>
-                  <TouchableOpacity onPress={() => navigation.navigate('PaymentConfirm')}>
+                  <TouchableOpacity onPress={() => navigation.navigate('Review')}>
                      <Text style={styles.skip}>Skip</Text>
                   </TouchableOpacity>
                </View>
@@ -256,8 +264,12 @@ const Result = ({ navigation }) => {
                   <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginVertical: 5, }}>
 
                      <TouchableOpacity onPress={() => openGalleryFront()}>
+                        {CompanyPreviousResultsPic1 ?
                         <ImageBackground source={{ uri: CompanyPreviousResultsPic1 }} style={styles.dp} />
-                     </TouchableOpacity>
+                         : 
+                        <ImageBackground source={{ uri: CompanyPreviousResultsPic1122 }} style={styles.dp} />
+                        }
+                        </TouchableOpacity>
 
                      <TouchableOpacity onPress={() => openGalleryFront2()}>
                         <ImageBackground source={{ uri:CompanyPreviousResultsPic2 }} style={styles.dp} />
@@ -324,6 +336,8 @@ const Result = ({ navigation }) => {
                      <Text style={styles.btn}> Submit </Text>
                   </View>
                </TouchableOpacity>
+               <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
+
             </View>
          </ScrollView>
       </>

@@ -1,21 +1,3 @@
-// import { StyleSheet, Text, View } from 'react-native'
-// import React from 'react'
-// import Navigatino from './src/Navigation-Flow/Navigation/Navigatino'
-// import { AuthContext, AuthProvider } from './context/AuthContext';
-
-
-// const App = () => {
-//   return (
-//     <>
-//       <Navigatino/>
-//     </>
-//   )
-// }
-
-// export default App
-
-// const styles = StyleSheet.create({})
-
 
 
 import { StyleSheet, Text, View } from 'react-native';

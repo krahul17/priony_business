@@ -3,11 +3,12 @@ import React, { useState } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../../Component/Loader/Loader';
 
 const Review = ({ navigation }) => {
 
 
-   const [CustomerReviewsPic1, setCustomerReviewsPic1] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
+   const [CustomerReviewsPic1, setCustomerReviewsPic1] = useState();
    const [CustomerReviewsPic2, setCustomerReviewsPic2] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
    const [CustomerReviewsPic3, setCustomerReviewsPic3] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
    const [CustomerReviewsPic4, setCustomerReviewsPic4] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
@@ -21,6 +22,8 @@ const Review = ({ navigation }) => {
    const [CustomerReviewsPic12, setCustomerReviewsPic12] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU');
    const [showoption, setShowoption] = useState(false)
    const [accessToken, setAccess] = useState(null);
+
+   let CustomerReviewsPic1122='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZAodGW2X9o3mmDgRC1UY07VEKS1_J42601zJiCcSWxskZd2aDOBsemSlM5O0Ch2XTls&usqp=CAU'
 
 
    const openGalleryFront = () => {
@@ -170,14 +173,15 @@ const Review = ({ navigation }) => {
 
    const SaveData = async () => {
 
-      // if (!(CustomerReviewsPic1 && CustomerReviewsPic2 && CustomerReviewsPic3 && CustomerReviewsPic4 && CustomerReviewsPic5 && CustomerReviewsPic6 && CustomerReviewsPic7 && CustomerReviewsPic8 && CustomerReviewsPic9 && CustomerReviewsPic10 && CustomerReviewsPic11 && CustomerReviewsPic12)) {
-      //    alert('Enter all felid')
-      //    return
-      // }
+      if (!(CustomerReviewsPic1 )) {
+         alert('Enter Minimum One Image')
+         return
+      }
+
       const accessToken = await AsyncStorage.getItem("accessToken");
       setAccess(accessToken);
 
-
+      setModalVisible(true)
 
       let formData = new FormData();
       let filename = CustomerReviewsPic1.split('/').pop();
@@ -213,10 +217,13 @@ const Review = ({ navigation }) => {
       }).then((result) => {
          result.json().then((response) => {
             console.log(response, "Response");
-            navigation.navigate('FreePlan')
+            setModalVisible(false)
             alert("DATA SAVE")
+            navigation.navigate('FreePlan')
+           
          }).catch((error) => {
-            alert('something went wrong')
+            setModalVisible(false)
+            alert(error)
             console.log(error);
          });
       })
@@ -241,7 +248,7 @@ const Review = ({ navigation }) => {
                </View>
 
                <View style={{ alignItems: 'flex-end', marginRight: 28 }}>
-                  <TouchableOpacity onPress={() => navigation.navigate('PaymentConfirm')}>
+                  <TouchableOpacity onPress={() => navigation.navigate('FreePlan')}>
                      <Text style={styles.skip}>Skip</Text>
                   </TouchableOpacity>
                </View>
@@ -256,11 +263,7 @@ const Review = ({ navigation }) => {
                            <Text style={{ color: '#000', fontWeight: '600', fontSize: 15, marginTop: 9, marginHorizontal: 8 }}>Upload Your Customer's Reviews</Text>
                         </View>
                      </View>
-                     {/* <View>
-                        <TouchableOpacity>
-                           <Image source={require('../assets/Camera.png')} style={styles.camera} />
-                        </TouchableOpacity>
-                     </View> */}
+                    
                   </View>
                </View>
 
@@ -269,8 +272,12 @@ const Review = ({ navigation }) => {
                   <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginVertical: 5, }}>
 
                      <TouchableOpacity onPress={() => openGalleryFront()}>
+                       { CustomerReviewsPic1 ?
                         <ImageBackground source={{ uri: CustomerReviewsPic1 }} style={styles.dp} />
-                     </TouchableOpacity>
+                       :
+                        <ImageBackground source={{ uri: CustomerReviewsPic1122 }} style={styles.dp} />
+                       }
+                      </TouchableOpacity>
 
                      <TouchableOpacity onPress={() => openGalleryFront2()}>
                         <ImageBackground source={{ uri: CustomerReviewsPic2 }} style={styles.dp} />
@@ -337,6 +344,8 @@ const Review = ({ navigation }) => {
                   <Text style={styles.btn}> Submit </Text>
 
                </TouchableOpacity>
+
+               <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
             </View>
          </ScrollView>

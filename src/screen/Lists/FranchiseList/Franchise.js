@@ -81,7 +81,7 @@ const Franchise = ({ navigation }) => {
 
                     <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
                         <View style={{ flexDirection: 'row', marginLeft: 30 }}>
-                            <TouchableOpacity onPress={() => navigation.navigate('ViewAds')}>
+                            <TouchableOpacity >
                                 <Image source={require('../../../screen/Lists/assets/eye.png')} style={styles.eye} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
@@ -92,7 +92,7 @@ const Franchise = ({ navigation }) => {
                         </View>
 
                         <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                            <TouchableOpacity onPress={() => navigation.navigate('LikeAds')}>
+                            <TouchableOpacity>
                                 <Image source={require('../../../screen/Lists/assets/thumb.png')} style={styles.like} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
@@ -104,7 +104,7 @@ const Franchise = ({ navigation }) => {
 
                         <View style={{ flexDirection: 'row', marginLeft: 30 }}>
 
-                            <TouchableOpacity onPress={() => navigation.navigate("ShareAds")}>
+                            <TouchableOpacity>
                                 <Image source={require('../assets/share.png')} style={styles.share} />
                             </TouchableOpacity>
                             <View style={styles.sharecount}>
