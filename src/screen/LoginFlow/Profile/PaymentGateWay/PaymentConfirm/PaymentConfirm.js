@@ -2,25 +2,45 @@ import { StyleSheet,SafeAreaView, Text, View ,StatusBar,Image,ScrollView,Touchab
 import React, { useEffect,useState,useContext } from 'react'
 import { AuthContext } from '../../../../../../context/AuthContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import BaseUrl from '../../../../../Component/BaseURL/BaseUrl';
 
 
 const PaymentConfirm = ({navigation}) => {
 
-    const {login,signup} =useContext(AuthContext)
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState([]);
     const [accessToken, setAccessToken] = useState();
 
-    useEffect(() => {
-        const firstLoad = async () => {
-            try {
-                const token = await AsyncStorage.getItem("accessToken");
-                setAccessToken(token);
-                login()
-            } catch (err) {
-                console.log(err);
-            }
-        };
+    console.log(data,"useinfo getting herr")
+
+    const firstLoad = async () => {
+        try {
+    
+          const accessToken = await AsyncStorage.getItem("accessToken");
+          setAccessToken(accessToken);
+          console.log(accessToken, ' hello im token')
+    
+          await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
+            headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json",
+              'Authorization': 'Bearer ' + accessToken,
+            },
+          }).then((response) => response.json())
+            .then((json) => setData(json.Events) )
+            .catch((error) => console.error(error))
+            .finally(() => setLoading(false));
+    
+          // console.log(data,"useinfo getting herr")
+    
+        } catch (err) {
+          console.log(err);
+        }
+      };
+    
+      useEffect(() => {
         firstLoad();
-    }, []);
+      }, []);
 
   return (
     <>

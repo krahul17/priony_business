@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.priony.business.app-mergeReleaseResources-28:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.priony.business.app-mergeReleaseResources-34:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\ff7f9e1ea9c2e709fffb9e018f2252cf\\transformed\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
