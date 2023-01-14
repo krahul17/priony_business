@@ -105,6 +105,9 @@ import InterviewYoutubeShare from '../../screen/Lists/InterviewYoutubeShare';
 import ViewsJobOffer from '../../screen/Lists/ViewsJobOffer/ViewsJobOffer';
 import LikeJobOffer from '../../screen/Lists/LikeJobOffer/LikejobOffer';
 import ShareJobOffer from '../../screen/Lists/ShareJobOffer/ShareJobOffer';
+import FranchiseView from '../../screen/Lists/FranchiseList/FranchiseView/FranchiseView';
+import FranchiseLike from '../../screen/Lists/FranchiseList/FranchiseView/FranchiseLike';
+import FranchiseShare from '../../screen/Lists/FranchiseList/FranchiseView/FranchiseShare';
 
 
 
@@ -133,7 +136,7 @@ const Navigatino = () => {
       {showWellcome ? <Stack.Screen
         name="WellComeScreen" component={WellComeScreen} />
         : null}
-
+     {/* <Stack.Screen name="PaymentConfirm" component={PaymentConfirm} /> */}
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="ProfileDetails" component={ProfileDetails} />
       <Stack.Screen name="PrCategories" component={PrCategories} />
@@ -180,6 +183,9 @@ const Navigatino = () => {
       <Stack.Screen name="CustomTodatDeal" component={CustomTodatDeal} />
       <Stack.Screen name="JobOffer" component={JobOffer} />
       <Stack.Screen name="SellFranchise" component={SellFranchise} />
+      <Stack.Screen name="FranchiseView" component={FranchiseView} />
+      <Stack.Screen name="FranchiseLike" component={FranchiseLike} />
+      <Stack.Screen name="FranchiseShare" component={FranchiseShare} />
       <Stack.Screen name="InterstedVistor" component={InterstedVistor} />
       <Stack.Screen name="Ielts" component={Ielts} />
       <Stack.Screen name="StudyVisa" component={StudyVisa} />

@@ -6,7 +6,7 @@ import RazorpayCheckout from 'react-native-razorpay';
 
 
 
-const PaymentGateWay = () => {
+const PaymentGateWay = ({navigation}) => {
 
     const companylogo2 = 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWR8UleGP6xe2whajk4Tq7rb08APejJOkf042F3Eo_TbVBg8Sj'
 
@@ -27,6 +27,20 @@ const PaymentGateWay = () => {
             setCompanyLogo(CompanyLogo.path)
         });
     }
+
+     useEffect(() => {
+        const firstLoad = async () => {
+            try {
+                const token = await AsyncStorage.getItem("accessToken");
+                setAccessToken(token);
+                login()
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        firstLoad();
+    }, []);
+
 
     return (
         <>
@@ -71,7 +85,7 @@ const PaymentGateWay = () => {
                         <View>
                             <Image source={require('../assets/qr.jpeg')} style={styles.qrimg} />
                         </View>
-                        <TouchableOpacity style={styles.Btn} onPress={() => {
+                        {/* <TouchableOpacity style={styles.Btn} onPress={() => {
                             var options = {
                                 description: 'Credits towards consultation',
                                 image: 'https://i.imgur.com/3g7nmJC.jpg',
@@ -94,7 +108,8 @@ const PaymentGateWay = () => {
                                 // handle failure
                                 alert(`Error: ${error.code} | ${error.description}`);
                             });
-                        }}>
+                        }}> */}
+                        <TouchableOpacity style={styles.Btn} onPress={() => navigation.navigate('PaymentConfirm')}>
                             <Text style={styles.btn}>Razor Pay </Text>
                         </TouchableOpacity>
 

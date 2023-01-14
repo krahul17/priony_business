@@ -1654,6 +1654,7 @@ drawable src_screen_lists_assets_bell
 drawable src_screen_lists_assets_chat1
 drawable src_screen_lists_assets_eye
 drawable src_screen_lists_assets_fav
+drawable src_screen_lists_assets_fav2
 drawable src_screen_lists_assets_logo
 drawable src_screen_lists_assets_profile
 drawable src_screen_lists_assets_read

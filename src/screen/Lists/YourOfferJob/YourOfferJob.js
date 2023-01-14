@@ -77,7 +77,7 @@ const YourOfferJob = ({ navigation }) => {
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
                             </TouchableOpacity>
                             <View style={styles.viewcount}>
-                                <Text >{likecount}</Text>
+                                <Text >{item.ViewsCount}</Text>
                             </View>
                         </View>
 
@@ -88,7 +88,7 @@ const YourOfferJob = ({ navigation }) => {
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
                             </TouchableOpacity>
                             <View style={styles.viewcount}>
-                                <Text >{likecount}</Text>
+                                <Text >{item.LikeCount}</Text>
                             </View>
                         </View>
 
@@ -98,7 +98,7 @@ const YourOfferJob = ({ navigation }) => {
                                 <Image source={require('../assets/share.png')} style={styles.share} />
                             </TouchableOpacity>
                             <View style={styles.sharecount}>
-                                <Text >{likecount}</Text>
+                                <Text >{item.ShearCount}</Text>
                             </View>
                         </View>
                     </View>

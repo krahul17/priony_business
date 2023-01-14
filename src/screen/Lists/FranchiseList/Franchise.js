@@ -22,8 +22,6 @@ const Franchise = ({ navigation }) => {
         }
     }
 
-    // let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNzEzNDc4LCJqdGkiOiI0N2QwOTBkZjViODg0NWEyYjczNzg2YjQ3Y2U1OGM1YiIsInVzZXJfaWQiOjI1fQ.49jpCS7XnhmS5prGvFmMS7OF54-gnggw_Cj6yAKZnWk"
-
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
@@ -81,34 +79,34 @@ const Franchise = ({ navigation }) => {
 
                     <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
                         <View style={{ flexDirection: 'row', marginLeft: 30 }}>
-                            <TouchableOpacity >
+                            <TouchableOpacity onPress={() => navigation.navigate("FranchiseView",{item})}>
                                 <Image source={require('../../../screen/Lists/assets/eye.png')} style={styles.eye} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
                             </TouchableOpacity>
                             <View style={styles.viewcount}>
-                                <Text >{likecount}</Text>
+                                <Text >{item.ViewsCount}</Text>
                             </View>
                         </View>
 
                         <View style={{ flexDirection: 'row', marginLeft: 50 }}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate("FranchiseLike",{item})}>
                                 <Image source={require('../../../screen/Lists/assets/thumb.png')} style={styles.like} />
 
                                 {/* <Image source={require('../assets/thumb.png')}  /> */}
                             </TouchableOpacity>
                             <View style={styles.viewcount}>
-                                <Text >{likecount}</Text>
+                                <Text >{item.LikeCount}</Text>
                             </View>
                         </View>
 
                         <View style={{ flexDirection: 'row', marginLeft: 30 }}>
 
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate("FranchiseShare",{item})}>
                                 <Image source={require('../assets/share.png')} style={styles.share} />
                             </TouchableOpacity>
                             <View style={styles.sharecount}>
-                                <Text >{likecount}</Text>
+                                <Text >{item.ShearCount}</Text>
                             </View>
                         </View>
                     </View>

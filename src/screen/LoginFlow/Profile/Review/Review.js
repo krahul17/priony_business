@@ -171,6 +171,8 @@ const Review = ({ navigation }) => {
       });
    }
 
+   const [modalVisible, setModalVisible] = useState(false);
+
    const SaveData = async () => {
 
       if (!(CustomerReviewsPic1 )) {

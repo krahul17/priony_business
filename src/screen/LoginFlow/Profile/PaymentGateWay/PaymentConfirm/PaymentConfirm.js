@@ -7,40 +7,81 @@ import BaseUrl from '../../../../../Component/BaseURL/BaseUrl';
 
 const PaymentConfirm = ({navigation}) => {
 
+    const {login,signup} =useContext(AuthContext)
+
     const [loading, setLoading] = useState(false);
-    const [data, setData] = useState([]);
+    const [data2, setData] = useState([]);
     const [accessToken, setAccessToken] = useState();
 
-    console.log(data,"useinfo getting herr")
+    // console.log(data,' 123545 data is here')
 
-    const firstLoad = async () => {
-        try {
-    
-          const accessToken = await AsyncStorage.getItem("accessToken");
-          setAccessToken(accessToken);
-          console.log(accessToken, ' hello im token')
-    
-          await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
-            headers: {
-              "Accept": "application/json",
-              "Content-Type": "application/json",
-              'Authorization': 'Bearer ' + accessToken,
-            },
-          }).then((response) => response.json())
-            .then((json) => setData(json.Events) )
-            .catch((error) => console.error(error))
-            .finally(() => setLoading(false));
-    
-          // console.log(data,"useinfo getting herr")
-    
-        } catch (err) {
-          console.log(err);
-        }
-      };
-    
-      useEffect(() => {
+    // useEffect(() => {
+    //     const firstLoad = async () => {
+    //         try {
+    //             const token = await AsyncStorage.getItem("accessToken");
+    //             setAccessToken(token);
+    //             login()
+    //         } catch (err) {
+    //             console.log(err);
+    //         }
+    //     };
+    //     firstLoad();
+    // }, []);
+
+    useEffect(() => {
+        const firstLoad = async () => {
+            try {
+                const accessToken = await AsyncStorage.getItem("accessToken");
+                setAccessToken(accessToken);
+                console.log(accessToken, ' hello im token')
+
+                await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
+                    headers: {
+                      "Accept": "application/json",
+                      "Content-Type": "application/json",
+                      'Authorization': 'Bearer ' + accessToken,
+                    },
+                  }).then((data) => {
+                    data.json().then((response) => {
+                       console.log(response.Events.Approved, "Response check")
+                       console.log(response.status)
+                       if (response.Events.Approved == true) {
+
+                        console.log(" status  is working");
+                         
+                      
+                        // login()
+                       }
+                       else if (response.Events.Approved == false) {
+                      
+                        //   AsyncStorage.setItem("userInfo", JSON.stringify(response))
+                        //    AsyncStorage.setItem("refereshToken", response.token.refresh);
+                        //   AsyncStorage.setItem("accessToken", response.token.access);
+                         
+                        //   navigation.navigate("CreateProfie", {
+                        //      phone_number
+                        //   });
+                          // console.log(response.token.access,'user token set ')
+                          console.log("else  is working");
+                          
+                       }
+                    }).catch((err)=>{
+                       setModalVisible(false)
+                       alert('invalid Otp')
+                    })
+                    console.log(data.status)
+                 
+                 })
+                 // setNumbId(result);
+              } catch (error) {
+                 // alert('code', code)
+                 alert(error);
+              }
+        };
         firstLoad();
-      }, []);
+    }, []);
+
+    
 
   return (
     <>
@@ -54,7 +95,7 @@ const PaymentConfirm = ({navigation}) => {
                     <Image source={require('../../../../assetsLogo/logo.png')} style={styles.img}/>
                 </View>
                 <View style={styles.confirm}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>navigation.navigate('HomeScreen')}>
                         <Text style={styles.text}> Wait for ADMIN confirmation{'\n'} for Payment</Text>
                     </TouchableOpacity>
                 </View>

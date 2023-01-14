@@ -51,28 +51,28 @@ const ViewsJobOffer = ({route}) => {
 
     const GustData = ({ item }) => {
 
-        // const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3,13));
-        // console.log(item.phone_number,'phone number gett')
-        // const WhatsAppchat = () => {
-        //   // Check for perfect 10 digit length
-        //   if (mobileNumber.length != 10) {
-        //     alert('Please insert correct WhatsApp number');
-        //     return;
-        //   }
-        //   // Using 91 for India
-        //   // You can change 91 with your country code
-        //   let url =
-        //     'whatsapp://send?text=' +
-        //     //  whatsAppMsg +
-        //     '&phone=91'+ mobileNumber;
-        //   Linking.openURL(url)
-        //     .then((data) => {
-        //       console.log('WhatsApp Opened');
-        //     })
-        //     .catch(() => {
-        //       alert('Make sure Whatsapp installed on your device');
-        //     });
-        // };
+        const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3,13));
+        console.log(item.phone_number,'phone number gett')
+        const WhatsAppchat = () => {
+          // Check for perfect 10 digit length
+          if (mobileNumber.length != 10) {
+            alert('Please insert correct WhatsApp number');
+            return;
+          }
+          // Using 91 for India
+          // You can change 91 with your country code
+          let url =
+            'whatsapp://send?text=' +
+            //  whatsAppMsg +
+            '&phone=91'+ mobileNumber;
+          Linking.openURL(url)
+            .then((data) => {
+              console.log('WhatsApp Opened');
+            })
+            .catch(() => {
+              alert('Make sure Whatsapp installed on your device');
+            });
+        };
         
         return (
             <View style={styles.mainList}>

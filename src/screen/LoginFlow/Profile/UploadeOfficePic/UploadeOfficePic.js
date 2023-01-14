@@ -5,6 +5,7 @@ import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
 import Loader from '../../../../Component/Loader/Loader';
 
+
 const UploadeOfficePic = ({ navigation }) => {
 
 
@@ -47,7 +48,7 @@ const CompanyCertificationPic111122=('https://encrypted-tbn0.gstatic.com/images?
    const [showoption12, setShowoption12] = useState(false)
    const [accessToken, setAccess] = useState(null);
 
-   const [modalVisible, setModalVisible] = useState(false);
+
 
    const openGalleryFront = () => {
       ImageCropPicker.openPicker({
@@ -185,7 +186,8 @@ const CompanyCertificationPic111122=('https://encrypted-tbn0.gstatic.com/images?
          setCompanyCertificationPic12(CompanyCertificationPic12.path)
       });
    }
-
+   const [modalVisible, setModalVisible] = useState(false);
+   
    const SaveData = async () => {
 
       if (!(CompanyCertificationPic1 )) {

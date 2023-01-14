@@ -292,6 +292,10 @@
         "source": "com.priony.business.app-react-31:/drawable-mdpi/src_screen_homescreen_assets_internation.png"
     },
     {
+        "merged": "com.priony.business.app-merged_res-36:/drawable-mdpi_src_screen_lists_assets_fav2.png.flat",
+        "source": "com.priony.business.app-react-31:/drawable-mdpi/src_screen_lists_assets_fav2.png"
+    },
+    {
         "merged": "com.priony.business.app-merged_res-36:/drawable-mdpi_src_screen_lists_assets_youtubebtn.png.flat",
         "source": "com.priony.business.app-react-31:/drawable-mdpi/src_screen_lists_assets_youtubebtn.png"
     },

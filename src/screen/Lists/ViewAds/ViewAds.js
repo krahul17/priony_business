@@ -41,7 +41,7 @@ const ViewAds = ({route}) => {
             'Authorization': 'Bearer ' + accessToken,
         },
     }).then((response) => response.json())
-        .then((json) => setData(json.Users))
+        .then((json) => setData(json.SellerProfile))
         .catch((error) =>
             // alert(error))
             console.error(error))
@@ -274,3 +274,4 @@ const styles = StyleSheet.create({
         marginTop: 2,
     },
 })
+

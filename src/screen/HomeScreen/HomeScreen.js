@@ -15,11 +15,11 @@ const HomeScreen = ({ navigation, item, Events }) => {
   const [data, setData] = useState([]);
   const [accessToken, setAccessToken] = useState();
 
-  console.log(data,"useinfo getting herr")
+  console.log(data, "useinfo getting herr")
 
   const [first, setfirst] = useState(data.plan);
 
-  console.log(data.plan,' plan is ....')
+  console.log(data.plan, ' plan is ....')
 
 
 
@@ -152,22 +152,25 @@ const HomeScreen = ({ navigation, item, Events }) => {
               </Modal>
             </View>
 
-            {/* { first === 'free_PLAN' &&
+          
               <View style={styles.bar}>
-
+             { first !== 'Free' &&
                 <View style={{ marginVertical: 10 }}>
                   <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>FreePlan</Text>
                 </View>
-
+              }
               </View>
-            } */}
+        
 
-            {first === 'PORFENSSIONAL Plan'  &&
-              <View style={styles.bar}>
+              {first === 'PORFENSSIONAL Plan' &&
+            <View style={styles.bar}>
+
+          
 
                 <View style={{ marginVertical: 10 }}>
-                  <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
+                <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
                 </View>
+
                 <View style={{ flexDirection: 'row', marginVertical: 12 }}>
                   <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
                   <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
@@ -175,9 +178,9 @@ const HomeScreen = ({ navigation, item, Events }) => {
                   <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
                   <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
                 </View>
-
-              </View>
-            }
+             
+            </View> 
+ }
 
           </View>
 
