@@ -1,5 +1,5 @@
 import { StyleSheet, SafeAreaView, Text, View, StatusBar, Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
 import RazorpayCheckout from 'react-native-razorpay';
 

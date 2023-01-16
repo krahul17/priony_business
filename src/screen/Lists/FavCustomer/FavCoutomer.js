@@ -28,7 +28,7 @@ const FavCustomer = () => {
         const accessToken = await AsyncStorage.getItem("accessToken");
         setAccess(accessToken);
 
-        fetch(BaseUrl + '/douryou-seller-api/seller-profile-likes/', {
+        fetch(BaseUrl + '/douryou-seller-api/seller-favourite-users', {
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const FavCustomer = () => {
 
     const Card = ({ item }) => {
 
-        const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3,13));
+        const [mobileNumber, setMobileNumber] = useState(item.FvtUsr.phone_number.slice(3,13));
         console.log(item.phone_number,'phone number gett')
         // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
         const WhatsAppchat = () => {
@@ -71,21 +71,21 @@ const FavCustomer = () => {
             <View style={styles.mainList}>
                 <TouchableOpacity>
                     <View style={styles.fav}>
-                        <Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
+                        <Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
                     </View>
                 </TouchableOpacity>
 
                 <View style={{ flexDirection: 'row' }}>
 
                     <View style={styles.Pic}>
-                        <Image source={{uri:BaseUrl + item.frontimage}} style={styles.pic} />
+                        <Image source={{uri:BaseUrl + item.FvtUsr.frontimage}} style={styles.pic} />
                     </View>
 
                     <View style={styles.adress}>
                         <View style={{ flexDirection: 'row' }}>
                             <View>
                                 <Text style={styles.name}>
-                                    {item.first_name}
+                                    {item.FvtUsr.first_name}
                                 </Text>
                             </View>
                         </View>
@@ -93,7 +93,7 @@ const FavCustomer = () => {
                         <View style={{ flexDirection: 'row' }}>
                             <View>
                                 <Text style={styles.email}>
-                                    {item.email}
+                                    {item.FvtUsr.email}
                                 </Text>
                             </View>
                         </View>
@@ -101,7 +101,7 @@ const FavCustomer = () => {
                         <View style={{ flexDirection: 'row' }}>
                             <View>
                                 <Text style={styles.dist}>
-                                    {item.last_name}
+                                    {item.FvtUsr.last_name}
                                 </Text>
                             </View>
                         </View>
@@ -130,7 +130,7 @@ const FavCustomer = () => {
 
                 <View>
                     <View style={{ backgroundColor: '#0006C1', padding: 10, marginTop: 10 }}>
-                        <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', }}>Date :- {item.date_joined.slice(2,10)}</Text>
+                        <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', }}>Date :- {item.FvtUsr.date_joined.slice(2,10)}</Text>
                     </View>
                 </View>
 
@@ -163,10 +163,10 @@ const FavCustomer = () => {
 
                     <FlatList
                         showsHorizontalScrollIndicator={false}
-                        data={data.Users}
+                        data={data.MyMatch}
                         renderItem={({ item, index }) =>
                             (<Card item={item} index={index}></Card>)}
-                        keyExtractor={Users => Users.id} />
+                        keyExtractor={FvtUsr => FvtUsr.id} />
                 </View>
             </ScrollView>
         </>

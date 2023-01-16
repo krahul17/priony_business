@@ -13,7 +13,8 @@ const favdataaa = [
 
 const UserRequirement = () => {
 
-    const [favselect4, setFavSelect4] = useState(true)
+    const [favselect4, setFavSelect4] = useState({})
+    console.log(favselect4.message,'uhrgjfjuew88755')
 
 
     const [loading, setLoading] = useState(false);
@@ -90,6 +91,7 @@ const UserRequirement = () => {
                 body: formData
             }).then((result) => {
                 result.json().then((response) => {
+                    setFavSelect4(response)
                     console.log(response, "Response");
                 }).catch((error) => {
                     alert(error)
@@ -129,11 +131,17 @@ const UserRequirement = () => {
 
                 <TouchableOpacity onPress={() =>{[favorate(), setFavSelect4(!favselect4)]}}>
                     <View style={styles.fav}>
-                        {favselect4 ?
+
+                        {favselect4.status !=='false' &&
+                        <Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
+                        }
+
+
+                        {/* {favselect4 ?
                             (<Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
                             :
                             (<Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
-                            )}
+                            )} */}
                     </View>
                 </TouchableOpacity>
 
