@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">989661042024-vnmd49eqp9rjd9e6f7n11d7m90usesh9.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">989661042024</string>
+    <string name="google_api_key" translatable="false">AIzaSyBrDh2-7mavrkWlusEByMxCvoFKIrQLTIU</string>
+    <string name="google_app_id" translatable="false">1:989661042024:android:2cd98d76c80e49e8a372dd</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBrDh2-7mavrkWlusEByMxCvoFKIrQLTIU</string>
+    <string name="google_storage_bucket" translatable="false">priony-business.appspot.com</string>
+    <string name="project_id" translatable="false">priony-business</string>
+</resources>

@@ -108,6 +108,7 @@ import ShareJobOffer from '../../screen/Lists/ShareJobOffer/ShareJobOffer';
 import FranchiseView from '../../screen/Lists/FranchiseList/FranchiseView/FranchiseView';
 import FranchiseLike from '../../screen/Lists/FranchiseList/FranchiseView/FranchiseLike';
 import FranchiseShare from '../../screen/Lists/FranchiseList/FranchiseView/FranchiseShare';
+import Notification from '../../screen/HomeScreen/Notification/Notification';
 
 
 
@@ -140,6 +141,7 @@ const Navigatino = () => {
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="ProfileDetails" component={ProfileDetails} />
       <Stack.Screen name="PrCategories" component={PrCategories} />
+      <Stack.Screen name="Notification" component={Notification} />
       <Stack.Screen name="PrEnquirtForm" component={PrEnquirtForm} />
       <Stack.Screen name="InterviewYoutubeView" component={InterviewYoutubeView} />
       <Stack.Screen name="InterviewYoutubeLike" component={InterviewYoutubeLike} />

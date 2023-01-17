@@ -44,6 +44,36 @@ const WorkPermit = () => {
 
     const Getdata = ({ item }) => {
 
+        const [favselect4, setFavSelect4] = useState({})
+
+        const favorate = async () => {
+
+
+            let gettingfav = 'Work Permit User'
+
+            let formData = new FormData();
+
+            formData.append('whyFvrt', gettingfav)
+
+            fetch(BaseUrl + '/douryou-seller-api/seller-add-users-to-favourite/' + item.id + "/", {
+                method: 'POST',
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "multipart/form-data",
+                    'Authorization': 'Bearer ' + accessToken,
+                },
+                body: formData
+            }).then((result) => {
+                result.json().then((response) => {
+                    setFavSelect4(response)
+                    console.log(response, "Response");
+                }).catch((error) => {
+                    alert(error)
+
+                });
+            })
+        }
+
         const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3,13));
         console.log(item.phone_number,'phone number gett')
         // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
@@ -70,11 +100,18 @@ const WorkPermit = () => {
 
         return (
             <View style={styles.mainList}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
                     <View style={styles.fav}>
-                        <Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
+
+
+                        {favselect4.status  ?
+                            (<Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
+                            :
+                            (<Image source={require('../../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
+                            )}
                     </View>
                 </TouchableOpacity>
+
 
                 <View style={{ flexDirection: 'row' }}>
 

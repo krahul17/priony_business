@@ -2,7 +2,8 @@ import { StyleSheet, Text, View, StatusBar, Modal, ScrollView, Image, TouchableO
 import React, { useState, useContext, useEffect } from 'react'
 import { AuthContext } from '../../../context/AuthContext'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import BaseUrl from '../../Component/BaseURL/BaseUrl'
+import BaseUrl from '../../Component/BaseURL/BaseUrl';
+import messaging from '@react-native-firebase/messaging';
 
 
 const HomeScreen = ({ navigation, item, Events }) => {
@@ -65,6 +66,40 @@ const HomeScreen = ({ navigation, item, Events }) => {
     firstLoad();
   }, []);
 
+
+  // messaging push notification start
+  useEffect(async () => {
+    const checkToken = async () => {
+      const fcmToken = await messaging().getToken();
+      if (fcmToken) {
+        console.log(fcmToken, 'fcm token : -');
+      }
+    }
+
+    checkToken();
+
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = messaging().onMessage(async remoteMessage => {
+      alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+      console.log(remoteMessage, 'helllo im mesagrel idhfdb')
+      console.log(remoteMessage.notification.body, '1111helllo im mesagrel idhfdb')
+      console.log(remoteMessage.notification.title, '1111helllo im mesagrel idhfdb')
+
+
+    });
+
+
+    return unsubscribe;
+  }, []);
+
+
+  messaging().setBackgroundMessageHandler(async remoteMessage => {
+    console.log('Message handled in the background!', remoteMessage);
+  });
+
+
   return (
     <>
       <StatusBar
@@ -91,7 +126,9 @@ const HomeScreen = ({ navigation, item, Events }) => {
           </View>
 
           <View>
-            <TouchableOpacity onPress={() => bell()}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Notification')}
+            >
               <Image source={require('../HomeScreen/assets/bell.png')} style={styles.bell} />
               <View>
                 <View style={{ backgroundColor: '#D1070A', borderRadius: 999, height: 17, width: 17, position: 'absolute', marginTop: -32, marginLeft: 32 }}>
@@ -152,23 +189,23 @@ const HomeScreen = ({ navigation, item, Events }) => {
               </Modal>
             </View>
 
-          
-              <View style={styles.bar}>
-             { first !== 'Free' &&
+
+            <View style={styles.bar}>
+              {first !== 'Free' &&
                 <View style={{ marginVertical: 10 }}>
                   <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>FreePlan</Text>
                 </View>
               }
-              </View>
-        
+            </View>
 
-              {first === 'PORFENSSIONAL Plan' &&
-            <View style={styles.bar}>
 
-          
+            {first === 'PORFENSSIONAL Plan' &&
+              <View style={styles.bar}>
+
+
 
                 <View style={{ marginVertical: 10 }}>
-                <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
+                  <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginVertical: 12 }}>
@@ -178,9 +215,9 @@ const HomeScreen = ({ navigation, item, Events }) => {
                   <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
                   <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
                 </View>
-             
-            </View> 
- }
+
+              </View>
+            }
 
           </View>
 

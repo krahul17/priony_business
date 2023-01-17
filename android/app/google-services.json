@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "989661042024",
+    "project_id": "priony-business",
+    "storage_bucket": "priony-business.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989661042024:android:2cd98d76c80e49e8a372dd",
+        "android_client_info": {
+          "package_name": "com.priony.business"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989661042024-b0b0geamh684hsmfcgr4spp6imn28utl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.priony.business",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "989661042024-vnmd49eqp9rjd9e6f7n11d7m90usesh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrDh2-7mavrkWlusEByMxCvoFKIrQLTIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989661042024-vnmd49eqp9rjd9e6f7n11d7m90usesh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

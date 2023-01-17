@@ -22,7 +22,7 @@ const FreePlan = ({ navigation }) => {
                     </View>
 
                     <View style={{ alignItems: 'flex-end', marginRight: 28 }}>
-                        <TouchableOpacity onPress={() => navigation.navigate('PaymentConfirm')}>
+                        <TouchableOpacity onPress={() => navigation.navigate('PaymentGateWay')}>
                             <Text style={styles.skip}>Skip</Text>
                         </TouchableOpacity>
                     </View>
@@ -61,7 +61,7 @@ const FreePlan = ({ navigation }) => {
 
                     </View>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('PaymentConfirm')} style={styles.Btn}>
+                    <TouchableOpacity onPress={() => navigation.navigate('PaymentGateWay')} style={styles.Btn}>
                         <Text style={styles.btn}>Submit</Text>
                     </TouchableOpacity>
 

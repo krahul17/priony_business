@@ -71,7 +71,8 @@ const UserRequirement = () => {
         console.log(accessToken, "ufgedufufjfgbyd 162215")
 
 
-
+        const [favselect4, setFavSelect4] = useState({})
+        
         const favorate = async () => {
 
 
@@ -145,11 +146,7 @@ const UserRequirement = () => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
-                    <View style={styles.fav}>
-                        <Image source={item.img} style={{ height: 40, width: 40 }} />
-                    </View>
-                </TouchableOpacity>
+            
 
                 <View style={{ flexDirection: 'row' }}>
 

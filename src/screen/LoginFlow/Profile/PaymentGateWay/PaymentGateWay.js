@@ -1,7 +1,9 @@
 import { StyleSheet, SafeAreaView, Text, View, StatusBar, Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native'
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useContext } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
 import RazorpayCheckout from 'react-native-razorpay';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { AuthContext } from '../../../../../context/AuthContext';
 
 
 
@@ -14,6 +16,9 @@ const PaymentGateWay = ({navigation}) => {
     const [CompanyLogo, setCompanyLogo] = useState("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
     const [showoption, setShowoption] = useState(false)
 
+    // const [showoption, setShowoption] = useState(false)
+
+    const {login,signup} =useContext(AuthContext)
 
     const openGalleryFront = () => {
         ImageCropPicker.openPicker({
@@ -32,7 +37,7 @@ const PaymentGateWay = ({navigation}) => {
         const firstLoad = async () => {
             try {
                 const token = await AsyncStorage.getItem("accessToken");
-                setAccessToken(token);
+                // setAccessToken(token);
                 login()
             } catch (err) {
                 console.log(err);
@@ -109,7 +114,7 @@ const PaymentGateWay = ({navigation}) => {
                                 alert(`Error: ${error.code} | ${error.description}`);
                             });
                         }}> */}
-                        <TouchableOpacity style={styles.Btn} onPress={() => navigation.navigate('PaymentConfirm')}>
+                        <TouchableOpacity style={styles.Btn}>
                             <Text style={styles.btn}>Razor Pay </Text>
                         </TouchableOpacity>
 
