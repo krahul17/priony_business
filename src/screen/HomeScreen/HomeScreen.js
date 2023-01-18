@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation, item, Events }) => {
   const [data, setData] = useState([]);
   const [accessToken, setAccessToken] = useState();
 
-  console.log(data, "useinfo getting herr")
+  // console.log(data, "useinfo getting herr")
 
   const [first, setfirst] = useState(data.plan);
 
@@ -62,42 +62,51 @@ const HomeScreen = ({ navigation, item, Events }) => {
     }
   };
 
+////Notification chech FCM token
+const [system_token, setSystem_token] = useState('')
+
+
+
+  const Savefcm = async () => {
+
+      
+    const accessToken = await AsyncStorage.getItem("accessToken");
+    setAccessToken(accessToken);
+    console.log('jdbfd ',accessToken)
+
+   
+      const fcmToken = await messaging().getToken();
+      setSystem_token(fcmToken)
+    
+
+    let formData = new FormData();
+  
+    formData.append('system_token', fcmToken)
+
+    fetch(BaseUrl +'/douryou-seller-api/seller-send-fcm-token-to-backend/', {
+       method: 'Patch',
+       headers: {
+          "Accept": "application/json",
+          "Content-Type": "multipart/form-data",
+          'Authorization': 'Bearer ' + accessToken,
+       },
+       body: formData
+    }).then((result) => {
+       result.json().then((response) => {
+
+          console.log(response, "Response");
+           
+       }).catch((error) => {
+          console.log(error);
+       });
+    })
+ }
+
   useEffect(() => {
+    Savefcm();
     firstLoad();
   }, []);
 
-
-  // messaging push notification start
-  useEffect(async () => {
-    const checkToken = async () => {
-      const fcmToken = await messaging().getToken();
-      if (fcmToken) {
-        console.log(fcmToken, 'fcm token : -');
-      }
-    }
-
-    checkToken();
-
-  }, []);
-
-  useEffect(() => {
-    const unsubscribe = messaging().onMessage(async remoteMessage => {
-      alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
-      console.log(remoteMessage, 'helllo im mesagrel idhfdb')
-      console.log(remoteMessage.notification.body, '1111helllo im mesagrel idhfdb')
-      console.log(remoteMessage.notification.title, '1111helllo im mesagrel idhfdb')
-
-
-    });
-
-
-    return unsubscribe;
-  }, []);
-
-
-  messaging().setBackgroundMessageHandler(async remoteMessage => {
-    console.log('Message handled in the background!', remoteMessage);
-  });
 
 
   return (
@@ -189,36 +198,26 @@ const HomeScreen = ({ navigation, item, Events }) => {
               </Modal>
             </View>
 
-
             <View style={styles.bar}>
-              {first !== 'Free' &&
-                <View style={{ marginVertical: 10 }}>
+              {first ?
+                (<View style={{ marginVertical: 10 }}>
                   <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>FreePlan</Text>
-                </View>
-              }
-            </View>
-
-
-            {first === 'PORFENSSIONAL Plan' &&
-              <View style={styles.bar}>
-
-
-
-                <View style={{ marginVertical: 10 }}>
+                </View>)
+                :
+               ( <><View style={{ marginVertical: 10 }}>
                   <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
                 </View>
-
                 <View style={{ flexDirection: 'row', marginVertical: 12 }}>
-                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-                </View>
-
-              </View>
-            }
-
+                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+              </View></>)
+                }
+             
+            </View>
+           
           </View>
 
           <View style={{ marginVertical: 20 }}>

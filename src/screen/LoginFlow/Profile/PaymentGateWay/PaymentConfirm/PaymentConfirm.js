@@ -15,18 +15,6 @@ const PaymentConfirm = ({navigation}) => {
 
     // console.log(data,' 123545 data is here')
 
-    // useEffect(() => {
-    //     const firstLoad = async () => {
-    //         try {
-    //             const token = await AsyncStorage.getItem("accessToken");
-    //             setAccessToken(token);
-    //             login()
-    //         } catch (err) {
-    //             console.log(err);
-    //         }
-    //     };
-    //     firstLoad();
-    // }, []);
 
     useEffect(() => {
         const firstLoad = async () => {
@@ -49,27 +37,20 @@ const PaymentConfirm = ({navigation}) => {
 
                         console.log(" status  is working");
                          
-                      
-                        // login()
+                        navigation.navigate('HomeScreen')
+                        login()
                        }
                        else if (response.Events.Approved == false) {
+                        login()
                       
-                        //   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-                        //    AsyncStorage.setItem("refereshToken", response.token.refresh);
-                        //   AsyncStorage.setItem("accessToken", response.token.access);
-                         
-                        //   navigation.navigate("CreateProfie", {
-                        //      phone_number
-                        //   });
-                          // console.log(response.token.access,'user token set ')
                           console.log("else  is working");
                           
                        }
                     }).catch((err)=>{
                        setModalVisible(false)
-                       alert('invalid Otp')
+                       alert(err)
                     })
-                    console.log(data.status)
+                    // console.log(data.status)
                  
                  })
                  // setNumbId(result);
@@ -95,7 +76,7 @@ const PaymentConfirm = ({navigation}) => {
                     <Image source={require('../../../../assetsLogo/logo.png')} style={styles.img}/>
                 </View>
                 <View style={styles.confirm}>
-                    <TouchableOpacity onPress={()=>navigation.navigate('HomeScreen')}>
+                    <TouchableOpacity>
                         <Text style={styles.text}> Wait for ADMIN confirmation{'\n'} for Payment</Text>
                     </TouchableOpacity>
                 </View>

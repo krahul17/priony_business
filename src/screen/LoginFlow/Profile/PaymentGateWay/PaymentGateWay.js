@@ -1,22 +1,22 @@
-import { StyleSheet, SafeAreaView, Text, View, StatusBar, Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native'
+import { StyleSheet, SafeAreaView, Text, View, StatusBar, Linking,Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native'
 import React, { useState,useEffect,useContext } from 'react'
 import ImageCropPicker from 'react-native-image-crop-picker';
-import RazorpayCheckout from 'react-native-razorpay';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AuthContext } from '../../../../../context/AuthContext';
+import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../../Component/Loader/Loader';
 
 
 
 
 const PaymentGateWay = ({navigation}) => {
 
-    const companylogo2 = 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWR8UleGP6xe2whajk4Tq7rb08APejJOkf042F3Eo_TbVBg8Sj'
-
-    // const [CompanyLogo, setCompanyLogo] = useState();
-    const [CompanyLogo, setCompanyLogo] = useState("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
+  
+    const [CompanyLogo, setCompanyLogo] = useState("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWR8UleGP6xe2whajk4Tq7rb08APejJOkf042F3Eo_TbVBg8Sj");
     const [showoption, setShowoption] = useState(false)
+    const [modalVisible, setModalVisible] = useState(false);
+    const [accessToken, setAccess] = useState(null);
 
-    // const [showoption, setShowoption] = useState(false)
 
     const {login,signup} =useContext(AuthContext)
 
@@ -33,19 +33,68 @@ const PaymentGateWay = ({navigation}) => {
         });
     }
 
-     useEffect(() => {
-        const firstLoad = async () => {
-            try {
-                const token = await AsyncStorage.getItem("accessToken");
-                // setAccessToken(token);
-                login()
-            } catch (err) {
-                console.log(err);
-            }
-        };
-        firstLoad();
-    }, []);
+    //  useEffect(() => {
+    //     const firstLoad = async () => {
+    //         try {
+    //             const token = await AsyncStorage.getItem("accessToken");
+    //             // setAccessToken(token);
+    //             // login()
+    //         } catch (err) {
+    //             console.log(err);
+    //         }
+    //     };
+    //     firstLoad();
+    // }, []);
+ 
+    const SaveData = async () => {
 
+      
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+        console.log('jdbfd ',accessToken)
+  
+        setModalVisible(true)
+
+        const uploadstr='Upload ScrrenShort'
+  
+        let formData = new FormData();
+        let filename = CompanyLogo.split('/').pop();
+        console.log("filename = " + filename);
+        let match = /\.(\w+)$/.exec(filename);
+        console.log("match = " + match);
+        let type = match ? `image/${match[1]}` : `image`;
+        console.log("type = " + type);
+
+        formData.append('screenshort', { uri: CompanyLogo, name: filename, type })
+        formData.append('Upload ScrrenShort', uploadstr)
+  
+        fetch(BaseUrl +'/douryou-seller-api/seller-send-screenshort-to-admin-for-profile-verification/', {
+           method: 'Patch',
+           headers: {
+              "Accept": "application/json",
+              "Content-Type": "multipart/form-data",
+              'Authorization': 'Bearer ' + accessToken,
+           },
+           body: formData
+        }).then((result) => {
+           result.json().then((response) => {
+              console.log(response, "Response");
+              setModalVisible(false)
+              login()
+              alert('Wait for Admin Confirmation')
+               
+           }).catch((error) => {
+              setModalVisible(false)
+              alert(error)
+              console.log(error);
+           });
+        })
+     }
+
+    const upiUrl = 'upi://pay?pa=suyashvashishtha@axl&pn=Suyash%20Vashishtha&mc=0000&mode=02&purpose=00';
+    const upiOpener = () => {
+        Linking.openURL(upiUrl)
+    }
 
     return (
         <>
@@ -63,7 +112,7 @@ const PaymentGateWay = ({navigation}) => {
                                 <Text style={styles.text}> Payment Gateway</Text>
                             </TouchableOpacity>
                         </View>
-                        <View>
+                        {/* <View>
                             <Text style={styles.textonly}> Your Plan</Text>
 
                             <View style={styles.planchoose}>
@@ -76,7 +125,8 @@ const PaymentGateWay = ({navigation}) => {
                                 <Text style={styles.textplan2}>: 7000</Text>
                             </View>
 
-                        </View>
+                        </View> */}
+
                         <View style={styles.nameBeneficier}>
                             <Text style={styles.textplan}> Sukhpreet Singh</Text>
                             <Text style={styles.textplan}> State Bank of India</Text>
@@ -90,32 +140,9 @@ const PaymentGateWay = ({navigation}) => {
                         <View>
                             <Image source={require('../assets/qr.jpeg')} style={styles.qrimg} />
                         </View>
-                        {/* <TouchableOpacity style={styles.Btn} onPress={() => {
-                            var options = {
-                                description: 'Credits towards consultation',
-                                image: 'https://i.imgur.com/3g7nmJC.jpg',
-                                currency: 'INR',
-                                key: 'rzp_test_OnUYJ85LMxASW9',
-                                amount: '100',
-                                name: 'Test',
-                                // order_id: 'order_DslnoIgkIDL8Z',//Replace this with an order_id created using Orders API.
-                                prefill: {
-                                    email: 'test@example.com',
-                                    contact: '9191919191',
-                                    name: 'Razorpay'
-                                },
-                                theme: { color: '#53a20e' }
-                            }
-                            RazorpayCheckout.open(options).then((data) => {
-                                // handle success
-                                alert(`Success: ${data.razorpay_payment_id}`);
-                            }).catch((error) => {
-                                // handle failure
-                                alert(`Error: ${error.code} | ${error.description}`);
-                            });
-                        }}> */}
-                        <TouchableOpacity style={styles.Btn}>
-                            <Text style={styles.btn}>Razor Pay </Text>
+                   
+                        <TouchableOpacity onPress={()=>upiOpener()} style={styles.Btn}>
+                            <Text style={styles.btn}>Payment </Text>
                         </TouchableOpacity>
 
 
@@ -124,7 +151,7 @@ const PaymentGateWay = ({navigation}) => {
                                 <ImageBackground source={{ uri: CompanyLogo }} style={styles.dp} />
                             </TouchableOpacity>
                         </View>
-                        <TouchableOpacity style={styles.Btn2}>
+                        <TouchableOpacity onPress={SaveData} style={styles.Btn2}>
                             <Text style={styles.btn2}>Upload ScreenShot </Text>
                         </TouchableOpacity>
 

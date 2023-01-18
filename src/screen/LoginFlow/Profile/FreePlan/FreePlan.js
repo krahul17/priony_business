@@ -1,9 +1,57 @@
 import { StyleSheet, ScrollView, number, Text, View, TouchableOpacity, Image, TextInput, TouchableHighlight, StatusBar } from 'react-native'
-import React from 'react'
+import React,{ useState,useContext } from 'react';
+import { AuthContext } from '../../../../../context/AuthContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../../Component/Loader/Loader';
 
 
 
 const FreePlan = ({ navigation }) => {
+
+    const [modalVisible, setModalVisible] = useState(false);
+    const [accessToken, setAccess] = useState(null);
+
+    const {login} =useContext(AuthContext)
+
+    const SaveData = async () => {
+
+      
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+        console.log('jdbfd ',accessToken)
+  
+        setModalVisible(true)
+
+        const planfree='Buy Freeplan Plan'
+  
+        let formData = new FormData();
+
+        formData.append('PlaneType', planfree)
+  
+        fetch(BaseUrl +'/douryou-seller-api/seller-buy-plan/', {
+           method: 'Patch',
+           headers: {
+              "Accept": "application/json",
+              "Content-Type": "multipart/form-data",
+              'Authorization': 'Bearer ' + accessToken,
+           },
+           body: formData
+        }).then((result) => {
+           result.json().then((response) => {
+              console.log(response, "Response");
+              setModalVisible(false)
+              alert('You Choose FREEPLAN')
+              login()
+             
+           }).catch((error) => {
+              setModalVisible(false)
+              alert(error)
+              console.log(error);
+           });
+        })
+     }
+
     return (
         <>
             <StatusBar
@@ -22,9 +70,7 @@ const FreePlan = ({ navigation }) => {
                     </View>
 
                     <View style={{ alignItems: 'flex-end', marginRight: 28 }}>
-                        <TouchableOpacity onPress={() => navigation.navigate('PaymentGateWay')}>
-                            <Text style={styles.skip}>Skip</Text>
-                        </TouchableOpacity>
+                        
                     </View>
 
                     <View style={styles.Input}>
@@ -61,7 +107,7 @@ const FreePlan = ({ navigation }) => {
 
                     </View>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('PaymentGateWay')} style={styles.Btn}>
+                    <TouchableOpacity onPress={SaveData} style={styles.Btn}>
                         <Text style={styles.btn}>Submit</Text>
                     </TouchableOpacity>
 
@@ -72,6 +118,8 @@ const FreePlan = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate('AllPlanList')} style={styles.Btn}>
                         <Text style={styles.btn2}> Upgrade Plan</Text>
                     </TouchableOpacity>
+
+                    <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
 
                 </View>

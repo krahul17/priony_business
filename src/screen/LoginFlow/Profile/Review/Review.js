@@ -182,6 +182,7 @@ const Review = ({ navigation }) => {
 
       const accessToken = await AsyncStorage.getItem("accessToken");
       setAccess(accessToken);
+      console.log('jdbfd ',accessToken)
 
       setModalVisible(true)
 

@@ -1,7 +1,52 @@
 import { StyleSheet, ScrollView, number, Text, View, TouchableOpacity, Image, TextInput, TouchableHighlight, StatusBar, Dimensions } from 'react-native'
-import React from 'react'
+import React,{ useState } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
+import Loader from '../../../../Component/Loader/Loader';
 
 const Profenssional = ({ navigation }) => {
+
+    const [modalVisible, setModalVisible] = useState(false);
+    const [accessToken, setAccess] = useState(null);
+
+    const SaveData = async () => {
+
+      
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
+        console.log('jdbfd ',accessToken)
+  
+        setModalVisible(true)
+
+        const planfree='Buy Professional Plan'
+  
+        let formData = new FormData();
+
+        formData.append('PlaneType', planfree)
+  
+        fetch(BaseUrl +'/douryou-seller-api/seller-buy-plan/', {
+           method: 'Patch',
+           headers: {
+              "Accept": "application/json",
+              "Content-Type": "multipart/form-data",
+              'Authorization': 'Bearer ' + accessToken,
+           },
+           body: formData
+        }).then((result) => {
+           result.json().then((response) => {
+              console.log(response, "Response");
+              setModalVisible(false)
+              alert('You Choose PROFESSIONAL')
+              navigation.navigate('PaymentGateWay')
+             
+           }).catch((error) => {
+              setModalVisible(false)
+              alert(error)
+              console.log(error);
+           });
+        })
+     }
+
     return (
         <>
             <StatusBar
@@ -147,9 +192,11 @@ const Profenssional = ({ navigation }) => {
                     </View>
 
 
-                    <TouchableOpacity style={styles.Btn}  onPress={() => navigation.navigate('PaymentGateWay')} >
+                    <TouchableOpacity style={styles.Btn}  onPress={SaveData} >
                         <Text style={styles.btn}>Buy Now</Text>
                     </TouchableOpacity>
+
+                    <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
 
                 </View>

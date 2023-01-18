@@ -137,7 +137,7 @@ const Navigatino = () => {
       {showWellcome ? <Stack.Screen
         name="WellComeScreen" component={WellComeScreen} />
         : null}
-     {/* <Stack.Screen name="PaymentConfirm" component={PaymentConfirm} /> */}
+     <Stack.Screen name="PaymentConfirm" component={PaymentConfirm} />
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="ProfileDetails" component={ProfileDetails} />
       <Stack.Screen name="PrCategories" component={PrCategories} />
