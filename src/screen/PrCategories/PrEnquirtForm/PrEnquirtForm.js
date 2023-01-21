@@ -24,6 +24,7 @@ const PrEnquirtForm = ({ navigation }) => {
     };
 
 
+
     useEffect( async () => {
         const accessToken = await AsyncStorage.getItem("accessToken");
         setAccess(accessToken);
@@ -56,18 +57,44 @@ const PrEnquirtForm = ({ navigation }) => {
 
     const Getdata = ({ item, index }) => {
 
+       console.log( item.id,'hello im id')
+
         const [favselect4, setFavSelect4] = useState({})
+
+
+
+        useEffect(async () => {
+            try{
+    
+            fetch(BaseUrl + '/douryou-seller-api/seller-check-pr-enquery-form-is-in-favourite-list/' + item.id + "/", {
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    'Authorization': 'Bearer ' + accessToken ,
+                },
+            }).then((response) => response.json())
+                .then((json) => setFavSelect4(json))
+                .catch((error) => console.error(error))
+                .finally(() => setLoading(false));
+        }catch(error){
+            console.log(error,'error')
+
+        }
+
+        }, []);
 
         const favorate = async () => {
 
+            console.log|('token received',accessToken)
 
-            let gettingfav = 'Ielts User'
+
+            let gettingfav = 'Legal Advisor User'
 
             let formData = new FormData();
 
-            formData.append('whyFvrt', gettingfav)
+            formData.append('WhyFvrt', gettingfav)
 
-            fetch(BaseUrl + '/douryou-seller-api/seller-add-users-to-favourite/' + item.username.id + "/", {
+            fetch(BaseUrl + '/douryou-seller-api/seller-add-pr-enquery-to-favourite/' + item.id + "/", {
                 method: 'POST',
                 headers: {
                     "Accept": "application/json",
@@ -77,7 +104,6 @@ const PrEnquirtForm = ({ navigation }) => {
                 body: formData
             }).then((result) => {
                 result.json().then((response) => {
-                    setFavSelect4(response)
                     console.log(response, "Response");
                 }).catch((error) => {
                     alert(error)
@@ -113,14 +139,14 @@ const PrEnquirtForm = ({ navigation }) => {
             <TouchableOpacity onPress={() => { navigation.navigate('Form',{value: item, value2:item.id}) }}>
                 <View style={styles.mainList}>
 
-                <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
+                <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4.status)] }}>
                     <View style={styles.fav}>
 
 
                         {favselect4.status  ?
-                            (<Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
+                            (<Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />)
                             :
-                            (<Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
+                            (<Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
                             )}
                     </View>
                 </TouchableOpacity>

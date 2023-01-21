@@ -1,4 +1,4 @@
-#Tue Jan 17 13:56:57 IST 2023
+#Fri Jan 20 19:28:32 IST 2023
 base.1=D\:\\priony_business\\priony_business\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
 path.1=classes2.dex
 base.0=D\:\\priony_business\\priony_business\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex

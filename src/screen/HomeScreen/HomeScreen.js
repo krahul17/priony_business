@@ -16,11 +16,11 @@ const HomeScreen = ({ navigation, item, Events }) => {
   const [data, setData] = useState([]);
   const [accessToken, setAccessToken] = useState();
 
-  // console.log(data, "useinfo getting herr")
+  console.log(accessToken, " accesstoken useinfo getting herr")
 
   const [first, setfirst] = useState(data.plan);
 
-  console.log(data.plan, ' plan is ....')
+  console.log(data, ' plan is ....')
 
 
 
@@ -126,9 +126,9 @@ const [system_token, setSystem_token] = useState('')
             <TouchableOpacity onPress={() => increment()}>
               <Image source={require('../../screen/HomeScreen/assets/chat1.png')} style={styles.message} />
               <View>
-                <View style={{ backgroundColor: '#D1070A', borderRadius: 999, height: 17, width: 17, position: 'absolute', marginTop: -30, marginLeft: 29 }}>
+                {/* <View style={{ backgroundColor: '#D1070A', borderRadius: 999, height: 17, width: 17, position: 'absolute', marginTop: -30, marginLeft: 29 }}>
                   <Text style={{ color: '#fff', textAlign: 'center', marginTop: -1, fontWeight: '400' }}>{count}</Text>
-                </View>
+                </View> */}
               </View>
             </TouchableOpacity>
 
@@ -140,9 +140,9 @@ const [system_token, setSystem_token] = useState('')
             >
               <Image source={require('../HomeScreen/assets/bell.png')} style={styles.bell} />
               <View>
-                <View style={{ backgroundColor: '#D1070A', borderRadius: 999, height: 17, width: 17, position: 'absolute', marginTop: -32, marginLeft: 32 }}>
+                {/* <View style={{ backgroundColor: '#D1070A', borderRadius: 999, height: 17, width: 17, position: 'absolute', marginTop: -32, marginLeft: 32 }}>
                   <Text style={{ color: '#fff', textAlign: 'center', marginTop: -1, fontWeight: '400' }}>{count1}</Text>
-                </View>
+                </View> */}
               </View>
             </TouchableOpacity>
           </View>
@@ -199,12 +199,27 @@ const [system_token, setSystem_token] = useState('')
             </View>
 
             <View style={styles.bar}>
-              {first ?
-                (<View style={{ marginVertical: 10 }}>
-                  <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>FreePlan</Text>
-                </View>)
-                :
-               ( <><View style={{ marginVertical: 10 }}>
+              {data.plan ==='PORFENSSIONAL Plan' &&
+                <View style={{ marginVertical: 10, flexDirection:'row' }}>
+                  <Text style={{ color: '#EFD757', fontSize: 20, marginRight:45, fontStyle: 'italic', fontWeight: '500' }}>Professional Plan</Text>
+                  <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                 <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                 <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                 <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                 <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
+                </View>
+                 
+                
+             }
+
+                {data.plan ==='FREE Plan' &&
+                <View style={{ marginVertical: 10 }}>
+                  <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>FreePlan Plan</Text>
+                </View>}
+
+                  {/* {data.plan ==='PORFENSSIONAL Plan' &&
+                
+            (<>   <View style={{ marginVertical: 10 }}>
                   <Text style={{ color: '#EFD757', fontSize: 20, fontStyle: 'italic', fontWeight: '500' }}>Professional</Text>
                 </View>
                 <View style={{ flexDirection: 'row', marginVertical: 12 }}>
@@ -213,8 +228,9 @@ const [system_token, setSystem_token] = useState('')
                 <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
                 <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
                 <Image source={require('../HomeScreen/assets/Star.png')} style={styles.star} />
-              </View></>)
-                }
+              </View>
+              </> ) } */}
+                
              
             </View>
            
@@ -951,6 +967,8 @@ const styles = StyleSheet.create({
   star: {
     width: 15,
     height: 15,
+    marginTop:6,
+    marginLeft:2
   },
   mainBorder: {
     borderWidth: 3,

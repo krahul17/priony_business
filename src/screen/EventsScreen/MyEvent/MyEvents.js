@@ -86,13 +86,9 @@ const MyEvents = ({navigation}) => {
         return (
 
             <View style={styles.mainList}>
-            <TouchableOpacity>
-                <View style={styles.fav}>
-                    <Image source={item.fav} style={{ height: 50, width: 50 }} />
-                </View>
-            </TouchableOpacity>
+          
 
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{ flexDirection: 'row',marginTop:20 }}>
 
                 <View style={styles.Pic}>
                     <Image source={{uri:BaseUrl + item.WhichEvent.EventImage}} style={styles.pic} />
@@ -153,13 +149,13 @@ const MyEvents = ({navigation}) => {
                 </View>
 
             </View>
-            <View >
+            {/* <View >
                 <TouchableOpacity onPress={() => navigation.navigate('ViewVisitor')} style={styles.Btn}>
                     <Text style={styles.btn}>View Visitor</Text>
                 </TouchableOpacity>
-            </View>
+            </View> */}
 
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -30 ,marginBottom:5}}>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10, marginTop: -10 ,marginBottom:5}}>
 
                 <TouchableOpacity onPress={() => { WhatsAppchat();}}>
                     <View style={{ marginRight: 20, margin: 2 }}>

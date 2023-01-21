@@ -1,18 +1,5 @@
 <libraries>
   <library
-      name="D:\priony_business\priony_business\android@@:react-native-razorpay::release"
-      jars="D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\.transforms\d017c14f9e5b533d4b08c6f914441316\transformed\out\jars\classes.jar"
-      resolved="Seller:react-native-razorpay:unspecified"
-      folder="D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\.transforms\d017c14f9e5b533d4b08c6f914441316\transformed\out"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
       name="D:\priony_business\priony_business\android@@:react-native-firebase_messaging::release"
       jars="D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\.transforms\8fe77b0775b5220fc9643a3d15cbb4a3\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-firebase_messaging:unspecified"
@@ -484,6 +471,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="javax.inject:javax.inject:1@jar"
+      jars="C:\Users\extec\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+      resolved="javax.inject:javax.inject:1"/>
+  <library
       name="androidx.autofill:autofill:1.1.0@aar"
       jars="C:\Users\extec\.gradle\caches\transforms-3\1039773d586fc830da85dee0357bc6a0\transformed\jetified-autofill-1.1.0\jars\classes.jar"
       resolved="androidx.autofill:autofill:1.1.0"
@@ -739,10 +730,6 @@
       jars="C:\Users\extec\.gradle\caches\modules-2\files-2.1\com.facebook.yoga\proguard-annotations\1.19.0\fcbbb39052e6490eaaf6a6959c49c3a4fbe87c63\proguard-annotations-1.19.0.jar"
       resolved="com.facebook.yoga:proguard-annotations:1.19.0"/>
   <library
-      name="javax.inject:javax.inject:1@jar"
-      jars="C:\Users\extec\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
-      resolved="javax.inject:javax.inject:1"/>
-  <library
       name="com.google.firebase:firebase-messaging:23.1.1@aar"
       jars="C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\jars\classes.jar"
       resolved="com.google.firebase:firebase-messaging:23.1.1"
@@ -833,19 +820,6 @@
       jars="C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\jars\classes.jar"
       resolved="com.google.firebase:firebase-common:20.2.0"
       folder="C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="com.razorpay:checkout:1.6.26@aar"
-      jars="C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\jars\classes.jar"
-      resolved="com.razorpay:checkout:1.6.26"
-      folder="C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -972,19 +946,6 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.google.android.gms:play-services-wallet:18.1.3@aar"
-      jars="C:\Users\extec\.gradle\caches\transforms-3\1cce0ddcbfd3b5d5c04acdacaa05167d\transformed\jetified-play-services-wallet-18.1.3\jars\classes.jar"
-      resolved="com.google.android.gms:play-services-wallet:18.1.3"
-      folder="C:\Users\extec\.gradle\caches\transforms-3\1cce0ddcbfd3b5d5c04acdacaa05167d\transformed\jetified-play-services-wallet-18.1.3"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
       name="com.google.android.gms:play-services-auth-api-phone:18.0.1@aar"
       jars="C:\Users\extec\.gradle\caches\transforms-3\122ec87db4e11ef56756ee2635c04aa1\transformed\jetified-play-services-auth-api-phone-18.0.1\jars\classes.jar"
       resolved="com.google.android.gms:play-services-auth-api-phone:18.0.1"
@@ -1002,32 +963,6 @@
       jars="C:\Users\extec\.gradle\caches\transforms-3\c48d98febf784df98d7d2fe04a6507b7\transformed\jetified-play-services-auth-base-18.0.4\jars\classes.jar"
       resolved="com.google.android.gms:play-services-auth-base:18.0.4"
       folder="C:\Users\extec\.gradle\caches\transforms-3\c48d98febf784df98d7d2fe04a6507b7\transformed\jetified-play-services-auth-base-18.0.4"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="com.google.android.gms:play-services-identity:17.0.0@aar"
-      jars="C:\Users\extec\.gradle\caches\transforms-3\02cdbcd6b622372d672706901b2a12b6\transformed\jetified-play-services-identity-17.0.0\jars\classes.jar"
-      resolved="com.google.android.gms:play-services-identity:17.0.0"
-      folder="C:\Users\extec\.gradle\caches\transforms-3\02cdbcd6b622372d672706901b2a12b6\transformed\jetified-play-services-identity-17.0.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="com.google.android.gms:play-services-maps:17.0.0@aar"
-      jars="C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\jars\classes.jar"
-      resolved="com.google.android.gms:play-services-maps:17.0.0"
-      folder="C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

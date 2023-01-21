@@ -32,477 +32,373 @@
 19-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-73
 19-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:21-70
 20        </intent>
-21        <intent>
-21-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:12:9-18:18
-22            <action android:name="android.intent.action.VIEW" />
-22-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:13:13-65
-22-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:13:21-62
-23
-24            <data
-24-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:15:13-17:38
-25                android:mimeType="*/*"
-25-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:16:17-39
-26                android:scheme="*" />
-26-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:17:17-35
-27        </intent>
-28        <intent>
-28-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:19:9-28:18
-29            <action android:name="android.intent.action.VIEW" />
-29-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:13:13-65
-29-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:13:21-62
-30
-31            <category android:name="android.intent.category.BROWSABLE" />
-31-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:22:13-74
-31-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:22:23-71
-32
-33            <data
-33-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:15:13-17:38
-34                android:host="pay"
-35                android:mimeType="*/*"
-35-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:16:17-39
-36                android:scheme="upi" />
-36-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:17:17-35
-37        </intent>
-38        <intent>
-38-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:29:9-31:18
-39            <action android:name="android.intent.action.MAIN" />
-39-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:13-65
-39-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:21-62
-40        </intent>
-41        <intent>
-41-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:32:9-36:18
-42            <action android:name="android.intent.action.SEND" />
-42-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:33:13-65
-42-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:33:21-62
-43
-44            <data android:mimeType="*/*" />
-44-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:15:13-17:38
-44-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:16:17-39
-45        </intent>
-46    </queries>
-47
-48    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-48-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-81
-48-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:22-78
-49    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-49-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:25:5-77
-49-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:25:22-74
-50    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-50-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:28:5-82
-50-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:28:22-79
-51
-52    <uses-feature
-52-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
-53        android:glEsVersion="0x00020000"
-53-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
-54        android:required="true" />
-54-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
-55
-56    <application
-56-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:6:5-27:19
-57        android:name="com.priony.business.MainApplication"
-57-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:7:7-38
-58        android:allowBackup="false"
-58-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:13:7-34
-59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-59-->[androidx.core:core:1.7.0] C:\Users\extec\.gradle\caches\transforms-3\0647204d58c048d1dd06350cd74722f3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-60        android:debuggable="true"
-61        android:icon="@mipmap/ic_launcher"
-61-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:11:7-41
-62        android:label="@string/app_name"
-62-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:10:7-39
-63        android:roundIcon="@mipmap/ic_launcher_round"
-63-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:12:7-52
-64        android:theme="@style/AppTheme"
-64-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:14:7-38
-65        android:usesCleartextTraffic="true" >
-65-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:9:7-42
-66        <activity
-66-->D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:11:9-111
-67            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-67-->D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:11:19-83
-68            android:exported="false" />
-68-->D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:11:84-108
-69        <activity
-69-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:15:7-26:18
-70            android:name="com.priony.business.MainActivity"
-70-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:16:9-37
-71            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-71-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:18:9-118
-72            android:exported="true"
-72-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:21:9-32
-73            android:label="@string/app_name"
-73-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:17:9-41
-74            android:launchMode="singleTask"
-74-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:19:9-40
-75            android:windowSoftInputMode="adjustResize" >
-75-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:20:9-51
-76            <intent-filter>
-76-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:22:9-25:25
-77                <action android:name="android.intent.action.MAIN" />
-77-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:13-65
-77-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:21-62
-78
-79                <category android:name="android.intent.category.LAUNCHER" />
-79-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:24:13-73
-79-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:24:23-70
-80            </intent-filter>
-81        </activity>
-82        <activity
-82-->[:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-12:86
-83            android:name="com.razorpay.CheckoutActivity"
-83-->[:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-57
-84            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-84-->[:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-83
-85            android:exported="true"
-85-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:51:13-36
-86            android:theme="@style/CheckoutTheme" >
-86-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:52:13-49
-87            <intent-filter>
-87-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:53:13-59:29
-88                <action android:name="android.intent.action.MAIN" />
-88-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:13-65
-88-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:21-62
-89
-90                <data
-90-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:15:13-17:38
-91                    android:host="rzp.io"
-92                    android:scheme="io.rzp" />
-92-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:17:17-35
-93            </intent-filter>
-94        </activity>
-95
-96        <service
-96-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-16:40
-97            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService"
-97-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-103
-98            android:exported="false" />
-98-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
-99        <service
-99-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-23:19
-100            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
-100-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-95
-101            android:exported="false" >
-101-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-37
-102            <intent-filter>
-102-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:29
-103                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-103-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-78
-103-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:25-75
-104            </intent-filter>
-105        </service>
-106
-107        <receiver
-107-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-32:20
-108            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
-108-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-96
-109            android:exported="true"
-109-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-36
-110            android:permission="com.google.android.c2dm.permission.SEND" >
-110-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-73
-111            <intent-filter>
-111-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
-112                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-112-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-81
-112-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-78
-113            </intent-filter>
-114        </receiver>
-115
-116        <meta-data
-116-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-36:36
-117            android:name="firebase_messaging_auto_init_enabled"
-117-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-64
-118            android:value="true" />
-118-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-33
-119        <meta-data
-119-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-39:32
-120            android:name="com.google.firebase.messaging.default_notification_channel_id"
-120-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-89
-121            android:value="" />
-121-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-29
-122        <meta-data
-122-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-42:47
-123            android:name="com.google.firebase.messaging.default_notification_color"
-123-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-84
-124            android:resource="@color/white" />
-124-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-44
-125        <meta-data
-125-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-13:36
-126            android:name="app_data_collection_default_enabled"
-126-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-63
-127            android:value="true" />
-127-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-33
-128
-129        <service
-129-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-23:19
-130            android:name="com.google.firebase.components.ComponentDiscoveryService"
-130-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-84
-131            android:directBootAware="true"
-131-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-43
-132            android:exported="false" >
-132-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
-133            <meta-data
-133-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:85
-134                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
-134-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-120
-135                android:value="com.google.firebase.components.ComponentRegistrar" />
-135-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-82
-136            <meta-data
-136-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:55:13-57:85
-137                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-137-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:56:17-119
-138                android:value="com.google.firebase.components.ComponentRegistrar" />
-138-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:57:17-82
-139            <meta-data
-139-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
-140                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-140-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
-141                android:value="com.google.firebase.components.ComponentRegistrar" />
-141-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
-142            <meta-data
-142-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
-143                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-143-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
-144                android:value="com.google.firebase.components.ComponentRegistrar" />
-144-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
-145        </service>
-146
-147        <provider
-147-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-29:38
-148            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
-148-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-88
-149            android:authorities="com.priony.business.reactnativefirebaseappinitprovider"
-149-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-86
-150            android:exported="false"
-150-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37
-151            android:initOrder="99" />
-151-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-35
-152        <provider
-152-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-26:20
-153            android:name="com.reactnative.ivpusic.imagepicker.IvpusicImagePickerFileProvider"
-153-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-94
-154            android:authorities="com.priony.business.provider"
-154-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-60
-155            android:exported="false"
-155-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
-156            android:grantUriPermissions="true" >
-156-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-47
-157            <meta-data
-157-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:78
-158                android:name="android.support.FILE_PROVIDER_PATHS"
-158-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-67
-159                android:resource="@xml/ivpusic_imagepicker_provider_paths" />
-159-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-75
-160        </provider>
-161
-162        <activity
-162-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-30:72
-163            android:name="com.yalantis.ucrop.UCropActivity"
-163-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-60
-164            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-164-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-69
-165
-166        <provider
-166-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
-167            android:name="cl.json.RNShareFileProvider"
-167-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-55
-168            android:authorities="com.priony.business.rnshare.fileprovider"
-168-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-72
-169            android:exported="false"
-169-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
-170            android:grantUriPermissions="true" >
-170-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
-171            <meta-data
-171-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:78
-172                android:name="android.support.FILE_PROVIDER_PATHS"
-172-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-67
-173                android:resource="@xml/share_download_paths" />
-173-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-75
-174        </provider>
-175        <provider
-175-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
-176            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-176-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-83
-177            android:authorities="com.priony.business.fileprovider"
-177-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-64
-178            android:exported="false"
-178-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
-179            android:grantUriPermissions="true" >
-179-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
-180            <meta-data
-180-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:78
-181                android:name="android.support.FILE_PROVIDER_PATHS"
-181-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-67
-182                android:resource="@xml/file_provider_paths" />
-182-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-75
-183        </provider>
-184
-185        <receiver
-185-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:40:9-46:20
-186            android:name="com.razorpay.RzpTokenReceiver"
-186-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:41:13-57
-187            android:exported="false" >
-187-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:42:13-37
-188            <intent-filter>
-188-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:43:13-45:29
-189                <action android:name="rzp.device_token.share" />
-189-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:44:17-65
-189-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:44:25-62
-190            </intent-filter>
-191        </receiver>
-192
-193        <meta-data
-193-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:62:9-64:58
-194            android:name="com.razorpay.plugin.googlepay_all"
-194-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:63:13-61
-195            android:value="com.razorpay.RzpGpayMerged" />
-195-->[com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:64:13-55
-196
-197        <receiver
-197-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:31:9-38:20
-198            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-198-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:32:13-78
-199            android:exported="true"
-199-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:33:13-36
-200            android:permission="com.google.android.c2dm.permission.SEND" >
-200-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:34:13-73
-201            <intent-filter>
-201-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
-202                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-202-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-81
-202-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-78
-203            </intent-filter>
-204        </receiver>
-205        <!--
-206             FirebaseMessagingService performs security checks at runtime,
-207             but set to not exported to explicitly avoid allowing another app to call it.
-208        -->
-209        <service
-209-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:44:9-51:19
-210            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-210-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:45:13-82
-211            android:directBootAware="true"
-211-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:46:13-43
-212            android:exported="false" >
-212-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:47:13-37
-213            <intent-filter android:priority="-500" >
-213-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:29
-214                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-214-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-78
-214-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:25-75
-215            </intent-filter>
-216        </service>
-217        <service
-217-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
-218            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-218-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
-219            android:exported="false" >
-219-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
-220            <meta-data
-220-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
-221                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-221-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
-222                android:value="cct" />
-222-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
-223        </service>
-224        <service
-224-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
-225            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-225-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
-226            android:exported="false"
-226-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
-227            android:permission="android.permission.BIND_JOB_SERVICE" >
-227-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
-228        </service>
-229
-230        <receiver
-230-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
-231            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-231-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
-232            android:exported="false" />
-232-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
-233
-234        <activity
-234-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:23:9-27:75
-235            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-235-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:24:13-93
-236            android:excludeFromRecents="true"
-236-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:25:13-46
-237            android:exported="false"
-237-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:26:13-37
-238            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-238-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:27:13-72
-239        <!--
-240            Service handling Google Sign-In user revocation. For apps that do not integrate with
-241            Google Sign-In, this service will never be started.
-242        -->
-243        <service
-243-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:33:9-37:51
-244            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-244-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
-245            android:exported="true"
-245-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:35:13-36
-246            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-246-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:36:13-107
-247            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
-247-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:37:13-48
-248        <uses-library
-248-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-249            android:name="org.apache.http.legacy"
-249-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-250            android:required="false" />
-250-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-251
-252        <activity
-252-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-253            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-253-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-254            android:exported="false"
-254-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-255            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-255-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-256
-257        <provider
-257-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
-258            android:name="com.google.firebase.provider.FirebaseInitProvider"
-258-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
-259            android:authorities="com.priony.business.firebaseinitprovider"
-259-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
-260            android:directBootAware="true"
-260-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
-261            android:exported="false"
-261-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
-262            android:initOrder="100" />
-262-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
-263
-264        <meta-data
-264-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\extec\.gradle\caches\transforms-3\47b0a75a35b9d53b43a810f4bc8a2582\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-265            android:name="com.google.android.gms.version"
-265-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\extec\.gradle\caches\transforms-3\47b0a75a35b9d53b43a810f4bc8a2582\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-266            android:value="@integer/google_play_services_version" />
-266-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\extec\.gradle\caches\transforms-3\47b0a75a35b9d53b43a810f4bc8a2582\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-267
-268        <provider
-268-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-269            android:name="androidx.startup.InitializationProvider"
-269-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-270            android:authorities="com.priony.business.androidx-startup"
-270-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-271            android:exported="false" >
-271-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-272            <meta-data
-272-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-273                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-273-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-274                android:value="androidx.startup" />
-274-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-275            <meta-data
-275-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-276                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-276-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-277                android:value="androidx.startup" />
-277-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-278        </provider>
-279    </application>
-280
-281</manifest>
+21    </queries>
+22
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+23-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-81
+23-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:22-78
+24    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+24-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:25:5-77
+24-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:25:22-74
+25    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+25-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:28:5-82
+25-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:28:22-79
+26
+27    <application
+27-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:6:5-27:19
+28        android:name="com.priony.business.MainApplication"
+28-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:7:7-38
+29        android:allowBackup="false"
+29-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:13:7-34
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.7.0] C:\Users\extec\.gradle\caches\transforms-3\0647204d58c048d1dd06350cd74722f3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:11:7-41
+33        android:label="@string/app_name"
+33-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:10:7-39
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:12:7-52
+35        android:theme="@style/AppTheme"
+35-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:14:7-38
+36        android:usesCleartextTraffic="true" >
+36-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:9:7-42
+37        <activity
+37-->D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:11:9-111
+38            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+38-->D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:11:19-83
+39            android:exported="false" />
+39-->D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:11:84-108
+40        <activity
+40-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:15:7-26:18
+41            android:name="com.priony.business.MainActivity"
+41-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:16:9-37
+42            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+42-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:18:9-118
+43            android:exported="true"
+43-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:21:9-32
+44            android:label="@string/app_name"
+44-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:17:9-41
+45            android:launchMode="singleTask"
+45-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:19:9-40
+46            android:windowSoftInputMode="adjustResize" >
+46-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:20:9-51
+47            <intent-filter>
+47-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:22:9-25:25
+48                <action android:name="android.intent.action.MAIN" />
+48-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:13-65
+48-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:23:21-62
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:24:13-73
+50-->D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:24:23-70
+51            </intent-filter>
+52        </activity>
+53
+54        <service
+54-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-16:40
+55            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService"
+55-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-103
+56            android:exported="false" />
+56-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
+57        <service
+57-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-23:19
+58            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+58-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-95
+59            android:exported="false" >
+59-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-37
+60            <intent-filter>
+60-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:29
+61                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+61-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-78
+61-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:25-75
+62            </intent-filter>
+63        </service>
+64
+65        <receiver
+65-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-32:20
+66            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+66-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-96
+67            android:exported="true"
+67-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-36
+68            android:permission="com.google.android.c2dm.permission.SEND" >
+68-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-73
+69            <intent-filter>
+69-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
+70                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+70-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-81
+70-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-78
+71            </intent-filter>
+72        </receiver>
+73
+74        <meta-data
+74-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-36:36
+75            android:name="firebase_messaging_auto_init_enabled"
+75-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-64
+76            android:value="true" />
+76-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-33
+77        <meta-data
+77-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-39:32
+78            android:name="com.google.firebase.messaging.default_notification_channel_id"
+78-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-89
+79            android:value="" />
+79-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-29
+80        <meta-data
+80-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-42:47
+81            android:name="com.google.firebase.messaging.default_notification_color"
+81-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-84
+82            android:resource="@color/white" />
+82-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-44
+83        <meta-data
+83-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-13:36
+84            android:name="app_data_collection_default_enabled"
+84-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-63
+85            android:value="true" />
+85-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-33
+86
+87        <service
+87-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-23:19
+88            android:name="com.google.firebase.components.ComponentDiscoveryService"
+88-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-84
+89            android:directBootAware="true"
+89-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-43
+90            android:exported="false" >
+90-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+91            <meta-data
+91-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:85
+92                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+92-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-120
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-82
+94            <meta-data
+94-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:55:13-57:85
+95                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+95-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:56:17-119
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:57:17-82
+97            <meta-data
+97-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+98                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+98-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+100            <meta-data
+100-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+101                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+101-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+103        </service>
+104
+105        <provider
+105-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-29:38
+106            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+106-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-88
+107            android:authorities="com.priony.business.reactnativefirebaseappinitprovider"
+107-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-86
+108            android:exported="false"
+108-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37
+109            android:initOrder="99" />
+109-->[:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-35
+110        <provider
+110-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-26:20
+111            android:name="com.reactnative.ivpusic.imagepicker.IvpusicImagePickerFileProvider"
+111-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-94
+112            android:authorities="com.priony.business.provider"
+112-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-60
+113            android:exported="false"
+113-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
+114            android:grantUriPermissions="true" >
+114-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-47
+115            <meta-data
+115-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:78
+116                android:name="android.support.FILE_PROVIDER_PATHS"
+116-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-67
+117                android:resource="@xml/ivpusic_imagepicker_provider_paths" />
+117-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-75
+118        </provider>
+119
+120        <activity
+120-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-30:72
+121            android:name="com.yalantis.ucrop.UCropActivity"
+121-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-60
+122            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+122-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-69
+123
+124        <provider
+124-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+125            android:name="cl.json.RNShareFileProvider"
+125-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-55
+126            android:authorities="com.priony.business.rnshare.fileprovider"
+126-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-72
+127            android:exported="false"
+127-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+128            android:grantUriPermissions="true" >
+128-->[:react-native-share] D:\priony_business\priony_business\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+129            <meta-data
+129-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:78
+130                android:name="android.support.FILE_PROVIDER_PATHS"
+130-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-67
+131                android:resource="@xml/share_download_paths" />
+131-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-75
+132        </provider>
+133        <provider
+133-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+134            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+134-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-83
+135            android:authorities="com.priony.business.fileprovider"
+135-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-64
+136            android:exported="false"
+136-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+137            android:grantUriPermissions="true" >
+137-->[:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+138            <meta-data
+138-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:78
+139                android:name="android.support.FILE_PROVIDER_PATHS"
+139-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-67
+140                android:resource="@xml/file_provider_paths" />
+140-->[:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-75
+141        </provider>
+142
+143        <receiver
+143-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:31:9-38:20
+144            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+144-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:32:13-78
+145            android:exported="true"
+145-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:33:13-36
+146            android:permission="com.google.android.c2dm.permission.SEND" >
+146-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:34:13-73
+147            <intent-filter>
+147-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
+148                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+148-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-81
+148-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-78
+149            </intent-filter>
+150        </receiver>
+151        <!--
+152             FirebaseMessagingService performs security checks at runtime,
+153             but set to not exported to explicitly avoid allowing another app to call it.
+154        -->
+155        <service
+155-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:44:9-51:19
+156            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+156-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:45:13-82
+157            android:directBootAware="true"
+157-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:46:13-43
+158            android:exported="false" >
+158-->[com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:47:13-37
+159            <intent-filter android:priority="-500" >
+159-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:29
+160                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+160-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-78
+160-->[:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:25-75
+161            </intent-filter>
+162        </service>
+163        <service
+163-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+164            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+164-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+165            android:exported="false" >
+165-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+166            <meta-data
+166-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+167                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+167-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+168                android:value="cct" />
+168-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+169        </service>
+170        <service
+170-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+171            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+171-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+172            android:exported="false"
+172-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+173            android:permission="android.permission.BIND_JOB_SERVICE" >
+173-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+174        </service>
+175
+176        <receiver
+176-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+177            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+177-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+178            android:exported="false" />
+178-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+179
+180        <provider
+180-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+181            android:name="com.google.firebase.provider.FirebaseInitProvider"
+181-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+182            android:authorities="com.priony.business.firebaseinitprovider"
+182-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+183            android:directBootAware="true"
+183-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+184            android:exported="false"
+184-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+185            android:initOrder="100" />
+185-->[com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+186
+187        <activity
+187-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:23:9-27:75
+188            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+188-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:24:13-93
+189            android:excludeFromRecents="true"
+189-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:25:13-46
+190            android:exported="false"
+190-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:26:13-37
+191            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+191-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:27:13-72
+192        <!--
+193            Service handling Google Sign-In user revocation. For apps that do not integrate with
+194            Google Sign-In, this service will never be started.
+195        -->
+196        <service
+196-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:33:9-37:51
+197            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+197-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
+198            android:exported="true"
+198-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:35:13-36
+199            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+199-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:36:13-107
+200            android:visibleToInstantApps="true" />
+200-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:37:13-48
+201
+202        <activity
+202-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+203            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+203-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+204            android:exported="false"
+204-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+205            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+205-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+206
+207        <meta-data
+207-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\extec\.gradle\caches\transforms-3\47b0a75a35b9d53b43a810f4bc8a2582\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+208            android:name="com.google.android.gms.version"
+208-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\extec\.gradle\caches\transforms-3\47b0a75a35b9d53b43a810f4bc8a2582\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+209            android:value="@integer/google_play_services_version" />
+209-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\extec\.gradle\caches\transforms-3\47b0a75a35b9d53b43a810f4bc8a2582\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+210
+211        <provider
+211-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+212            android:name="androidx.startup.InitializationProvider"
+212-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+213            android:authorities="com.priony.business.androidx-startup"
+213-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+214            android:exported="false" >
+214-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+215            <meta-data
+215-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+216                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+216-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+217                android:value="androidx.startup" />
+217-->[androidx.emoji2:emoji2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\97bc83f13aff2563f29b3d7c47622736\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+218            <meta-data
+218-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+219                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+219-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+220                android:value="androidx.startup" />
+220-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+221        </provider>
+222    </application>
+223
+224</manifest>

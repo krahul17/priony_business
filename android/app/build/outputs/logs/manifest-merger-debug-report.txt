@@ -8,11 +8,11 @@ MERGED from D:\priony_business\priony_business\android\app\src\main\AndroidManif
 MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\4579d77217e00b3eb1409e4f5131b607\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\ae0c35edff7aab3199726067e4d40486\transformed\jetified-flipper-network-plugin-0.125.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\0309eaa86938eb5ff5694657217d7d3a\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:8:1-15:12
-MERGED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
-MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-45:12
 MERGED from [:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-32:12
+MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-date-picker] D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-33:12
 MERGED from [:react-native-pager-view] D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] D:\priony_business\priony_business\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
@@ -22,6 +22,13 @@ MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modu
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\944607f6175508cf03d94879b702df89\transformed\jetified-react-native-0.70.6-debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\7d1215b5fa1a53b61877e8b34a697be3\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.react:hermes-engine:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\26fe5f9d2d311a0d0b54e301cde057e7\transformed\jetified-hermes-engine-0.70.6-debug\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:17:1-61:12
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:15:1-33:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\extec\.gradle\caches\transforms-3\de2cb78b1d59c9c71bae33cfb2b7d528\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:15:1-39:12
 MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\53e5b0c5d12254b319eac61720d1cc38\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\6b48c660c921f316326d291233e9bc95\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\324021a591dfa1969c23a97c25cd81ee\transformed\jetified-fresco-2.6.0\AndroidManifest.xml:2:1-9:12
@@ -41,29 +48,19 @@ MERGED from [com.github.yalantis:ucrop:2.2.6-native] C:\Users\extec\.gradle\cach
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\0d1cfdcc191390bf79cf28fe48b6f226\transformed\material-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\extec\.gradle\caches\transforms-3\e2a06fbf1db0940d3045823cb1a36aed\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\85bcf7cb456d96d4395b3b331758c9ba\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:2:1-67:12
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\extec\.gradle\caches\transforms-3\076130cb8039e384f2d8ce5c8475f1b5\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\1039773d586fc830da85dee0357bc6a0\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fresco:middleware:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\eb73ccd7f9e42d1de1f4869b28068499\transformed\jetified-middleware-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\685ebdb3c548883eea127204344e4309\transformed\jetified-ui-common-2.6.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:17:1-61:12
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:15:1-33:12
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:15:1-37:12
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\9f98fd33fe04370c6addaed56390f04e\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\bcc202018667e9bd4f8ff3bfcac7f37c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\extec\.gradle\caches\transforms-3\8f2808cb9f01e8fdc77f8dc992bb3b6d\transformed\jetified-core-ktx-1.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.webkit:webkit:1.4.0] C:\Users\extec\.gradle\caches\transforms-3\da96e37afd14db409ed4b981b6b96e1c\transformed\webkit-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\3982020e17e1812eda7af6dc5971699f\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.android.gms:play-services-wallet:18.1.3] C:\Users\extec\.gradle\caches\transforms-3\1cce0ddcbfd3b5d5c04acdacaa05167d\transformed\jetified-play-services-wallet-18.1.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\122ec87db4e11ef56756ee2635c04aa1\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\extec\.gradle\caches\transforms-3\c48d98febf784df98d7d2fe04a6507b7\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\02cdbcd6b622372d672706901b2a12b6\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:2:1-23:12
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\76ae2daf5cd390f44d99b61247c1b69e\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\8b6eb717f6dfce9e82b448b3981e8fa1\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\bdae96e184074d91fc8fdafc6cd11f02\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:15:1-22:12
@@ -89,6 +86,8 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\extec\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\extec\.gradle\caches\transforms-3\3c4b2257d6a0f30baa3fe3f89ad43a9b\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\3a6ae6f1351491f519b5ee47c5fee7b2\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\extec\.gradle\caches\transforms-3\6d1aa3c3d77d7bafbf4071917f1344cf\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\727d1e8b9eb1a845be608ac02bbfafbf\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\extec\.gradle\caches\transforms-3\a1871d936ac378a9950719650813cd35\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\945e584c5c8a25127913eb9d221b107f\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] C:\Users\extec\.gradle\caches\transforms-3\9273a2a1e5de8464856b7455047ccaca\transformed\exifinterface-1.1.0-beta01\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\extec\.gradle\caches\transforms-3\33bab08a5aaffa2193826b2d58382744\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
@@ -100,12 +99,11 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\extec\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\extec\.gradle\caches\transforms-3\6b06549378c751d2d8dee18f390786f8\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\59adb4f12e07c57baefb278016ec29bc\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\a45ea0072a3dcd07ff0e4798be3a1f52\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\extec\.gradle\caches\transforms-3\a1871d936ac378a9950719650813cd35\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
-MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\727d1e8b9eb1a845be608ac02bbfafbf\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:15:1-23:12
-MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\extec\.gradle\caches\transforms-3\de2cb78b1d59c9c71bae33cfb2b7d528\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\a7aa25b2721b4b795209d6121b6d8e83\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\3f4cde4758188897548b14ff2f0ff701\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:2:1-11:12
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\1bd8a0d72b84604f866f8dbab961e91e\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\e1b73babc2f30731d3bf1244712b9a6f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 INJECTED from D:\priony_business\priony_business\android\app\src\debug\AndroidManifest.xml:2:1-13:12
@@ -134,12 +132,8 @@ MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\extec\.gradle\caches
 MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\4579d77217e00b3eb1409e4f5131b607\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:15:5-67
 MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:9:5-67
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:9:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
 MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\76ae2daf5cd390f44d99b61247c1b69e\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:8:5-67
@@ -150,8 +144,6 @@ application
 ADDED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:6:5-27:19
 MERGED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:6:5-27:19
 MERGED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:6:5-27:19
-MERGED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-13:19
-MERGED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-13:19
 MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-43:19
 MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-43:19
 MERGED from [:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-30:19
@@ -164,12 +156,6 @@ MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modu
 MERGED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\944607f6175508cf03d94879b702df89\transformed\jetified-react-native-0.70.6-debug\AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\944607f6175508cf03d94879b702df89\transformed\jetified-react-native-0.70.6-debug\AndroidManifest.xml:9:5-20
-MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\extec\.gradle\caches\transforms-3\2bf69de1156156ab69787107dfe06526\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\extec\.gradle\caches\transforms-3\2bf69de1156156ab69787107dfe06526\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\0d1cfdcc191390bf79cf28fe48b6f226\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\0d1cfdcc191390bf79cf28fe48b6f226\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:39:5-65:19
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:39:5-65:19
 MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:30:5-59:19
 MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:30:5-59:19
 MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
@@ -178,18 +164,18 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Us
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
-MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\02cdbcd6b622372d672706901b2a12b6\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\02cdbcd6b622372d672706901b2a12b6\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
 MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
 MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
 MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
+MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\extec\.gradle\caches\transforms-3\2bf69de1156156ab69787107dfe06526\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\extec\.gradle\caches\transforms-3\2bf69de1156156ab69787107dfe06526\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\0d1cfdcc191390bf79cf28fe48b6f226\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\0d1cfdcc191390bf79cf28fe48b6f226\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\8b6eb717f6dfce9e82b448b3981e8fa1\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\8b6eb717f6dfce9e82b448b3981e8fa1\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\86fe6c9435338e57c7ffb3d73a9b1e72\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
@@ -210,6 +196,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\9cbc968d0d8d3046f25757fc04540d9c\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\9cbc968d0d8d3046f25757fc04540d9c\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:11:5-20
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\extec\.gradle\caches\transforms-3\0647204d58c048d1dd06350cd74722f3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:label
@@ -270,16 +258,16 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\extec
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\ae0c35edff7aab3199726067e4d40486\transformed\jetified-flipper-network-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\0309eaa86938eb5ff5694657217d7d3a\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\0309eaa86938eb5ff5694657217d7d3a\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
-MERGED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
 MERGED from [:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-pager-view] D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -298,6 +286,20 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\exte
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\7d1215b5fa1a53b61877e8b34a697be3\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.facebook.react:hermes-engine:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\26fe5f9d2d311a0d0b54e301cde057e7\transformed\jetified-hermes-engine-0.70.6-debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:hermes-engine:0.70.6] C:\Users\extec\.gradle\caches\transforms-3\26fe5f9d2d311a0d0b54e301cde057e7\transformed\jetified-hermes-engine-0.70.6-debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\extec\.gradle\caches\transforms-3\de2cb78b1d59c9c71bae33cfb2b7d528\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\extec\.gradle\caches\transforms-3\de2cb78b1d59c9c71bae33cfb2b7d528\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\53e5b0c5d12254b319eac61720d1cc38\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\53e5b0c5d12254b319eac61720d1cc38\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\6b48c660c921f316326d291233e9bc95\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:5:5-7:41
@@ -336,8 +338,6 @@ MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\extec\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\extec\.gradle\caches\transforms-3\e2a06fbf1db0940d3045823cb1a36aed\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\85bcf7cb456d96d4395b3b331758c9ba\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\85bcf7cb456d96d4395b3b331758c9ba\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:5:5-7:41
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\extec\.gradle\caches\transforms-3\076130cb8039e384f2d8ce5c8475f1b5\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\extec\.gradle\caches\transforms-3\076130cb8039e384f2d8ce5c8475f1b5\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\1039773d586fc830da85dee0357bc6a0\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -346,14 +346,6 @@ MERGED from [com.facebook.fresco:middleware:2.6.0] C:\Users\extec\.gradle\caches
 MERGED from [com.facebook.fresco:middleware:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\eb73ccd7f9e42d1de1f4869b28068499\transformed\jetified-middleware-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\685ebdb3c548883eea127204344e4309\transformed\jetified-ui-common-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\685ebdb3c548883eea127204344e4309\transformed\jetified-ui-common-2.6.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\extec\.gradle\caches\transforms-3\835502a43f012edd9551b28291b92861\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\9f98fd33fe04370c6addaed56390f04e\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\9f98fd33fe04370c6addaed56390f04e\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\bcc202018667e9bd4f8ff3bfcac7f37c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -366,22 +358,12 @@ MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\extec\.gradle\caches\transfo
 MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\3982020e17e1812eda7af6dc5971699f\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-wallet:18.1.3] C:\Users\extec\.gradle\caches\transforms-3\1cce0ddcbfd3b5d5c04acdacaa05167d\transformed\jetified-play-services-wallet-18.1.3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-wallet:18.1.3] C:\Users\extec\.gradle\caches\transforms-3\1cce0ddcbfd3b5d5c04acdacaa05167d\transformed\jetified-play-services-wallet-18.1.3\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\122ec87db4e11ef56756ee2635c04aa1\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\122ec87db4e11ef56756ee2635c04aa1\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\extec\.gradle\caches\transforms-3\c48d98febf784df98d7d2fe04a6507b7\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\extec\.gradle\caches\transforms-3\c48d98febf784df98d7d2fe04a6507b7\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\02cdbcd6b622372d672706901b2a12b6\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\02cdbcd6b622372d672706901b2a12b6\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\76ae2daf5cd390f44d99b61247c1b69e\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\76ae2daf5cd390f44d99b61247c1b69e\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\8b6eb717f6dfce9e82b448b3981e8fa1\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
@@ -432,6 +414,10 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\extec\.gradle\caches
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\3a6ae6f1351491f519b5ee47c5fee7b2\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\extec\.gradle\caches\transforms-3\6d1aa3c3d77d7bafbf4071917f1344cf\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\extec\.gradle\caches\transforms-3\6d1aa3c3d77d7bafbf4071917f1344cf\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\727d1e8b9eb1a845be608ac02bbfafbf\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\727d1e8b9eb1a845be608ac02bbfafbf\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\extec\.gradle\caches\transforms-3\a1871d936ac378a9950719650813cd35\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\extec\.gradle\caches\transforms-3\a1871d936ac378a9950719650813cd35\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\945e584c5c8a25127913eb9d221b107f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\945e584c5c8a25127913eb9d221b107f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] C:\Users\extec\.gradle\caches\transforms-3\9273a2a1e5de8464856b7455047ccaca\transformed\exifinterface-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
@@ -454,18 +440,16 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\extec\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\59adb4f12e07c57baefb278016ec29bc\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\a45ea0072a3dcd07ff0e4798be3a1f52\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\extec\.gradle\caches\transforms-3\a45ea0072a3dcd07ff0e4798be3a1f52\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\extec\.gradle\caches\transforms-3\a1871d936ac378a9950719650813cd35\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\extec\.gradle\caches\transforms-3\a1871d936ac378a9950719650813cd35\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\727d1e8b9eb1a845be608ac02bbfafbf\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\727d1e8b9eb1a845be608ac02bbfafbf\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\extec\.gradle\caches\transforms-3\de2cb78b1d59c9c71bae33cfb2b7d528\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\extec\.gradle\caches\transforms-3\de2cb78b1d59c9c71bae33cfb2b7d528\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\a7aa25b2721b4b795209d6121b6d8e83\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\a7aa25b2721b4b795209d6121b6d8e83\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\3f4cde4758188897548b14ff2f0ff701\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\3f4cde4758188897548b14ff2f0ff701\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:7:5-9:41
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\1bd8a0d72b84604f866f8dbab961e91e\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\extec\.gradle\caches\transforms-3\1bd8a0d72b84604f866f8dbab961e91e\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\e1b73babc2f30731d3bf1244712b9a6f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -492,18 +476,6 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\4579d77217e00b3eb1409e4f5131b607\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.125.0] C:\Users\extec\.gradle\caches\transforms-3\4579d77217e00b3eb1409e4f5131b607\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
-activity#com.razorpay.CheckoutActivity
-ADDED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-12:86
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:48:9-60:20
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:48:9-60:20
-	android:exported
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:51:13-36
-	android:configChanges
-		ADDED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-83
-	android:theme
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:52:13-49
-	android:name
-		ADDED from [:react-native-razorpay] D:\priony_business\priony_business\node_modules\react-native-razorpay\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-57
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [:react-native-firebase_messaging] D:\priony_business\priony_business\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
 MERGED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:26:5-68
@@ -520,8 +492,6 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Us
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\392e6b6fba2d531793b82783a528cfdd\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
 MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\extec\.gradle\caches\transforms-3\76ae2daf5cd390f44d99b61247c1b69e\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
@@ -620,8 +590,6 @@ ADDED from [:react-native-firebase_app] D:\priony_business\priony_business\node_
 		ADDED from [:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-88
 queries
 ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-13:15
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:11:5-37:15
-MERGED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:11:5-37:15
 intent#action:name:android.media.action.IMAGE_CAPTURE
 ADDED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-12:18
 action#android.media.action.IMAGE_CAPTURE
@@ -674,52 +642,6 @@ ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modul
 		ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 	android:name
 		ADDED from [:react-native-webview] D:\priony_business\priony_business\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-83
-intent#action:name:android.intent.action.VIEW+data:mimeType:*/*+data:scheme:*
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:12:9-18:18
-action#android.intent.action.VIEW
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:13:13-65
-	android:name
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:13:21-62
-data
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:15:13-17:38
-	android:scheme
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:17:17-35
-	android:mimeType
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:16:17-39
-intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:host:pay+data:mimeType:*/*+data:scheme:upi
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:19:9-28:18
-category#android.intent.category.BROWSABLE
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:22:13-74
-	android:name
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:22:23-71
-intent#action:name:android.intent.action.MAIN
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:29:9-31:18
-intent#action:name:android.intent.action.SEND+data:mimeType:*/*
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:32:9-36:18
-action#android.intent.action.SEND
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:33:13-65
-	android:name
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:33:21-62
-receiver#com.razorpay.RzpTokenReceiver
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:40:9-46:20
-	android:exported
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:42:13-37
-	android:name
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:41:13-57
-intent-filter#action:name:rzp.device_token.share
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:43:13-45:29
-action#rzp.device_token.share
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:44:17-65
-	android:name
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:44:25-62
-intent-filter#action:name:android.intent.action.MAIN+data:host:rzp.io+data:scheme:io.rzp
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:53:13-59:29
-meta-data#com.razorpay.plugin.googlepay_all
-ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:62:9-64:58
-	android:value
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:64:13-55
-	android:name
-		ADDED from [com.razorpay:checkout:1.6.26] C:\Users\extec\.gradle\caches\transforms-3\86794dcc85e68c28bae7c98f7b3d06b3\transformed\jetified-checkout-1.6.26\AndroidManifest.xml:63:13-61
 uses-permission#android.permission.POST_NOTIFICATIONS
 ADDED from [com.google.firebase:firebase-messaging:23.1.1] C:\Users\extec\.gradle\caches\transforms-3\49caeea695f7c01261b547db803e51cf\transformed\jetified-firebase-messaging-23.1.1\AndroidManifest.xml:25:5-77
 	android:name
@@ -786,6 +708,24 @@ ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\e
 		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
 	android:name
 		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\extec\.gradle\caches\transforms-3\1742eac9aa8483db668d7aa7e799e0f6\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -806,18 +746,6 @@ ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gr
 		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:36:13-107
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\extec\.gradle\caches\transforms-3\750928b5e5c17b1e3fffc3d09843a966\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
-uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
-	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
-	android:required
-		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
-uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-	android:required
-		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\extec\.gradle\caches\transforms-3\c62712d2a784b7f3d12c5a700becd4c7\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 	android:exported
@@ -826,24 +754,6 @@ ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gr
 		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\extec\.gradle\caches\transforms-3\43a47f35034419d56527adc8180d3679\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
-ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
-	android:value
-		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\extec\.gradle\caches\transforms-3\e49e7e3e932a7fc59e237b00011b831d\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
-provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
-	android:authorities
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
-	android:exported
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
-	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
-	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\extec\.gradle\caches\transforms-3\e53c305f1ae64109ecbf31c6f80e3e9d\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\extec\.gradle\caches\transforms-3\47b0a75a35b9d53b43a810f4bc8a2582\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 	android:value

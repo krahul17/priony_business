@@ -90,8 +90,8 @@ const PaymentGateWay = ({navigation}) => {
            });
         })
      }
-
-    const upiUrl = 'upi://pay?pa=suyashvashishtha@axl&pn=Suyash%20Vashishtha&mc=0000&mode=02&purpose=00';
+     
+     const upiUrl ='upi://pay?pa=sadevraprince@oksbi&pn=sukhpreetsingh&tn=Note&am=7000&cu=INR'
     const upiOpener = () => {
         Linking.openURL(upiUrl)
     }

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList, StatusBar, Linking,ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, FlatList, StatusBar, Linking, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -14,7 +14,7 @@ const Education = () => {
     const [accessToken, setAccess] = useState(null);
 
     const url = ShareUrl;
-    const options = {url};
+    const options = { url };
     const share = async (customOptions = options) => {
         try {
             await Share.open(customOptions);
@@ -44,7 +44,28 @@ const Education = () => {
 
     const Getdata = ({ item }) => {
 
-        const [favselect4, setFavSelect4] = useState({})
+        const [favselect4, setFavSelect4] = useState()
+
+        useEffect(async () => {
+            try{
+    
+            fetch(BaseUrl + '/douryou-seller-api/seller-check-user-education-lone-user-favourite-or-not/' + item.id + "/", {
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    'Authorization': 'Bearer ' + accessToken ,
+                },
+            }).then((response) => response.json())
+                .then((json) => setFavSelect4(json.status))
+                .catch((error) => console.error(error))
+                .finally(() => setLoading(false));
+        }catch(error){
+            console.log(error,'error')
+
+        }
+
+        }, []);
+
 
         const favorate = async () => {
 
@@ -53,7 +74,7 @@ const Education = () => {
 
             let formData = new FormData();
 
-            formData.append('whyFvrt', gettingfav)
+            formData.append('WhyFvrt', gettingfav)
 
             fetch(BaseUrl + '/douryou-seller-api/seller-add-users-to-favourite/' + item.id + "/", {
                 method: 'POST',
@@ -65,7 +86,6 @@ const Education = () => {
                 body: formData
             }).then((result) => {
                 result.json().then((response) => {
-                    setFavSelect4(response)
                     console.log(response, "Response");
                 }).catch((error) => {
                     alert(error)
@@ -74,43 +94,45 @@ const Education = () => {
             })
         }
 
-        const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3,13));
-        console.log(item.phone_number,'phone number gett')
+        const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3, 13));
+        console.log(item.phone_number, 'phone number gett')
         // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
         const WhatsAppchat = () => {
-          // Check for perfect 10 digit length
-          if (mobileNumber.length != 10) {
-            alert('Please insert correct WhatsApp number');
-            return;
-          }
-          // Using 91 for India
-          // You can change 91 with your country code
-          let url =
-            'whatsapp://send?text=' +
-            //  whatsAppMsg +
-            '&phone=91'+ mobileNumber;
-          Linking.openURL(url)
-            .then((data) => {
-              console.log('WhatsApp Opened');
-            })
-            .catch(() => {
-              alert('Make sure Whatsapp installed on your device');
-            });
+            // Check for perfect 10 digit length
+            if (mobileNumber.length != 10) {
+                alert('Please insert correct WhatsApp number');
+                return;
+            }
+            // Using 91 for India
+            // You can change 91 with your country code
+            let url =
+                'whatsapp://send?text=' +
+                //  whatsAppMsg +
+                '&phone=91' + mobileNumber;
+            Linking.openURL(url)
+                .then((data) => {
+                    console.log('WhatsApp Opened');
+                })
+                .catch(() => {
+                    alert('Make sure Whatsapp installed on your device');
+                });
         };
 
         return (
             <View style={styles.mainList}>
 
-                
+
                 <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
                     <View style={styles.fav}>
 
+                        {favselect4 ?
 
-                        {favselect4.status  ?
-                            (<Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
+
+                            (<Image source={require('../../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />)
                             :
-                            (<Image source={require('../../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
-                            )}
+                            (<Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
+                        }
+
                     </View>
                 </TouchableOpacity>
 
@@ -157,7 +179,7 @@ const Education = () => {
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10 }}>
 
                     <View style={{ marginRight: 20, margin: 2 }}>
-                        <TouchableOpacity onPress={() => { WhatsAppchat();}}>
+                        <TouchableOpacity onPress={() => { WhatsAppchat(); }}>
                             <Image source={require('../../../../screen/Lists/assets/chat1.png')} style={{ height: 26, width: 27 }} />
                         </TouchableOpacity>
                     </View>

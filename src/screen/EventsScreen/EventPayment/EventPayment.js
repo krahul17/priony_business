@@ -1,10 +1,17 @@
-import { StyleSheet, SafeAreaView, Text, View, StatusBar, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { StyleSheet, SafeAreaView, Text, View, StatusBar, Linking,Image, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 
 
 const EventPayment = ({ navigation,route }) => {
-    const {plan,finalamount}=route.params
+    const {plan,finalamount,item}=route.params
+
+    console.log(item,'item')
+
+    const upiUrl ='upi://pay?pa=sadevraprince@oksbi&pn=sukhpreetsingh&tn=Note&am=7000&cu=INR'
+    const upiOpener = () => {
+        Linking.openURL(upiUrl)
+    }
     return (
         <>
             <StatusBar
@@ -51,9 +58,17 @@ const EventPayment = ({ navigation,route }) => {
 
                     </View>
                     
-                     <TouchableOpacity style={styles.Btn} onPress={() => navigation.navigate('PassConfirm')}>
+                     <TouchableOpacity style={styles.Btn} onPress={()=>upiOpener()} 
+                    //   onPress={() => navigation.navigate('PassConfirm')}
+                      >
 
-                        <Text style={styles.btn}> Submit </Text>
+                        <Text style={styles.btn}> Payment </Text>
+
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.Btn}  onPress={() => navigation.navigate('PassConfirm',{item})}>
+
+                        <Text style={styles.btn}> Next </Text>
 
                     </TouchableOpacity>
                 </ScrollView>

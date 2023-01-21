@@ -68,13 +68,13 @@ const VieweProfile = () => {
 
         return (
             <View style={styles.mainList}>
-                <TouchableOpacity>
+                {/* <TouchableOpacity>
                     <View style={styles.fav}>
                         <Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{ flexDirection: 'row',marginTop:10 }}>
 
                     <View style={styles.Pic}>
                         <Image source={{uri:BaseUrl + item.frontimage}} style={styles.pic} />

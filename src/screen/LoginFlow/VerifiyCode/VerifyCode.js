@@ -55,6 +55,7 @@ const VerifyCode = ({ navigation, route }) => {
                   setModalVisible(false)
                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
                   AsyncStorage.setItem("refereshToken", response.token.refresh);
+                  console.log('refresh token set in system',response.token.refresh)
                  AsyncStorage.setItem("accessToken", response.token.access);
               
                 login()
@@ -63,6 +64,7 @@ const VerifyCode = ({ navigation, route }) => {
                   setModalVisible(false)
                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
                    AsyncStorage.setItem("refereshToken", response.token.refresh);
+                   console.log(' else if refresh token set in system',response.token.refresh)
                   AsyncStorage.setItem("accessToken", response.token.access);
                  
                   navigation.navigate("CreateProfie", {

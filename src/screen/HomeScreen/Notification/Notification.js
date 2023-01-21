@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, Modal, ScrollView, Image, FlatList, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Modal,ScrollView, Image, FlatList, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native'
 import React, { useState, useContext, useEffect } from 'react'
 import { AuthContext } from '../../../../context/AuthContext'
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -98,7 +98,6 @@ const Notification = () => {
     }, []);
 
 
-
     const GustData = ({ item }) => {
 
         return (
@@ -119,7 +118,7 @@ const Notification = () => {
                             <View style={styles.adress}>
                                 <View style={{ flexDirection: 'row' }}>
 
-                                    <View>
+                                    <View style={styles.namewidth}>
                                         <Text style={styles.name}>
                                             {item.Title}
                                         </Text>
@@ -128,7 +127,7 @@ const Notification = () => {
 
                                 <View style={{ flexDirection: 'row' }}>
 
-                                    <View>
+                                    <View style={styles.namewidth}>
                                         <Text style={styles.email}>
                                             {item.Discription}
                                         </Text>
@@ -181,6 +180,8 @@ const Notification = () => {
 
 
                 </View>
+
+             
             </ScrollView>
         </SafeAreaView>
 
@@ -237,6 +238,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         height: '100%',
         width: '98%',
+        borderColor:'#0006C1'
     },
     mainTexts: {
         fontSize: 25,
@@ -259,8 +261,12 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         color: '#000',
         marginTop: 10,
-        marginLeft: 60
+        marginLeft: 5
         //   width:Dimensions.get('screen').width*0.45,
+    },
+
+    namewidth:{
+        width:'89%'
     },
     email: {
         fontSize: 14,

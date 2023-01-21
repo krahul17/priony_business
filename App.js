@@ -6,6 +6,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AuthContext, AuthProvider } from './context/AuthContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
@@ -27,6 +28,7 @@ import PaymentConfirm from './src/screen/LoginFlow/Profile/PaymentGateWay/Paymen
 import Navigatino from './src/Navigation-Flow/Navigation/Navigatino';
 import AllPlanList from './src/screen/LoginFlow/Profile/AllPlanList/AllPlanList';
 import PlanComingSoon from './src/screen/LoginFlow/Profile/PlanComingSoon/PlanComingSoon';
+import BaseUrl from './src/Component/BaseURL/BaseUrl';
 
 
 
@@ -62,9 +64,9 @@ function AuthStack() {
   )
 }
 function AppNav() {
-  const { userToken } = useContext(AuthContext)
+  const { userToken} = useContext(AuthContext)
   console.log("user Token = " + userToken)
-  console.log("statement = " + userToken !== null)
+  // console.log("statement = " + userToken !== null)
 
   // var token = 'eyJ0eXAiO..';
   // var decoded = jwt_decode(token);
@@ -113,6 +115,46 @@ function AppNav() {
   //     return null
   //   }
   // }
+
+
+
+
+  
+  const[refresh,setRefreshToken]=useState()
+  console.log(refresh, '12hello im refresh token')
+
+  const firstLoad = async () => {
+    try {
+      const refereshToken = await AsyncStorage.getItem("refereshToken");
+         setRefreshToken(refereshToken)
+         console.log('17662378',refereshToken)
+
+         let formData = new FormData();
+         formData.append('refresh', refereshToken)
+         fetch(BaseUrl + '/priony/token/refresh/', {
+           method: 'POST',
+           headers: {
+             "Accept": "application/json",
+             "Content-Type": "multipart/form-data",
+             
+           },
+           body: formData
+         }).then((result) => {
+           result.json().then((response) => {
+             console.log(response.access, " 123 Response")
+             AsyncStorage.setItem("accessToken", response.access);
+            //  alert("Thanks !")
+           })
+         })
+   } catch (error) {
+      // alert('code', code)
+      // alert(error);
+   }
+  };
+
+  useEffect(() => {
+    firstLoad();
+  }, []);
   
 
   return (

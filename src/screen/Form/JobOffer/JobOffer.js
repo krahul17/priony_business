@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput, ImageBackground, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, ScrollView, StatusBar, View, Text, Pressable, TextInput, ImageBackground, TouchableOpacity, Image } from "react-native";
 import CustomDropDown from '../../../Component/CustomDropDown/CustomDropDown';
 import { Picker } from '@react-native-picker/picker';
 import CustomGender from '../../../Component/CustomGender/CustomGender';
@@ -8,14 +8,23 @@ import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 import ImagePicker from 'react-native-image-crop-picker';
 import BaseUrl from '../../../Component/BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import DatePicker from 'react-native-date-picker'
+import CustomText from '../../../Component/CustomText/CustomText';
 
-export default function JobOffer({navigation}) {
+export default function JobOffer({ navigation }) {
+
+    const [date, setDate] = useState(new Date())
+    const [open, setOpen] = useState(false)
+    const [dolabel, setDolabel] = useState('Last Date For Apply')
+
+    var mydate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+    // console.log("modifydateof birth",mydate)
 
     const [title, setTitle] = useState('')
     const [employee, setEmployee] = useState('')
     const [gender, setGender] = useState('')
     const [sallary, setSallary] = useState('')
-    const [lastdate, setLastdate] = useState('')
+    const [lastdate, setLastdate] = useState(mydate)
     const [amount, setAmount] = useState('')
     const [amount2, setAmount2] = useState('')
     const [position, setPosition] = useState('')
@@ -28,7 +37,7 @@ export default function JobOffer({navigation}) {
     const [showoption, setShowoption] = useState(false)
 
     const [accessToken, setAccess] = useState(null);
-    console.log('CHECJ', title,)
+    console.log('CHECJ', lastdate,)
 
     const openGalleryFront = () => {
         ImagePicker
@@ -117,10 +126,45 @@ export default function JobOffer({navigation}) {
 
                     <CustomTextInput label={'Enter Job Title '} value={title} setValue={setTitle} />
                     <CustomTextInput label={'Enter Total Employee Required '} value={employee} setValue={setEmployee} />
-                    <CustomTextInput label={'Who Can Apply (Male / Female / Both)'} value={gender} setValue={setGender} />
+
+                    <View style={styles.borderTitle}>
+                        <Picker
+                            selectedValue={gender}
+                            onValueChange={(itemValue) =>
+                                setGender(itemValue)}
+                            style={styles.pick}>
+                            <Picker.Item label="Select Gender :" value="disable" style={{ color: "#000", }} />
+                            <Picker.Item label="Male" value="Male" style={{ color: "#000", }} />
+                            <Picker.Item label="Female" value="Female" style={{ color: "#000", }} />
+                            <Picker.Item label="Both" value="Both" style={{ color: "#000", }} />
+                        </Picker>
+                    </View>
 
                     <CustomTextInput label={'Enter Salary Period '} value={sallary} setValue={setSallary} />
-                    <CustomTextInput label={'Enter Last Date for Apply'} value={lastdate} setValue={setLastdate} />
+
+                    <DatePicker
+                        modal
+                        open={open}
+                        date={date}
+                        onConfirm={(date) => {
+                            setOpen(false)
+                            setDate(date)
+                            setDolabel(date.toDateString())
+                            var mydate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+                            // console.log(mydate)
+                        }}
+                        onCancel={() => {
+                            setOpen(false)
+                        }}
+                    />
+
+                    <Pressable onPress={() => setOpen(true)} >
+
+                        <View style={styles.textField}>
+                            <Text style={styles.text111}> {dolabel}</Text>
+                        </View>
+                    </Pressable>
+
                     <CustomTextInput label={'Enter Salary From '} value={amount} setValue={setAmount} />
                     <CustomTextInput label={'Enter Salary To '} value={amount2} setValue={setAmount2} />
                     <CustomTextInput label={'Enter Position Type'} value={position} setValue={setPosition} />
@@ -163,6 +207,14 @@ const styles = StyleSheet.create({
         marginTop: 10,
         height: 70,
         width: 130
+    },
+
+    borderTitle: {
+        borderWidth: 1,
+        width: '84%',
+        alignSelf: 'center',
+        borderRadius: 8,
+        marginVertical: 10
     },
     dp: {
         width: 350,
@@ -267,6 +319,25 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         fontWeight: "600"
     },
+
+    textField: {
+        margin: 10,
+        width: '85%',
+        alignSelf: 'center',
+        borderWidth: 1,
+        borderColor: '#000',
+        height: 55,
+        borderRadius: 10,
+        // alignItems: "center",
+        justifyContent: "center"
+    
+    },
+    text111:{
+      paddingLeft: 8,
+      fontSize: 16,
+      fontWeight: "400",
+      color: "#000"
+    }
 
 });
 

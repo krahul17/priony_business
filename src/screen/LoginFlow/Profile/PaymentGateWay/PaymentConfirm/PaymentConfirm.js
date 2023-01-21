@@ -32,10 +32,10 @@ const PaymentConfirm = ({navigation}) => {
                   }).then((data) => {
                     data.json().then((response) => {
                        console.log(response.Events.Approved, "Response check")
-                       console.log(response.status)
+                    //    console.log(response.status)
                        if (response.Events.Approved == true) {
 
-                        console.log(" status  is working");
+                        // console.log(" status  is working");
                          
                         navigation.navigate('HomeScreen')
                         login()
@@ -43,7 +43,7 @@ const PaymentConfirm = ({navigation}) => {
                        else if (response.Events.Approved == false) {
                         login()
                       
-                          console.log("else  is working");
+                        //   console.log("else  is working");
                           
                        }
                     }).catch((err)=>{

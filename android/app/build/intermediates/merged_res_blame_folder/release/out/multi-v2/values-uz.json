@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.priony.business.app-mergeReleaseResources-37:/values-uz/values-uz.xml",
+            "outputFile": "com.priony.business.app-mergeReleaseResources-34:/values-uz/values-uz.xml",
             "map": [
                 {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\43a47f35034419d56527adc8180d3679\\transformed\\jetified-play-services-base-18.0.1\\res\\values-uz\\values.xml",
@@ -69,23 +69,6 @@
                         "startOffsets": "3773",
                         "endColumns": "149",
                         "endOffsets": "3918"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\1cce0ddcbfd3b5d5c04acdacaa05167d\\transformed\\jetified-play-services-wallet-18.1.3\\res\\values-uz\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "202",
-                        "endColumns": "80",
-                        "endOffsets": "282"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "5202",
-                        "endColumns": "84",
-                        "endOffsets": "5282"
                     }
                 }
             ]

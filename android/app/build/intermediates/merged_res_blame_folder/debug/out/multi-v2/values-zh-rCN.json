@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.priony.business.app-mergeDebugResources-38:/values-zh-rCN/values-zh-rCN.xml",
+            "outputFile": "com.priony.business.app-mergeDebugResources-36:/values-zh-rCN/values-zh-rCN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\43a47f35034419d56527adc8180d3679\\transformed\\jetified-play-services-base-18.0.1\\res\\values-zh-rCN\\values.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "2662,2763,2892,3007,3109,3214,3330,3432,3623,3731,3832,3962,4077,4181,4289,4345,4402",
                         "endColumns": "100,128,114,101,104,115,101,91,107,100,129,114,103,107,55,56,73",
                         "endOffsets": "2758,2887,3002,3104,3209,3325,3427,3519,3726,3827,3957,4072,4176,4284,4340,4397,4471"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\1cce0ddcbfd3b5d5c04acdacaa05167d\\transformed\\jetified-play-services-wallet-18.1.3\\res\\values-zh-rCN\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "206",
-                        "endColumns": "67",
-                        "endOffsets": "273"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "4656",
-                        "endColumns": "71",
-                        "endOffsets": "4723"
                     }
                 },
                 {

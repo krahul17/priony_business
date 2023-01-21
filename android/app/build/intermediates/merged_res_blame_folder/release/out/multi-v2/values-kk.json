@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.priony.business.app-mergeReleaseResources-37:/values-kk/values-kk.xml",
+            "outputFile": "com.priony.business.app-mergeReleaseResources-34:/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\43a47f35034419d56527adc8180d3679\\transformed\\jetified-play-services-base-18.0.1\\res\\values-kk\\values.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "2796,2899,3052,3178,3284,3424,3550,3673,3946,4111,4217,4374,4503,4656,4813,4876,4935",
                         "endColumns": "102,152,125,105,139,125,122,108,164,105,156,128,152,156,62,58,77",
                         "endOffsets": "2894,3047,3173,3279,3419,3545,3668,3777,4106,4212,4369,4498,4651,4808,4871,4930,5008"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\1cce0ddcbfd3b5d5c04acdacaa05167d\\transformed\\jetified-play-services-wallet-18.1.3\\res\\values-kk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "202",
-                        "endColumns": "78",
-                        "endOffsets": "280"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "5196",
-                        "endColumns": "82",
-                        "endOffsets": "5274"
                     }
                 },
                 {

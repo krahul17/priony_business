@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
         console.log("login presed");
         let refereshToken = await AsyncStorage.getItem('refereshToken');
         setReferesh(refereshToken)
-        console.log(refereshToken)
+        // console.log(refereshToken)
 
         let accessToken = await AsyncStorage.getItem('accessToken');
         setAccess(accessToken)
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
         console.log("login presed");
         let refereshToken = await AsyncStorage.getItem('refereshToken');
         setReferesh(refereshToken)
-        console.log(refereshToken)
+        // console.log(refereshToken)
 
         let accessToken = await AsyncStorage.getItem('accessToken');
         setAccess(accessToken)
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ login, logout, userToken , accessToken , signup }}>
+        <AuthContext.Provider value={{ login, logout, refereshToken,userToken , accessToken , signup }}>
             {children}
         </AuthContext.Provider>
     );

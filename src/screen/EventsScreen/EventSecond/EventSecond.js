@@ -114,7 +114,7 @@ const EventSecond = ({ navigation, route }) => {
             result.json().then((response) => {
                 console.log(response, "Response");
                 alert("DATA SAVE")
-                navigation.navigate('EventPayment',{
+                navigation.navigate('EventPayment',{item,
                     plan:item.EventCatagory,finalamount})
             }).catch((error) => {
                 console.log(error);

@@ -45,16 +45,18 @@ const ProfileDetails = ({ navigation, route }) => {
               </View>
             </View>
 
-            { data.FREE_Plan === true &&
+          
+                
+            {data.plan ==='FREE Plan' &&
               <View style={styles.bar}>
                 <View>
-                  <Text style={styles.professional}>Professional</Text>
+                  <Text style={styles.professional}>Free</Text>
                 </View>
-              
+
               </View>
             }
 
-            {data.BUSINESS_Plan === true &&
+            {data.plan === 'PORFENSSIONAL Plan' &&
               <View style={styles.bar}>
                 <View>
                   <Text style={styles.professional}>Professional</Text>
@@ -166,9 +168,9 @@ const ProfileDetails = ({ navigation, route }) => {
         <View style={styles.lsatborder}>
           <View style={{ flexDirection: 'row', }}>
 
-            <View style={{ flexDirection: 'row', justifyContent:"space-evenly" }}>
+            <View style={{ flexDirection: 'row', justifyContent: "space-evenly" }}>
 
-              <View style={{flexDirection: 'row', marginLeft: 80 }}>
+              <View style={{ flexDirection: 'row', marginLeft: 80 }}>
                 {/* <TouchableOpacity> */}
                 <Image source={require('../ProfileDetails/assets/eye.png')} style={styles.eye} />
                 {/* </TouchableOpacity> */}
@@ -178,18 +180,18 @@ const ProfileDetails = ({ navigation, route }) => {
               </View>
 
 
-              <View style={{marginLeft: 20,flexDirection: 'row' }}>
-               
+              <View style={{ marginLeft: 20, flexDirection: 'row' }}>
+
                 <View>
                   <Image source={require('../ProfileDetails/assets/like.png')} style={styles.like} />
                 </View>
-            
+
                 <View style={{ marginLeft: 10, marginTop: 8, width: '30%' }}>
                   <Text>{data.LikeCount}</Text>
                 </View>
               </View>
 
-              <View style={{ marginLeft: 20,flexDirection: 'row' }}>   
+              <View style={{ marginLeft: 20, flexDirection: 'row' }}>
                 <View>
                   <Image source={require('../ProfileDetails/assets/share.png')} style={styles.like} />
                 </View>
@@ -198,7 +200,7 @@ const ProfileDetails = ({ navigation, route }) => {
                 </View>
               </View>
 
-             
+
 
             </View>
 

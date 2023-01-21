@@ -1,9 +1,46 @@
-import React from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, StatusBar, } from 'react-native';
+import BaseUrl from '../../../Component/BaseURL/BaseUrl';
+import { AuthContext } from '../../../../context/AuthContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const PassConfirm = ({route}) => {
+
+    const {item}=route.params
+
+    const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [accessToken, setAccessToken] = useState();
 
 
+    const firstLoad = async () => {
+        try {
+    
+          const accessToken = await AsyncStorage.getItem("accessToken");
+          setAccessToken(accessToken);
+          console.log(accessToken, ' hello im token')
+    
+          await fetch(BaseUrl + '/douryou-seller-api/seller-registration/', {
+            headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json",
+              'Authorization': 'Bearer ' + accessToken,
+            },
+          }).then((response) => response.json())
+            .then((json) => setData(json.Events))
+            .catch((error) => console.error(error))
+            .finally(() => setLoading(false));
+    
+          // console.log(data,"useinfo getting herr")
+    
+        } catch (err) {
+          console.log(err);
+        }
+      };
 
-const PassConfirm = () => {
+      useEffect(() => {
+        firstLoad();
+      }, []);
 
     return (<>
 
@@ -24,10 +61,10 @@ const PassConfirm = () => {
                     <View style={styles.submain}>
                         <View style={styles.row}>
                             <View atyle={styles.mainimg}>
-                                <Image source={require('../../EventsScreen/assets/cityimage.png')} style={styles.cityimg}/>
+                                <Image source={{ uri: BaseUrl + item.EventImage }} style={styles.cityimg}/>
                             </View>
                             <View style={styles.maintext}>
-                                <Text style={styles.maintext1}>Moga, Punjab</Text>
+                                <Text style={styles.maintext1}> {item.EventAddress}</Text>
                             </View>
                             <View style={styles.maincityimg1}>
                                 {/* <Image source={require('../assets/favourite.png')} style={styles.cityimg1}/> */}
@@ -39,13 +76,13 @@ const PassConfirm = () => {
 
                         <View style={styles.congrat}>
                             <Text style={styles.hennyfont}>CONGRATULATIONS</Text>
-                            <Text style={styles.italicfont}>Mr. KAMALDEEP SINGH</Text>
+                            <Text style={styles.italicfont}>{data.CompanyName}</Text>
                         </View>
 
                         <View style={styles.entryfont}>
                             <Text style={styles.font}>Your Entry PASS will Be</Text>
                             <Text style={styles.font}>Confirmed With ID Number</Text>
-                            <Text style={styles.font}>MOGA/15/08/2022/635</Text>
+                            <Text style={styles.font}>{item.id}</Text>
                         </View>
 
                         <View style={styles.showfont}>

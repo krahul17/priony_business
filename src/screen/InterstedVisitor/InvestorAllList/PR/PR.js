@@ -46,7 +46,28 @@ const PR = () => {
 
     const Getdata = ({ item }) => {
 
-        const [favselect4, setFavSelect4] = useState({})
+        const [favselect4, setFavSelect4] = useState()
+
+        useEffect(async () => {
+            try{
+    
+            fetch(BaseUrl + '/douryou-seller-api/seller-check-user-permanent-residen-user-favourite-or-not/' + item.id + "/", {
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    'Authorization': 'Bearer ' + accessToken ,
+                },
+            }).then((response) => response.json())
+                .then((json) => setFavSelect4(json.status))
+                .catch((error) => console.error(error))
+                .finally(() => setLoading(false));
+        }catch(error){
+            console.log(error,'error')
+
+        }
+
+        }, []);
+
 
         const favorate = async () => {
 
@@ -55,7 +76,7 @@ const PR = () => {
 
             let formData = new FormData();
 
-            formData.append('whyFvrt', gettingfav)
+            formData.append('WhyFvrt', gettingfav)
 
             fetch(BaseUrl + '/douryou-seller-api/seller-add-users-to-favourite/' + item.id + "/", {
                 method: 'POST',
@@ -67,7 +88,7 @@ const PR = () => {
                 body: formData
             }).then((result) => {
                 result.json().then((response) => {
-                    setFavSelect4(response)
+                   
                     console.log(response, "Response");
                 }).catch((error) => {
                     alert(error)
@@ -105,12 +126,14 @@ const PR = () => {
                  <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
                     <View style={styles.fav}>
 
+                   {favselect4 ?
+                   
+                   
+                   (<Image source={require('../../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />)
+                   :
+                    (<Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
+                   }
 
-                        {favselect4.status  ?
-                            (<Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
-                            :
-                            (<Image source={require('../../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
-                            )}
                     </View>
                 </TouchableOpacity>
 

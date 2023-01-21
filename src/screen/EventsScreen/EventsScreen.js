@@ -87,13 +87,13 @@ const EventsScreen = ({ navigation }) => {
         return (
 
             <View style={styles.mainList}>
-                <TouchableOpacity>
+                {/* <TouchableOpacity>
                     <View style={styles.fav}>
                         <Image source={require('../EventsScreen/assets/fav.png')} style={{ height: 50, width: 50 }} />
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{ flexDirection: 'row',marginTop:22 }}>
 
                     <View style={styles.Pic}>
                         <Image source={{ uri: BaseUrl + item.EventImage }} style={styles.pic} />
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
         marginTop: '10%'
     },
     mainList: {
-        height: 450,
+        height: 420,
         width: '97%',
         borderWidth: 3,
         marginHorizontal: 7,
