@@ -95,7 +95,7 @@ const MyEvents = ({navigation}) => {
                 </View>
 
                 <View  style={{width:'60%'}}>
-                    <Text style={{ fontSize: 35, fontWeight: '600', color: '#000', }}>{item.WhichEvent.EventAddress}</Text>
+                    <Text style={{ fontSize: 25, fontWeight: '600', color: '#000', }}>{item.WhichEvent.EventAddress}</Text>
                 </View>
 
 

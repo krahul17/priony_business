@@ -71,7 +71,7 @@ const UserRequirement = () => {
        
 
 
-        const [favselect4, setFavSelect4] = useState({})
+        const [favselect4, setFavSelect4] = useState()
 
         useEffect(async () => {
             try{
@@ -83,7 +83,7 @@ const UserRequirement = () => {
                     'Authorization': 'Bearer ' + accessToken ,
                 },
             }).then((response) => response.json())
-                .then((json) => setFavSelect4(json))
+                .then((json) => setFavSelect4(json.status))
                 .catch((error) => console.error(error))
                 .finally(() => setLoading(false));
         }catch(error){
@@ -153,7 +153,7 @@ const UserRequirement = () => {
                 <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
                     <View style={styles.fav}>
 
-                        {favselect4.status ?
+                        {favselect4 ?
 
 
                             (<Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />)

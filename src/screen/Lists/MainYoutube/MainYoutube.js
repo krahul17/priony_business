@@ -97,7 +97,7 @@ const url = "https://www.excellencetechnology.in/privacy-policy/";
           <View style={{ flexDirection: 'row', }}>
          
             <View>
-              <Text style={styles.text}>Post Date & Time :- {item.AddedTime.slice(0,8)} Second</Text>
+              <Text style={styles.text}>Post Time :- {item.AddedTime.slice(0,8)}</Text>
             </View>
           </View>
         </View>

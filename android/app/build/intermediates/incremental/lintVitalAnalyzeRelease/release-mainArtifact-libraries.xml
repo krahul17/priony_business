@@ -104,6 +104,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="D:\priony_business\priony_business\android@@:react-native-date-picker::release"
+      jars="D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\.transforms\20fbb2145f1ac93f66e937fd17ab1b83\transformed\out\jars\classes.jar"
+      resolved="Seller:react-native-date-picker:unspecified"
+      folder="D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\.transforms\20fbb2145f1ac93f66e937fd17ab1b83\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="D:\priony_business\priony_business\android@@:react-native-image-crop-picker::release"
       jars="D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\.transforms\86fd6443786e99d639e7f29e433c6f11\transformed\out\jars\classes.jar"
       resolved="Seller:react-native-image-crop-picker:unspecified"
@@ -1270,6 +1283,36 @@
       jars="C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0\jars\classes.jar"
       resolved="androidx.print:print:1.0.0"
       folder="C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.github.henninghall:numberpickerview:v1.1.5@aar"
+      jars="C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5\jars\classes.jar"
+      resolved="com.github.henninghall:numberpickerview:v1.1.5"
+      folder="C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="org.apache.commons:commons-lang3:3.8@jar"
+      jars="C:\Users\extec\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.8\222fc4cf714a63f27cbdafdbd863efd0d30c8a1e\commons-lang3-3.8.jar"
+      resolved="org.apache.commons:commons-lang3:3.8"/>
+  <library
+      name="net.time4j:time4j-android:4.8-2021a@aar"
+      jars="C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\jars\classes.jar"
+      resolved="net.time4j:time4j-android:4.8-2021a"
+      folder="C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

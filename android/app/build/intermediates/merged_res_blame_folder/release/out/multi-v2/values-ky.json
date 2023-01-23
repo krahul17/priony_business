@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.priony.business.app-mergeReleaseResources-34:/values-ky/values-ky.xml",
+            "outputFile": "com.priony.business.app-mergeReleaseResources-35:/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\0647204d58c048d1dd06350cd74722f3\\transformed\\core-1.7.0\\res\\values-ky\\values-ky.xml",

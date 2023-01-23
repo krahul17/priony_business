@@ -8,6 +8,7 @@ MERGED from [:react-native-firebase_messaging] D:\priony_business\priony_busines
 MERGED from [:react-native-firebase_app] D:\priony_business\priony_business\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-32:12
 MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-date-picker] D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-33:12
 MERGED from [:react-native-pager-view] D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] D:\priony_business\priony_business\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
@@ -93,6 +94,8 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\extec\.gradle\cache
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\a7aa25b2721b4b795209d6121b6d8e83\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\3f4cde4758188897548b14ff2f0ff701\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:2:1-11:12
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\extec\.gradle\caches\transforms-3\d281d3c8eeca3885825d71a0a5ffca20\transformed\jetified-fbcore-2.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\e1b73babc2f30731d3bf1244712b9a6f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 INJECTED from D:\priony_business\priony_business\android\app\src\main\AndroidManifest.xml:1:1-28:12
@@ -178,6 +181,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\extec\.gradle\caches\transforms-3\d11c85b860290b9cde7acec14be46a2f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\9cbc968d0d8d3046f25757fc04540d9c\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\9cbc968d0d8d3046f25757fc04540d9c\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:11:5-20
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\extec\.gradle\caches\transforms-3\0647204d58c048d1dd06350cd74722f3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:label
@@ -230,6 +235,8 @@ MERGED from [:react-native-async-storage_async-storage] D:\priony_business\prion
 MERGED from [:react-native-async-storage_async-storage] D:\priony_business\priony_business\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-picker_picker] D:\priony_business\priony_business\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] D:\priony_business\priony_business\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-crop-picker] D:\priony_business\priony_business\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-pager-view] D:\priony_business\priony_business\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
@@ -400,6 +407,10 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\3f4cde4758188897548b14ff2f0ff701\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\extec\.gradle\caches\transforms-3\755ea6dd90b6a93f50012bf3983c2438\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\extec\.gradle\caches\transforms-3\9935da28631a45e726a6ee2fcd22c65e\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:7:5-9:41
+MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\extec\.gradle\caches\transforms-3\73dcb99f4a48bc4d1ab0c8899c9eddd2\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\extec\.gradle\caches\transforms-3\d281d3c8eeca3885825d71a0a5ffca20\transformed\jetified-fbcore-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\extec\.gradle\caches\transforms-3\d281d3c8eeca3885825d71a0a5ffca20\transformed\jetified-fbcore-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\extec\.gradle\caches\transforms-3\e1b73babc2f30731d3bf1244712b9a6f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41

@@ -59,7 +59,7 @@ const PrEnquirtForm = ({ navigation }) => {
 
        console.log( item.id,'hello im id')
 
-        const [favselect4, setFavSelect4] = useState({})
+        const [favselect4, setFavSelect4] = useState()
 
 
 
@@ -73,7 +73,7 @@ const PrEnquirtForm = ({ navigation }) => {
                     'Authorization': 'Bearer ' + accessToken ,
                 },
             }).then((response) => response.json())
-                .then((json) => setFavSelect4(json))
+                .then((json) => setFavSelect4(json.status))
                 .catch((error) => console.error(error))
                 .finally(() => setLoading(false));
         }catch(error){
@@ -85,7 +85,7 @@ const PrEnquirtForm = ({ navigation }) => {
 
         const favorate = async () => {
 
-            console.log|('token received',accessToken)
+            console.log|('token received',item.id)
 
 
             let gettingfav = 'Legal Advisor User'
@@ -139,11 +139,11 @@ const PrEnquirtForm = ({ navigation }) => {
             <TouchableOpacity onPress={() => { navigation.navigate('Form',{value: item, value2:item.id}) }}>
                 <View style={styles.mainList}>
 
-                <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4.status)] }}>
+                <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
                     <View style={styles.fav}>
 
 
-                        {favselect4.status  ?
+                        {favselect4 ?
                             (<Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />)
                             :
                             (<Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />

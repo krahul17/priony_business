@@ -1,17 +1,17 @@
-import { StyleSheet, Text, View, FlatList, StatusBar, ScrollView, Linking,Image, TouchableOpacity, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, FlatList, StatusBar, ScrollView, Linking, Image, TouchableOpacity, Dimensions } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import BaseUrl from '../../../../Component/BaseURL/BaseUrl';
 import Share from 'react-native-share'
 import { ShareUrl } from '../../../../Component/BaseURL/BaseUrl';
 
-const FranchiseShare = ({route}) => {
+const FranchiseShare = ({ route }) => {
 
-    const {item}= route.params
-    const todayid= item.FranchiseID
+    const { item } = route.params
+    const todayid = item.FranchiseID
 
 
-    console.log(todayid,'getttthhsb')
+    console.log(todayid, 'getttthhsb')
 
     const url = ShareUrl;
     const options = { url };
@@ -24,61 +24,116 @@ const FranchiseShare = ({route}) => {
     };
 
 
-  const [accessToken, setAccess] = useState(null);
-  const [data, setData] = useState({});
-  const [loading, setLoading] = useState(null);
+    const [accessToken, setAccess] = useState(null);
+    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(null);
 
-  console.log(data," hello im liked")
+    console.log(data, " hello im liked")
 
-  useEffect( async () => {
+    useEffect(async () => {
 
-    const accessToken = await AsyncStorage.getItem("accessToken");
-    setAccess(accessToken);
+        const accessToken = await AsyncStorage.getItem("accessToken");
+        setAccess(accessToken);
 
-    fetch(BaseUrl + '/douryou-seller-api/seller-see-who-shear-sell-franchise/' + todayid +'/' , {
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            'Authorization': 'Bearer ' + accessToken,
-        },
-    }).then((response) => response.json())
-        .then((json) => setData(json.Users))
-        .catch((error) =>
-            // alert(error))
-            console.error(error))
-        .finally(() => setLoading(false));
-}, []);
+        fetch(BaseUrl + '/douryou-seller-api/seller-see-who-shear-sell-franchise/' + todayid + '/', {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'Authorization': 'Bearer ' + accessToken,
+            },
+        }).then((response) => response.json())
+            .then((json) => setData(json.Users))
+            .catch((error) =>
+                // alert(error))
+                console.error(error))
+            .finally(() => setLoading(false));
+    }, []);
 
     const GustData = ({ item }) => {
 
-        const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3,13));
-        console.log(item.phone_number,'phone number gett')
-        const WhatsAppchat = () => {
-          // Check for perfect 10 digit length
-          if (mobileNumber.length != 10) {
-            alert('Please insert correct WhatsApp number');
-            return;
-          }
-          // Using 91 for India
-          // You can change 91 with your country code
-          let url =
-            'whatsapp://send?text=' +
-            //  whatsAppMsg +
-            '&phone=91'+ mobileNumber;
-          Linking.openURL(url)
-            .then((data) => {
-              console.log('WhatsApp Opened');
+
+        const [favselect4, setFavSelect4] = useState()
+
+        useEffect(async () => {
+            try {
+
+                fetch(BaseUrl + '/douryou-seller-api/seller-check-user-shear-franchise-user-favourite-or-not/' + item.id + "/", {
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json",
+                        'Authorization': 'Bearer ' + accessToken,
+                    },
+                }).then((response) => response.json())
+                    .then((json) => setFavSelect4(json.status))
+                    .catch((error) => console.error(error))
+                    .finally(() => setLoading(false));
+            } catch (error) {
+                console.log(error, 'error')
+
+            }
+
+        }, []);
+
+        const favorate = async () => {
+
+
+            let gettingfav = 'Share Franchise'
+
+            let formData = new FormData();
+
+            formData.append('WhyFvrt', gettingfav)
+
+            fetch(BaseUrl + '/douryou-seller-api/seller-add-users-to-favourite/' + item.id + "/", {
+                method: 'POST',
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "multipart/form-data",
+                    'Authorization': 'Bearer ' + accessToken,
+                },
+                body: formData
+            }).then((result) => {
+                result.json().then((response) => {
+
+                    console.log(response, "Response");
+                }).catch((error) => {
+                    alert(error)
+
+                });
             })
-            .catch(() => {
-              alert('Make sure Whatsapp installed on your device');
-            });
+        }
+
+        const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3, 13));
+        console.log(item.phone_number, 'phone number gett')
+        const WhatsAppchat = () => {
+            // Check for perfect 10 digit length
+            if (mobileNumber.length != 10) {
+                alert('Please insert correct WhatsApp number');
+                return;
+            }
+            // Using 91 for India
+            // You can change 91 with your country code
+            let url =
+                'whatsapp://send?text=' +
+                //  whatsAppMsg +
+                '&phone=91' + mobileNumber;
+            Linking.openURL(url)
+                .then((data) => {
+                    console.log('WhatsApp Opened');
+                })
+                .catch(() => {
+                    alert('Make sure Whatsapp installed on your device');
+                });
         };
-        
+
         return (
             <View style={styles.mainList}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
                     <View style={styles.fav}>
-                        <Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
+                        {favselect4 ?
+                            <Image source={require('../../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />
+                            :
+                            <Image source={require('../../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
+                        }
                     </View>
                 </TouchableOpacity>
 
@@ -125,7 +180,7 @@ const FranchiseShare = ({route}) => {
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10 }}>
 
                     <View style={{ marginRight: 20, margin: 2 }}>
-                        <TouchableOpacity onPress={() => { WhatsAppchat();}}>
+                        <TouchableOpacity onPress={() => { WhatsAppchat(); }}>
                             <Image source={require('../../../../screen/Lists/assets/chat1.png')} style={{ height: 26, width: 27 }} />
                         </TouchableOpacity>
                     </View>
@@ -188,7 +243,7 @@ const FranchiseShare = ({route}) => {
     )
 }
 
-export default  FranchiseShare
+export default FranchiseShare
 
 const styles = StyleSheet.create({
     Logo: {

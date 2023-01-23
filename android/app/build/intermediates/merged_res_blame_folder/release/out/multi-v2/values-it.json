@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.priony.business.app-mergeReleaseResources-34:/values-it/values-it.xml",
+            "outputFile": "com.priony.business.app-mergeReleaseResources-35:/values-it/values-it.xml",
             "map": [
                 {
                     "source": "C:\\Users\\extec\\.gradle\\caches\\transforms-3\\47b0a75a35b9d53b43a810f4bc8a2582\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-it\\values.xml",

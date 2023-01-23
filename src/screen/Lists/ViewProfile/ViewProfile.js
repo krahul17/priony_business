@@ -42,6 +42,56 @@ const VieweProfile = () => {
 
     const Card = ({ item }) => {
 
+        const [favselect4, setFavSelect4] = useState()
+
+        useEffect(async () => {
+            try{
+    
+            fetch(BaseUrl + '/douryou-seller-api/seller-check-user-view-profile-favourite-or-not/' + item.id + "/", {
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    'Authorization': 'Bearer ' + accessToken ,
+                },
+            }).then((response) => response.json())
+                .then((json) => setFavSelect4(json.status))
+                .catch((error) => console.error(error))
+                .finally(() => setLoading(false));
+        }catch(error){
+            console.log(error,'error')
+
+        }
+
+        }, []);
+
+        const favorate = async () => {
+
+
+            let gettingfav = 'View Profile'
+
+            let formData = new FormData();
+
+            formData.append('WhyFvrt', gettingfav)
+
+            fetch(BaseUrl + '/douryou-seller-api/seller-add-users-to-favourite/' + item.id + "/", {
+                method: 'POST',
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "multipart/form-data",
+                    'Authorization': 'Bearer ' + accessToken,
+                },
+                body: formData
+            }).then((result) => {
+                result.json().then((response) => {
+                  
+                    console.log(response, "Response");
+                }).catch((error) => {
+                    alert(error)
+
+                });
+            })
+        }
+
         const [mobileNumber, setMobileNumber] = useState(item.phone_number.slice(3,13));
         console.log(item.phone_number,'phone number gett')
         // const [whatsAppMsg, setWhatsAppMsg] = useState('Please follow https://aboutreact.com',  );
@@ -68,11 +118,19 @@ const VieweProfile = () => {
 
         return (
             <View style={styles.mainList}>
-                {/* <TouchableOpacity>
+                <TouchableOpacity onPress={() => { [favorate(), setFavSelect4(!favselect4)] }}>
                     <View style={styles.fav}>
-                        <Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />
+
+                        {favselect4 ?
+
+
+                            (<Image source={require('../../../screen/Lists/assets/fav2.png')} style={{ height: 40, width: 40 }} />)
+                            :
+                            (<Image source={require('../../../screen/Lists/assets/fav.png')} style={{ height: 40, width: 40 }} />)
+                        }
+
                     </View>
-                </TouchableOpacity> */}
+                </TouchableOpacity>
 
                 <View style={{ flexDirection: 'row',marginTop:10 }}>
 
@@ -132,7 +190,7 @@ const VieweProfile = () => {
 
                 <View>
                     <View style={{ backgroundColor: '#0006C1', padding: 10, marginTop: 10 }}>
-                        <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', }}>Date :- {item.date_joined.slice(2,10)}</Text>
+                        <Text style={{ color: '#fff', fontSize: 15, fontWeight: '800', }}>Date :- {item.date_joined.slice(0,10)}</Text>
                     </View>
                 </View>
 
