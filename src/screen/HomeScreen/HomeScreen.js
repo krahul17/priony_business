@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, Modal, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Modal, ScrollView, Image, TouchableOpacity, Linking,Dimensions } from 'react-native'
 import React, { useState, useContext, useEffect } from 'react'
 import { AuthContext } from '../../../context/AuthContext'
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -823,7 +823,7 @@ const [system_token, setSystem_token] = useState('')
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginHorizontal: 7, marginVertical: 10 }}>
 
               <View style={styles.box}>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={() => Linking.openURL('http://www.douryou.com/our-privacy-policy/')} >
                   <View style={{ alignSelf: 'center', marginVertical: 20 }}>
                     <Image source={require('../HomeScreen/assets/policy.png')} style={{ width: 50, height: 50 }} />
                   </View>
