@@ -89,45 +89,6 @@ const VerifyCode = ({ navigation, route }) => {
    }
 
 
-   // const verCode = async () => {
-
-
-   //    let data = { phone_number, otpis }
-   //    fetch(BaseUrl + '/douryou-seller-api/seller-verify-otp/', {
-   //       method: 'POST',
-   //       headers: {
-   //          "Accept": "application/json",
-   //          "Content-Type": "application/json"
-   //       },
-   //       body: JSON.stringify(data)
-   //    }).then((result) => {
-   //       result.json().then((resp) => {
-   //          console.log(resp, "resp")
-
-   //          if (resp.status ==true) {
-
-   //             navigation.navigate('HomeScreen', {
-   //                phone_number
-   //             })
-   //          }
-   //          else {
-
-   //             AsyncStorage.setItem("userInfo", JSON.stringify(response));
-   //             console.log("referesh token = " + response.token.refresh);
-   //             AsyncStorage.setItem("refereshToken", response.token.refresh);
-   //             AsyncStorage.setItem("accessToken", response.token.access);
-   //             login();
-   //             navigation.navigate('CreateProfie', {
-   //                phone_number
-   //             })
-              
-   //          }
-   //       }).catch((error) => {
-   //          console.log(error);
-   //       });
-   //    })
-
-   // }
 
    return (
       <>

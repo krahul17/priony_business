@@ -29,6 +29,10 @@ import Navigatino from './src/Navigation-Flow/Navigation/Navigatino';
 import AllPlanList from './src/screen/LoginFlow/Profile/AllPlanList/AllPlanList';
 import PlanComingSoon from './src/screen/LoginFlow/Profile/PlanComingSoon/PlanComingSoon';
 import BaseUrl from './src/Component/BaseURL/BaseUrl';
+import Signup from './src/screen/LoginFlow/Signup/Signup';
+import Forgotten from './src/screen/LoginFlow/Forgotten/Forgotten';
+import SetNewPassword from './src/screen/LoginFlow/SetNewPassword/SetNewPassword';
+import ForgottenOtp from './src/screen/LoginFlow/Forgotten/ForgottenOtp';
 
 
 
@@ -39,7 +43,12 @@ function AuthStack() {
   return (
     <Stack.Navigator screenOptions={{
       headerShown: false
-    }}>
+    }}> 
+
+{/* <Stack.Screen name="ForgottenOtp" component={ForgottenOtp} /> */}
+       {/* <Stack.Screen name="SetNewPassword" component={SetNewPassword} /> */}
+    {/* <Stack.Screen name="Forgotten" component={Forgotten} /> */}
+    {/* <Stack.Screen name="Signup" component={Signup} /> */}
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="VerifyCode" component={VerifyCode} />
       <Stack.Screen name="CreateProfie" component={CreateProfie} />
