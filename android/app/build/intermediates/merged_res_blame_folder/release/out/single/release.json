@@ -156,6 +156,10 @@
         "source": "com.priony.business.app-react-32:/drawable-mdpi/src_screen_homescreen_assets_insurance.png"
     },
     {
+        "merged": "com.priony.business.app-merged_res-37:/drawable-mdpi_src_screen_assetslogo_eye1.png.flat",
+        "source": "com.priony.business.app-react-32:/drawable-mdpi/src_screen_assetslogo_eye1.png"
+    },
+    {
         "merged": "com.priony.business.app-merged_res-37:/drawable-mdpi_src_screen_homescreen_assets_deal.png.flat",
         "source": "com.priony.business.app-react-32:/drawable-mdpi/src_screen_homescreen_assets_deal.png"
     },
@@ -342,6 +346,10 @@
     {
         "merged": "com.priony.business.app-merged_res-37:/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "com.priony.business.app-main-38:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.priony.business.app-merged_res-37:/drawable-mdpi_src_screen_assetslogo_eye.png.flat",
+        "source": "com.priony.business.app-react-32:/drawable-mdpi/src_screen_assetslogo_eye.png"
     },
     {
         "merged": "com.priony.business.app-merged_res-37:/drawable-mdpi_src_screen_eventsscreen_assets_logo.png.flat",

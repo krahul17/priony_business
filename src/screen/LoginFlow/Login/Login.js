@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
          }
          setModalVisible(true)
         let data={phone_number}
-        fetch(BaseUrl +"/douryou-seller-api/seller-send-otp/",{
+        fetch(BaseUrl +"/douryou-seller-api/seller-number-check/",{
             method:"POST",
             headers:{
                 'Accept':'application/json',
@@ -29,10 +29,21 @@ const Login = ({ navigation }) => {
         }).then((result)=>{
                 result.json().then((resp)=>{
                     console.log(resp,"12345566566")
-                    setModalVisible(false)
-                     navigation.navigate('VerifyCode',{
-                        phone_number
-                     });
+
+                    if (resp.status == true) {
+                        setModalVisible(false)
+                        navigation.navigate("VerifyCode",{phone_number});
+                    
+                      
+                     }
+                     else if (resp.status == false) {
+                        setModalVisible(false)
+                       
+                        navigation.navigate("Signup",{phone_number});
+                        // console.log(response.token.access,'user token set ')
+                        console.log("else  is working");
+                        
+                     }
                     
                 }) .catch((error) => {
                     console.log(error);

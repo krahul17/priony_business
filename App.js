@@ -45,12 +45,14 @@ function AuthStack() {
       headerShown: false
     }}> 
 
-{/* <Stack.Screen name="ForgottenOtp" component={ForgottenOtp} /> */}
-       {/* <Stack.Screen name="SetNewPassword" component={SetNewPassword} /> */}
-    {/* <Stack.Screen name="Forgotten" component={Forgotten} /> */}
-    {/* <Stack.Screen name="Signup" component={Signup} /> */}
+ 
       <Stack.Screen name="Login" component={Login} />
+
       <Stack.Screen name="VerifyCode" component={VerifyCode} />
+      <Stack.Screen name="Forgotten" component={Forgotten} />
+      <Stack.Screen name="ForgottenOtp" component={ForgottenOtp} />
+      <Stack.Screen name="SetNewPassword" component={SetNewPassword} />
+         <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="CreateProfie" component={CreateProfie} />
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Aboutus" component={Aboutus} />
@@ -72,10 +74,14 @@ function AuthStack() {
     </Stack.Navigator>
   )
 }
+
+
 function AppNav() {
   const { userToken} = useContext(AuthContext)
   console.log("user Token = " + userToken)
-  // console.log("statement = " + userToken !== null)
+
+  // var jwt_decode = require('jwt-decode')
+  console.log("statement = " + userToken !== null)
 
   // var token = 'eyJ0eXAiO..';
   // var decoded = jwt_decode(token);
@@ -161,8 +167,25 @@ function AppNav() {
    }
   };
 
+  // async function isTokenExpired () {
+
+  //   const tokenn = await AsyncStorage.getItem("userInfo");
+  //    let token2= tokenn.token
+  //   console.log(tokenn,'00000000000')
+
+  //   var decoded = jwt_decode(tokenn)
+  //   console.log(decoded);
+  
+  //   if (decoded.exp < Date.now() / 1000) {
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
+
   useEffect(() => {
     firstLoad();
+    // isTokenExpired()
   }, []);
   
 

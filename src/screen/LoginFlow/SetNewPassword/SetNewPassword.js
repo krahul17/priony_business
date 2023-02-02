@@ -10,75 +10,67 @@ import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 
 const SetNewPassword = ({ navigation, route }) => {
 
+    const { phone_number } = route.params
+    console.log(phone_number, 'hello')
+
     const [password, setPassword] = useState("");
     const [cpassword, setCpassword] = useState("");
     const [modalVisible, setModalVisible] = useState(false);
+    const [shouldShow, setShouldShow] = useState(true);
+
+    const verCode = async () => {
+
+        if (!(phone_number && password)) {
+            alert('Enter all felid')
+            return
+        }
+
+        try {
+
+            let data = { phone_number, password }
+
+            console.log('check', data)
+
+            setModalVisible(true)
+            // console.log()
+
+            fetch(BaseUrl + '/douryou-seller-api/seller-set-new-password/', {
+                method: 'PATCH',
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+
+                },
+                body: JSON.stringify(data)
+            }).then((data) => {
+                data.json().then((response) => {
+                    console.log(response, "Response check")
+                    console.log(response.status)
+                    if (response.status == true) {
+                        setModalVisible(false)
+
+                        navigation.navigate("Login");
+                    }
+                    else if (response.status == false) {
+                        setModalVisible(false)
 
 
-    //    const verCode = async () => {
+                        // console.log(response.token.access,'user token set ')
+                        console.log("else  is working");
 
-    //       if (!(otpis)) {
-    //          alert('Enter all felid')
-    //          return
-    //       }
+                    }
+                }).catch((err) => {
+                    setModalVisible(false)
+                    alert(err);
+                })
 
-    //       try {
-
-    //          let  data =  { phone_number, otpis }
-
-    //                 console.log( 'check', data)
-
-    //                 setModalVisible(true)
-    //                // console.log()
-
-    //          fetch(BaseUrl +'/douryou-seller-api/seller-verify-otp/', {
-    //                method: 'POST',
-    //                headers: {
-    //                   "Accept": "application/json",
-    //                   "Content-Type": "application/json",
-
-    //                },
-    //                body: JSON.stringify(data)
-    //          }).then((data) => {
-    //             data.json().then((response) => {
-    //                console.log(response, "Response check")
-    //                console.log(response.status)
-    //                if (response.status == true) {
-    //                   setModalVisible(false)
-    //                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-    //                   AsyncStorage.setItem("refereshToken", response.token.refresh);
-    //                   console.log('refresh token set in system',response.token.refresh)
-    //                  AsyncStorage.setItem("accessToken", response.token.access);
-
-    //                 login()
-    //                }
-    //                else if (response.status == false) {
-    //                   setModalVisible(false)
-    //                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-    //                    AsyncStorage.setItem("refereshToken", response.token.refresh);
-    //                    console.log(' else if refresh token set in system',response.token.refresh)
-    //                   AsyncStorage.setItem("accessToken", response.token.access);
-
-    //                   navigation.navigate("CreateProfie", {
-    //                      phone_number
-    //                   });
-    //                   // console.log(response.token.access,'user token set ')
-    //                   console.log("else  is working");
-
-    //                }
-    //             }).catch((err)=>{
-    //                setModalVisible(false)
-    //                alert('invalid Otp')
-    //             })
-    //             console.log(data.status)
-
-    //          })
-    //          // setNumbId(result);
-    //       } catch (error) {
-    //          // alert('code', code)
-    //          alert(error);
-    //       }
-    //    }
+            })
+            // setNumbId(result);
+        } catch (error) {
+            // alert('code', code)
+            alert(error);
+        }
+    }
 
 
     return (
@@ -100,10 +92,17 @@ const SetNewPassword = ({ navigation, route }) => {
 
                     </View>
 
-                    <View style={{marginTop:15}}>
+                    <View style={{ marginTop: 15 }}>
 
-                        <CustomTextInput label={'Password'} value={password} setValue={setPassword} />
+                        <CustomTextInput label={'Password'} value={password} secureTextEntry={shouldShow} setValue={setPassword} />
 
+                        <TouchableOpacity onPress={() => setShouldShow(!shouldShow)}>
+                            {shouldShow ?
+                                <Image source={require('../../assetsLogo/eye.png')} style={styles.showpd} />
+                                :
+                                <Image source={require('../../assetsLogo/eye1.png')} style={styles.showpd} />
+                            }
+                        </TouchableOpacity>
                         <CustomTextInput label={'Confirm Password'} value={cpassword} setValue={setCpassword} />
 
 
@@ -114,8 +113,7 @@ const SetNewPassword = ({ navigation, route }) => {
 
 
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Login')}
-                        //    onPress={verCode}
+                        onPress={verCode}
                         style={styles.Btn}>
                         <View >
                             <Text style={styles.btn}>Submit </Text>
@@ -191,5 +189,11 @@ const styles = StyleSheet.create({
         color: '#545F74',
         fontSize: 15,
         marginLeft: 5
+    },
+    showpd: {
+        height: 25,
+        width: 25,
+        marginTop: -52,
+        marginHorizontal:'80%'
     },
 })

@@ -12,6 +12,7 @@ const PaymentConfirm = ({navigation}) => {
     const [loading, setLoading] = useState(false);
     const [data2, setData] = useState([]);
     const [accessToken, setAccessToken] = useState();
+    const [modalVisible, setModalVisible] = useState(false);
 
     // console.log(data,' 123545 data is here')
 
@@ -19,6 +20,7 @@ const PaymentConfirm = ({navigation}) => {
     useEffect(() => {
         const firstLoad = async () => {
             try {
+                setModalVisible(true)
                 const accessToken = await AsyncStorage.getItem("accessToken");
                 setAccessToken(accessToken);
                 console.log(accessToken, ' hello im token')

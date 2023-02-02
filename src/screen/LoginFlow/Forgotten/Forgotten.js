@@ -15,70 +15,70 @@ const Forgotten = ({ navigation, route }) => {
     const [modalVisible, setModalVisible] = useState(false);
 
 
-    //    const verCode = async () => {
+    console.log(phone_number,'heeeloll')
+    console.log(email,'111111heeeloll')
 
-    //       if (!(otpis)) {
-    //          alert('Enter all felid')
-    //          return
-    //       }
 
-    //       try {
+       const verCode = async () => {
 
-    //          let  data =  { phone_number, otpis }
+          if (!(phone_number && email)) {
+             alert('Enter all felid')
+             return
+          }
 
-    //                 console.log( 'check', data)
+          try {
 
-    //                 setModalVisible(true)
-    //                // console.log()
+             let  data =  { phone_number, email }
 
-    //          fetch(BaseUrl +'/douryou-seller-api/seller-verify-otp/', {
-    //                method: 'POST',
-    //                headers: {
-    //                   "Accept": "application/json",
-    //                   "Content-Type": "application/json",
+                    // console.log( 'check', data)
 
-    //                },
-    //                body: JSON.stringify(data)
-    //          }).then((data) => {
-    //             data.json().then((response) => {
-    //                console.log(response, "Response check")
-    //                console.log(response.status)
-    //                if (response.status == true) {
-    //                   setModalVisible(false)
-    //                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-    //                   AsyncStorage.setItem("refereshToken", response.token.refresh);
-    //                   console.log('refresh token set in system',response.token.refresh)
-    //                  AsyncStorage.setItem("accessToken", response.token.access);
+                    setModalVisible(true)
+                   // console.log()
 
-    //                 login()
-    //                }
-    //                else if (response.status == false) {
-    //                   setModalVisible(false)
-    //                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-    //                    AsyncStorage.setItem("refereshToken", response.token.refresh);
-    //                    console.log(' else if refresh token set in system',response.token.refresh)
-    //                   AsyncStorage.setItem("accessToken", response.token.access);
+             fetch(BaseUrl +'/douryou-seller-api/seller-forget-password-detail-data/', {
+                   method: 'POST',
+                   headers: {
+                      "Accept": "application/json",
+                      "Content-Type": "application/json",
 
-    //                   navigation.navigate("CreateProfie", {
-    //                      phone_number
-    //                   });
-    //                   // console.log(response.token.access,'user token set ')
-    //                   console.log("else  is working");
+                   },
+                   body: JSON.stringify(data)
+             }).then((data) => {
+                data.json().then((response) => {
+                   console.log(response, "Response check")
+                   if (response.status == true) {
+                      setModalVisible(false)
+                     console.log('if is working')
 
-    //                }
-    //             }).catch((err)=>{
-    //                setModalVisible(false)
-    //                alert('invalid Otp')
-    //             })
-    //             console.log(data.status)
+                     navigation.navigate("ForgottenOtp",{phone_number});
+                     console.log("going for Otp wait");
+                     
+                
+                   }
+                   else if (response.status == false) {
+                      setModalVisible(false)
+                     
 
-    //          })
-    //          // setNumbId(result);
-    //       } catch (error) {
-    //          // alert('code', code)
-    //          alert(error);
-    //       }
-    //    }
+                    alert('Please Enter Valid Credential')
+                      console.log(response,'else is working ')
+                      console.log("else  is working");
+
+                   }
+                }).catch((err)=>{
+                   setModalVisible(false)
+                   alert(err)
+                   console.log(err,"catch1  is working");
+                })
+                console.log(data.status)
+
+             })
+             // setNumbId(result);
+          } catch (error) {
+             // alert('code', code)
+             alert(error);
+             console.log(err,"catch2  is working");
+          }
+       }
 
 
     return (
@@ -138,8 +138,7 @@ const Forgotten = ({ navigation, route }) => {
 
 
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Login')}
-                        //    onPress={verCode}
+                           onPress={verCode}
                         style={styles.Btn}>
                         <View >
                             <Text style={styles.btn}>Submit </Text>

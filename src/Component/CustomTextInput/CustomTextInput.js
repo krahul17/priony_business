@@ -3,7 +3,7 @@ import React from 'react'
 import OutlineInput from 'react-native-outline-input';
 
 
-const CustomTextInput = ({ value, setValue, label,keyboardType }) => {
+const CustomTextInput = ({ value, setValue, label,keyboardType,secureTextEntry }) => {
   return (
     <View>
      
@@ -20,6 +20,7 @@ const CustomTextInput = ({ value, setValue, label,keyboardType }) => {
           passiveValueColor="#000"
           autoCapitalize={"toUpperCase"}
           keyboardType={keyboardType}
+          secureTextEntry={secureTextEntry}
           
         />
       </View>

@@ -10,78 +10,69 @@ import Loader from '../../../Component/Loader/Loader';
 const ForgottenOtp = ({ navigation, route }) => {
 
 
+const {phone_number}=route.params
 
-
-   const [otpis, setOtpis] = useState("");
+   const [otp, setOtp] = useState("");
    const [modalVisible, setModalVisible] = useState(false);
 
 
 
 
-//    const verCode = async () => {
+   const verCode = async () => {
 
-//       if (!(otpis)) {
-//          alert('Enter all felid')
-//          return
-//       }
+      if (!(otp)) {
+         alert('Enter all felid')
+         return
+      }
 
-//       try {
+      try {
 
-//          let  data =  { phone_number, otpis }
+         let  data =  { phone_number, otp }
 
-//                 console.log( 'check', data)
+                console.log( 'check', data)
 
-//                 setModalVisible(true)
-//                // console.log()
+                setModalVisible(true)
+               // console.log()
 
-//          fetch(BaseUrl +'/douryou-seller-api/seller-verify-otp/', {
-//                method: 'POST',
-//                headers: {
-//                   "Accept": "application/json",
-//                   "Content-Type": "application/json",
+         fetch(BaseUrl +'/douryou-seller-api/seller-verify-email-otp-to-change-password/', {
+               method: 'POST',
+               headers: {
+                  "Accept": "application/json",
+                  "Content-Type": "application/json",
 
-//                },
-//                body: JSON.stringify(data)
-//          }).then((data) => {
-//             data.json().then((response) => {
-//                console.log(response, "Response check")
-//                console.log(response.status)
-//                if (response.status == true) {
-//                   setModalVisible(false)
-//                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-//                   AsyncStorage.setItem("refereshToken", response.token.refresh);
-//                   console.log('refresh token set in system',response.token.refresh)
-//                  AsyncStorage.setItem("accessToken", response.token.access);
-              
-//                 login()
-//                }
-//                else if (response.status == false) {
-//                   setModalVisible(false)
-//                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-//                    AsyncStorage.setItem("refereshToken", response.token.refresh);
-//                    console.log(' else if refresh token set in system',response.token.refresh)
-//                   AsyncStorage.setItem("accessToken", response.token.access);
-                 
-//                   navigation.navigate("CreateProfie", {
-//                      phone_number
-//                   });
-//                   // console.log(response.token.access,'user token set ')
-//                   console.log("else  is working");
+               },
+               body: JSON.stringify(data)
+         }).then((data) => {
+            data.json().then((response) => {
+               console.log(response, "Response check")
+               // console.log(response.status)
+               if (response.status == true) {
+                  navigation.navigate("SetNewPassword", {
+                     phone_number
+                  });
+                
+               }
+               else if (response.status == false) {
+                  setModalVisible(false)
+                
+                 alert('Invalid Code')
+                  // console.log(response.token.access,'user token set ')
+                  console.log("else  is working");
                   
-//                }
-//             }).catch((err)=>{
-//                setModalVisible(false)
-//                alert('invalid Otp')
-//             })
-//             console.log(data.status)
+               }
+            }).catch((err)=>{
+               setModalVisible(false)
+              
+            })
+            
          
-//          })
-//          // setNumbId(result);
-//       } catch (error) {
-//          // alert('code', code)
-//          alert(error);
-//       }
-//    }
+         })
+         // setNumbId(result);
+      } catch (error) {
+         // alert('code', code)
+         alert(error);
+      }
+   }
 
 
 
@@ -128,32 +119,15 @@ const ForgottenOtp = ({ navigation, route }) => {
                         borderStyle: 'dashed',
 
                      }}
-                     value={otpis}
-                     onChangeText={(text) => setOtpis(text)}
+                     value={otp}
+                     onChangeText={(text) => setOtp(text)}
                   />
-               </View>
-
-               <View style={styles.CODE}>
-                  <Text style={{ color: '#999999', }}>
-
-                  </Text>
-                  <TouchableOpacity>
-                     <Text style={styles.Code}><RnOtpTimer
-                        minutes={0}
-                        seconds={60}
-                        resendButtonStyle={styles.button}
-                        resendButtonTextStyle={styles.buttonText}
-                        resendButtonAction={() => {
-                           console.log('otp resent!')
-                        }}
-                     /></Text>
-                  </TouchableOpacity>
                </View>
 
 
                {/* <TouchableOpacity onPress={() => navigation.navigate('CreateProfie')} style={styles.Btn}> */}
                <TouchableOpacity 
-            //    onPress={verCode} 
+               onPress={verCode} 
                style={styles.Btn}>
                   <View >
                      <Text style={styles.btn}>Submit </Text>

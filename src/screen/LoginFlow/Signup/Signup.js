@@ -10,75 +10,74 @@ import CustomTextInput from '../../../Component/CustomTextInput/CustomTextInput'
 
 const Signup = ({ navigation, route }) => {
 
+   const {phone_number}=route.params
+
     const [password, setPassword] = useState("");
     const [cpassword, setCpassword] = useState("");
     const [modalVisible, setModalVisible] = useState(false);
+    const [shouldShow, setShouldShow] = useState(true);
 
+   const verCode = async () => {
 
-//    const verCode = async () => {
+      if (!(password && cpassword)) {
+         alert('Enter all felid')
+         return
+      }
 
-//       if (!(otpis)) {
-//          alert('Enter all felid')
-//          return
-//       }
+      try {
 
-//       try {
+         let  data =  { phone_number, password }
 
-//          let  data =  { phone_number, otpis }
+                console.log( 'check', data)
 
-//                 console.log( 'check', data)
+                setModalVisible(true)
+               // console.log()
 
-//                 setModalVisible(true)
-//                // console.log()
+         fetch(BaseUrl +'/douryou-seller-api/seller-create-signup-password/', {
+               method: 'POST',
+               headers: {
+                  "Accept": "application/json",
+                  "Content-Type": "application/json",
 
-//          fetch(BaseUrl +'/douryou-seller-api/seller-verify-otp/', {
-//                method: 'POST',
-//                headers: {
-//                   "Accept": "application/json",
-//                   "Content-Type": "application/json",
-
-//                },
-//                body: JSON.stringify(data)
-//          }).then((data) => {
-//             data.json().then((response) => {
-//                console.log(response, "Response check")
-//                console.log(response.status)
-//                if (response.status == true) {
-//                   setModalVisible(false)
-//                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-//                   AsyncStorage.setItem("refereshToken", response.token.refresh);
-//                   console.log('refresh token set in system',response.token.refresh)
-//                  AsyncStorage.setItem("accessToken", response.token.access);
+               },
+               body: JSON.stringify(data)
+         }).then((data) => {
+            data.json().then((response) => {
+               console.log(response, "Response check")
+               // console.log(response.status)
+               if (response.status == true) {
+                  // console.log(response.status, "Response check")
+                  setModalVisible(false)
+                  AsyncStorage.setItem("userInfo", JSON.stringify(response.token))
+                  AsyncStorage.setItem("refereshToken", response.token.refresh);
+                 AsyncStorage.setItem("accessToken", response.token.access);
               
-//                 login()
-//                }
-//                else if (response.status == false) {
-//                   setModalVisible(false)
-//                   AsyncStorage.setItem("userInfo", JSON.stringify(response))
-//                    AsyncStorage.setItem("refereshToken", response.token.refresh);
-//                    console.log(' else if refresh token set in system',response.token.refresh)
-//                   AsyncStorage.setItem("accessToken", response.token.access);
+                 navigation.navigate("CreateProfie", {
+                  phone_number
+               });
+               }
+               else if (response.status == false) {
+                  setModalVisible(false)
+
+                  alert('Profile Not Created')
                  
-//                   navigation.navigate("CreateProfie", {
-//                      phone_number
-//                   });
-//                   // console.log(response.token.access,'user token set ')
-//                   console.log("else  is working");
+                  navigation.navigate("Login");
+                  console.log("else  is working");
                   
-//                }
-//             }).catch((err)=>{
-//                setModalVisible(false)
-//                alert('invalid Otp')
-//             })
-//             console.log(data.status)
+               }
+            }).catch((err)=>{
+               setModalVisible(false)
+               alert(err)
+            })
+          
          
-//          })
-//          // setNumbId(result);
-//       } catch (error) {
-//          // alert('code', code)
-//          alert(error);
-//       }
-//    }
+         })
+         // setNumbId(result);
+      } catch (error) {
+         // alert('code', code)
+         alert(error);
+      }
+   }
 
 
    return (
@@ -101,7 +100,7 @@ const Signup = ({ navigation, route }) => {
                </View>
                <View style={{ flexDirection: 'row', alignSelf: 'center', marginTop: 10,marginBottom:35 }}>
                   <View>
-                     <Text style={{ color: '#000', fontSize: 17, fontWeight: '600' }}>7814479746</Text>
+                     <Text style={{ color: '#000', fontSize: 17, fontWeight: '600' }}>{phone_number}</Text>
                   </View>
                   <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                      <View>
@@ -110,16 +109,22 @@ const Signup = ({ navigation, route }) => {
                   </TouchableOpacity>
                </View>
 
-               <CustomTextInput label={'Password'} value={password} setValue={setPassword} />
-
+               <CustomTextInput label={'Password'} value={password} secureTextEntry={shouldShow} setValue={setPassword} />
+               <TouchableOpacity onPress={() => setShouldShow(!shouldShow)}>
+                  {shouldShow ?
+                     <Image source={require('../../assetsLogo/eye.png')} style={styles.showpd} />
+                     :
+                     <Image source={require('../../assetsLogo/eye1.png')} style={styles.showpd} />
+                  }
+               </TouchableOpacity>
                <CustomTextInput label={'Confirm Password'} value={cpassword} setValue={setCpassword} />
         
 
 
             
                <TouchableOpacity 
-               onPress={() => navigation.navigate('Login')}
-            //    onPress={verCode}
+               // onPress={() => navigation.navigate('Login')}
+               onPress={verCode}
                 style={styles.Btn}>
                   <View >
                      <Text style={styles.btn}>Submit </Text>
@@ -196,4 +201,10 @@ const styles = StyleSheet.create({
       fontSize: 15,
       marginLeft: 5
    },
+   showpd: {
+      height: 25,
+      width: 25,
+      marginTop: -52,
+      marginHorizontal:'80%'
+  },
 })
