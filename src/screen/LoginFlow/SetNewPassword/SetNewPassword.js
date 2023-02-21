@@ -20,10 +20,10 @@ const SetNewPassword = ({ navigation, route }) => {
 
     const verCode = async () => {
 
-        if (!(phone_number && password)) {
-            alert('Enter all felid')
+        if (password !== cpassword) {
+            alert('PassWord and Confirm Password not match')
             return
-        }
+         }
 
         try {
 

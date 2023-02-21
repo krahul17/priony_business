@@ -19,10 +19,11 @@ const Signup = ({ navigation, route }) => {
 
    const verCode = async () => {
 
-      if (!(password && cpassword)) {
-         alert('Enter all felid')
+     if (password !== cpassword) {
+         alert('PassWord and Confirm Password not match')
          return
       }
+
 
       try {
 
